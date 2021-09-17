@@ -15,7 +15,7 @@ export const Footer: FC = () => {
         backgroundColor: white,
       }}
     >
-      {""}
+      {" "}
     </Box>
   );
 };

@@ -1,5 +1,5 @@
 const isProd = process.env.NODE_ENV === "production";
-const prefix = "/secureux.design/";
+const prefix = "/secureux.design";
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
 });
