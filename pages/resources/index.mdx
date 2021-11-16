@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Head from "next/head";
-import { Container, Box } from "@material-ui/core";
+import { Container, Box } from "@mui/material";
 import { useTranslate } from "react-polyglot";
-import { useAppContext } from "../components/common/AppProvider";
+import { useAppContext } from "components/AppProvider";
 import { MDXProvider } from "@mdx-js/react";
-import { Layout } from "../components/common/Layout";
+import { Layout } from "components/Layout";
 
 [comment]: # "Start editable"
 
@@ -34,7 +34,7 @@ export default function Privacy({ children }) {
   return (
     <Layout>
       <Head>
-        <title>SecureUX: Test</title>
+        <title>UXSecurity: Resources</title>
       </Head>
       <Container maxWidth="md" sx={{ mb: 10 }}>
         <MDXProvider components={components}>{children}</MDXProvider>

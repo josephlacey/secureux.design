@@ -1,7 +1,7 @@
-import { FC, createContext, useContext } from "react";
-import { useTheme } from "@material-ui/core/styles";
-import { useMediaQuery } from "@material-ui/core";
-import { colors, typography } from "../../styles/theme";
+import { createContext, useContext, FC } from "react";
+import { useTheme } from "@mui/material/styles";
+import { useMediaQuery } from "@mui/material";
+import { colors, typography, components } from "styles/theme";
 
 const basePath =
   process.env.NODE_ENV === "production" ? "/secureux.design/" : "";
@@ -20,24 +20,23 @@ const useTablet = (): boolean => {
 const AppContext = createContext({
   colors,
   typography,
+  components,
   loader,
   useMobile,
   useTablet,
 });
 
-export const AppProvider: FC = ({ children }) => (
-  <AppContext.Provider
-    value={{
-      colors,
-      typography,
-      loader,
-      useMobile,
-      useTablet,
-    }}
-  >
-    {children}
-  </AppContext.Provider>
-);
+export const AppProvider: FC = ({ children }) => {
+  const value = {
+    colors,
+    typography,
+    components,
+    loader,
+    useMobile,
+    useTablet,
+  };
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+};
 
 export function useAppContext() {
   return useContext(AppContext);

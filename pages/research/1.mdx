@@ -1,0 +1,37 @@
+import { useState } from "react";
+import Head from "next/head";
+import { Container, Box } from "@mui/material";
+import { useTranslate } from "react-polyglot";
+import { useAppContext } from "components/AppProvider";
+import { MDXProvider } from "@mdx-js/react";
+import { Layout } from "components/Layout";
+
+[comment]: # "Start editable"
+
+# INFO ON HOW TO USE THE CURRICULUM
+
+## UX SECURITY CURRICULUM MOLUT EXPEDIT VOLO IPSUNT VOLOR REPUDIC
+
+### Popout definition here with link to glossary Ucil eaqui quam enis arum re, sam nobis exero optaspi dignihilit glossary exura.
+
+UX Security Curriculum is a project Imust doloris reperum quatist quos velitium volore nostia natqui volenem facest, volore reptae consecaest debitate porpore, ut adi velis endis de nis mi, excerep tatempel el maximpor maionemos eos expliquibus maio vellendendae sit que re de niente omnihit hici ut perorum int, conecae es res dignate maio et fugit que dolectatesto maio. Ra velestis nest renime volorer natemquasint autae dollabo. Ut millabo reptatem excepudam quam doles estrupis sequo et magniatius, opti tem quia quas dest que sum facerernatis et id quaepta tquatur aut volupta as mos asped et officae volum il magnis sit in esciasim ra doloreium none con ea dolorem nonseditiis velluptur? Estionem que re porem quatate nimenis sitisti busam autae dollabo. Ut millabo reptatem excepudam opti tem quia opti tem quia quam doles. Asped magnis non endi accatium hictur acerorem coreium fugia natectaernat ommodip samendi adi aliquaecus, sime nonsedici andandu cipsum quo volor as es dolut aut eum aliquaecus, sime nonsedici andandu cipsum quo volor as es dolut aut eum.
+
+[comment]: # "End editable"
+
+export default function Research1({ children }) {
+  const t = useTranslate();
+  const {
+    typography: { h1 },
+  } = useAppContext();
+ 
+}
+
+return (
+
+<Head>
+  <title>UXSecurity: Research</title>
+</Head>
+<Box>
+  <MDXProvider components={components}>{children}</MDXProvider>
+</Box>
+)}

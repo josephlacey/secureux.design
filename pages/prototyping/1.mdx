@@ -1,0 +1,44 @@
+import { useState } from "react";
+import Head from "next/head";
+import { Container, Box } from "@mui/material";
+import { useTranslate } from "react-polyglot";
+import { useAppContext } from "components/AppProvider";
+import { MDXProvider } from "@mdx-js/react";
+import { Layout } from "components/Layout";
+
+[comment]: # "Start editable"
+
+### This is a test file
+
+It's **easy** to edit, but it _can also_ include React components.
+
+[comment]: # "End editable"
+
+export default function Privacy({ children }) {
+  const t = useTranslate();
+  const {
+    typography: { h3, h4, body },
+  } = useAppContext();
+  const [components, setComponents] = useState({
+    h3: ({ children }) => (
+      <Box component="h3" sx={{ ...h3, textAlign: "left", m: 0, mt: 5, p: 0 }}>
+        {children}
+      </Box>
+    ),
+    h4: ({ children }) => (
+      <Box component="h4" sx={{ ...h4, textAlign: "left", m: 0, mt: 3 }}>
+        {children}
+      </Box>
+    ),
+  });
+  return (
+    <Layout>
+      <Head>
+        <title>UXSecurity: Prototyping / Building</title>
+      </Head>
+      <Container maxWidth="md" sx={{ mb: 10 }}>
+        <MDXProvider components={components}>{children}</MDXProvider>
+      </Container>
+    </Layout>
+  );
+}

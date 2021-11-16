@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Link from "next/link";
-import { Button as MUIButton } from "@material-ui/core";
+import { Button as MUIButton } from "@mui/material";
 import { useAppContext } from "./AppProvider";
 
 interface ButtonProps {

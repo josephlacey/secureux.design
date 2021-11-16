@@ -2,9 +2,9 @@
 import { Children } from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
-import createEmotionCache from "../lib/createEmotionCache";
+import createEmotionCache from "lib/createEmotionCache";
 
-export default class SecureUXDocument extends Document {
+export default class UXSecurityDocument extends Document {
   render() {
     return (
       <Html lang="en">
@@ -18,7 +18,7 @@ export default class SecureUXDocument extends Document {
   }
 }
 
-SecureUXDocument.getInitialProps = async (ctx) => {
+UXSecurityDocument.getInitialProps = async (ctx) => {
   const originalRenderPage = ctx.renderPage;
   const cache = createEmotionCache();
   const { extractCriticalToChunks } = createEmotionServer(cache as any);
