@@ -10,7 +10,7 @@ interface ChapterAccordionProps {
   title: string;
   chapter: number;
   expandedChapter: number;
-  toggleExpandedChapter: (chapter: number) => void;
+  toggleExpandedChapter: any;
 }
 
 export const ChapterAccordion: FC<ChapterAccordionProps> = ({

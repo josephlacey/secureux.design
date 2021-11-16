@@ -1,3 +1,5 @@
-a {
-  color: #3399ff;
+a,
+a:visited {
+  color: "#0000ff";
+  text-decoration: none;
 }

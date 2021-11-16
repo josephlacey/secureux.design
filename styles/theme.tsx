@@ -46,14 +46,13 @@ export const typography: any = {
       color: colors.brightBlue,
       fontSize: "18px",
       width: "100%",
-      backgroundColor: "green",
     },
     border: `1px solid ${colors.brightBlue}`,
     borderRadius: "500px",
   },
 };
 
-export const components = {
+export const components = (color: string = colors.black) => ({
   h1: ({ children }) => (
     <Grid item xs={6}>
       <Box
@@ -62,6 +61,7 @@ export const components = {
           ...typography.h1,
           width: "100%",
           mb: "80px",
+          color,
         }}
       >
         {children}
@@ -109,4 +109,4 @@ export const components = {
       </Box>
     </Grid>
   ),
-};
+});
