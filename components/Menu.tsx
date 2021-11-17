@@ -2,9 +2,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { Grid, Drawer, Box, IconButton } from "@mui/material";
 import { InfoOutlined } from "@mui/icons-material";
+import LogoWhite from "images/logo-white.svg";
 import { ChapterAccordion } from "./ChapterAccordion";
 import { useAppContext } from "./AppProvider";
-import LogoWhite from "images/logo-white.svg";
 
 export const Menu = () => {
   const {
@@ -68,13 +68,13 @@ export const Menu = () => {
                   expandedChapter={expandedChapter}
                   toggleExpandedChapter={toggleExpandedChapter}
                 >
-                  <Link href="/research/1">
+                  <Link href="/research/1" passHref>
                     <Box sx={chapterStyles}>Chapter 1</Box>
                   </Link>
-                  <Link href="/research/2">
+                  <Link href="/research/2" passHref>
                     <Box sx={chapterStyles}>Chapter 2</Box>
                   </Link>
-                  <Link href="/research/3">
+                  <Link href="/research/3" passHref>
                     <Box sx={chapterStyles}>Chapter 3</Box>
                   </Link>
                 </ChapterAccordion>
@@ -84,7 +84,7 @@ export const Menu = () => {
                   expandedChapter={expandedChapter}
                   toggleExpandedChapter={toggleExpandedChapter}
                 >
-                  <Link href="/ideation/1">
+                  <Link href="/ideation/1" passHref>
                     <Box sx={chapterStyles}>Chapter 1</Box>
                   </Link>
                 </ChapterAccordion>
@@ -94,7 +94,7 @@ export const Menu = () => {
                   expandedChapter={expandedChapter}
                   toggleExpandedChapter={toggleExpandedChapter}
                 >
-                  <Link href="/prototyping/1">
+                  <Link href="/prototyping/1" passHref>
                     <Box sx={chapterStyles}>Chapter 1</Box>
                   </Link>
                 </ChapterAccordion>
@@ -104,7 +104,7 @@ export const Menu = () => {
                   expandedChapter={expandedChapter}
                   toggleExpandedChapter={toggleExpandedChapter}
                 >
-                  <Link href="/launching/1">
+                  <Link href="/launching/1" passHref>
                     <Box sx={chapterStyles}>Chapter 1</Box>
                   </Link>
                 </ChapterAccordion>
@@ -114,7 +114,7 @@ export const Menu = () => {
                   expandedChapter={expandedChapter}
                   toggleExpandedChapter={toggleExpandedChapter}
                 >
-                  <Link href="/future/1">
+                  <Link href="/future/1" passHref>
                     <Box sx={chapterStyles}>Chapter 1</Box>
                   </Link>
                 </ChapterAccordion>
