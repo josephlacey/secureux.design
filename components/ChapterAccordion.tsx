@@ -29,7 +29,14 @@ export const ChapterAccordion: FC<ChapterAccordionProps> = ({
     sx={{ background: "transparent" }}
   >
     <AccordionSummary>
-      <Box sx={{ color: "white" }}>{`${chapter} ${title}`}</Box>
+      <Box
+        sx={{
+          color: "white",
+          fontSize: 34,
+          fontFamily: "Helvetica",
+          textTransform: "uppercase",
+        }}
+      >{`${chapter} ${title}`}</Box>
     </AccordionSummary>
     <AccordionDetails>
       <Box sx={{ color: "white" }}>{children}</Box>
