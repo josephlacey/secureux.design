@@ -8,6 +8,7 @@ export const colors: any = {
   mintGreen: "#a9d8b8",
   limeGreen: "#d3fc7a",
   lavender: "#e2c5e4",
+  lightBlue: "#42acf7",
   brightBlue: "#0000ff",
 };
 

@@ -8,9 +8,6 @@ module.exports = withMDX({
   reactStrictMode: true,
   basePath: isProd ? prefix : "",
   assetPrefix: isProd ? prefix : "",
-  images: {
-    loader: "custom",
-  },
   trailingSlash: true,
   pageExtensions: ["js", "jsx", "ts", "tsx", "mdx"],
 });

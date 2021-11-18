@@ -4,7 +4,7 @@ import { Menu } from "./Menu";
 export const Layout = ({ children }) => (
   <>
     <Menu />
-    <Box sx={{ m: "40px", ml: "60px", maxWidth: 1200 }}>
+    <Box sx={{ m: "40px", ml: "100px", maxWidth: 1200 }}>
       <Grid
         container
         columns={8}
