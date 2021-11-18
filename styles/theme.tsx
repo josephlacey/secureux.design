@@ -1,4 +1,5 @@
 import { Box, Grid } from "@mui/material";
+import { Definition } from "components/Definition";
 
 export const colors: any = {
   white: "#ffffff",
@@ -96,17 +97,11 @@ export const components = (color: string = colors.black) => ({
       </Box>
     </Grid>
   ),
-  blockquote: ({ children }) => (
-    <Grid item xs={2}>
-      <Box
-        component="blockquote"
-        sx={{
-          ...typography.blockquote,
-          width: "100%",
-        }}
-      >
-        {children}
-      </Box>
-    </Grid>
-  ),
+  blockquote: ({ children }) => {
+    const rawText = children.props.children;
+    const id = (rawText as string).match(/(?<=\{#)(.*)(?=\}$)/)[0];
+    const text = (rawText as string).replace(/ \{#.*\}$/, "");
+    console.log({ id, text });
+    return <Definition id={id}>{text}</Definition>;
+  },
 });

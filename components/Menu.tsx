@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
-import { Grid, Drawer, Box, IconButton } from "@mui/material";
-import { InfoOutlined } from "@mui/icons-material";
+import { Grid, Drawer, Box, IconButton, Button } from "@mui/material";
+import { InfoOutlined, Twitter, Instagram } from "@mui/icons-material";
 import LogoWhite from "images/logo-white.svg";
 import { ChapterAccordion } from "./ChapterAccordion";
 import { useAppContext } from "./AppProvider";
@@ -10,7 +10,7 @@ export const Menu = () => {
   const {
     typography: { h1 },
   } = useAppContext();
-  const [menuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [expandedChapter, setExpandedChapter] = useState(1);
   const toggleExpandedChapter = (chapter: number) => {
     if (chapter === expandedChapter) {
@@ -34,11 +34,14 @@ export const Menu = () => {
     <Drawer
       sx={{
         position: "absolute",
+        overflow: "hidden",
         backgroundColor: "black",
         width: menuOpen ? 800 : 60,
+        transition: "width 0.25s ease-in-out",
         height: "100vh",
         "& .MuiDrawer-paper": {
           width: menuOpen ? 800 : 60,
+          transition: "width 0.25s ease-in-out",
           backgroundColor: "black",
         },
       }}
@@ -125,8 +128,18 @@ export const Menu = () => {
                   <Link href="/glossary">Glossary</Link>
                 </Box>
               </Box>
-              <Link href="https://twitter.com">Twitter</Link>
-              <Link href="https://instagram.com">Instagram</Link>
+              <Link href="https://twitter.com" passHref>
+                <IconButton sx={{ color: "white" }}>
+                  <Twitter />
+                  <Box sx={{ ml: 1 }}>Twitter</Box>
+                </IconButton>
+              </Link>
+              <Link href="https://instagram.com" passHref>
+                <IconButton sx={{ color: "white" }}>
+                  <Instagram />
+                  <Box sx={{ ml: 1 }}>Instagram</Box>
+                </IconButton>
+              </Link>
             </Box>
           </Grid>
         ) : null}
@@ -140,7 +153,7 @@ export const Menu = () => {
           sx={{ width: "60px" }}
         >
           <Grid item>
-            <Box
+            <Button
               sx={{
                 color: "white",
                 textTransform: "uppercase",
@@ -148,9 +161,10 @@ export const Menu = () => {
                 textAlign: "center",
                 marginTop: "4px",
               }}
+              onClick={() => setMenuOpen(!menuOpen)}
             >
-              close
-            </Box>
+              {menuOpen ? "Close" : "Open"}
+            </Button>
           </Grid>
           <Grid item>
             <Box
