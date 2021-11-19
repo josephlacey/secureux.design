@@ -3,10 +3,10 @@ import { Grid, Box } from "@mui/material";
 import { Research } from "components/home/Research";
 import { IdeationPrototyping } from "components/home/IdeationPrototyping";
 import { LaunchingFuture } from "components/home/LaunchingFuture";
-import UXSIcon1 from "images/uxs-icon-1.svg";
-import UXSIcon2 from "images/uxs-icon-2.svg";
-import UXSIcon3 from "images/uxs-icon-3.svg";
-import UXSIcon4 from "images/uxs-icon-4.svg";
+import UXSIcon1 from "public/images/uxs-icon-1.svg";
+import UXSIcon2 from "public/images/uxs-icon-2.svg";
+import UXSIcon3 from "public/images/uxs-icon-3.svg";
+import UXSIcon4 from "public/images/uxs-icon-4.svg";
 import { keyframes } from "@mui/system";
 
 const spin = keyframes`

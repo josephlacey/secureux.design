@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Grid, Drawer, Box, IconButton, Button } from "@mui/material";
 import { InfoOutlined, Twitter, Instagram } from "@mui/icons-material";
-import LogoWhite from "images/logo-white.svg";
+import LogoWhite from "public/images/logo-white.svg";
 import { ChapterAccordion } from "./ChapterAccordion";
 import { useAppContext } from "./AppProvider";
 
