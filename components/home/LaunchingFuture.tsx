@@ -61,8 +61,8 @@ export const LaunchingFuture: FC = () => {
         />
       </Link>
       <text
-        x="650"
-        y="390"
+        x="730"
+        y="420"
         className="title"
         textAnchor="middle"
         dominantBaseline="central"
