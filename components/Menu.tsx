@@ -56,78 +56,90 @@ export const Menu = () => {
         sx={{ height: "100vh", width: 800 }}
       >
         {menuOpen ? (
-          <Grid item sx={{ padding: "20px" }} xs={11}>
-            <Box>
-              <Box sx={mainMenuItemStyles}>
-                <Link href="/about">About</Link>
-              </Box>
+          <Grid
+            container
+            item
+            sx={{ padding: "20px" }}
+            xs={11}
+            direction="column"
+            justifyContent="space-between"
+          >
+            <Grid item>
               <Box>
                 <Box sx={mainMenuItemStyles}>
-                  <Link href="/research/1">Phases</Link>
+                  <Link href="/about">About</Link>
                 </Box>
-                <ChapterAccordion
-                  title="Research"
-                  chapter={1}
-                  expandedChapter={expandedChapter}
-                  toggleExpandedChapter={toggleExpandedChapter}
-                >
-                  <Link href="/research/1" passHref>
-                    <Box sx={chapterStyles}>Chapter 1</Box>
-                  </Link>
-                  <Link href="/research/2" passHref>
-                    <Box sx={chapterStyles}>Chapter 2</Box>
-                  </Link>
-                  <Link href="/research/3" passHref>
-                    <Box sx={chapterStyles}>Chapter 3</Box>
-                  </Link>
-                </ChapterAccordion>
-                <ChapterAccordion
-                  title="Ideation"
-                  chapter={2}
-                  expandedChapter={expandedChapter}
-                  toggleExpandedChapter={toggleExpandedChapter}
-                >
-                  <Link href="/ideation/1" passHref>
-                    <Box sx={chapterStyles}>Chapter 1</Box>
-                  </Link>
-                </ChapterAccordion>
-                <ChapterAccordion
-                  title="Prototyping / Building"
-                  chapter={3}
-                  expandedChapter={expandedChapter}
-                  toggleExpandedChapter={toggleExpandedChapter}
-                >
-                  <Link href="/prototyping/1" passHref>
-                    <Box sx={chapterStyles}>Chapter 1</Box>
-                  </Link>
-                </ChapterAccordion>
-                <ChapterAccordion
-                  title="Launching / Community Feedback"
-                  chapter={4}
-                  expandedChapter={expandedChapter}
-                  toggleExpandedChapter={toggleExpandedChapter}
-                >
-                  <Link href="/launching/1" passHref>
-                    <Box sx={chapterStyles}>Chapter 1</Box>
-                  </Link>
-                </ChapterAccordion>
-                <ChapterAccordion
-                  title="Looking to Future / Next Steps"
-                  chapter={5}
-                  expandedChapter={expandedChapter}
-                  toggleExpandedChapter={toggleExpandedChapter}
-                >
-                  <Link href="/future/1" passHref>
-                    <Box sx={chapterStyles}>Chapter 1</Box>
-                  </Link>
-                </ChapterAccordion>
-                <Box sx={mainMenuItemStyles}>
-                  <Link href="/resources">Resources</Link>
-                </Box>
-                <Box sx={mainMenuItemStyles}>
-                  <Link href="/glossary">Glossary</Link>
+                <Box>
+                  <Box sx={mainMenuItemStyles}>
+                    <Link href="/research/1">Phases</Link>
+                  </Box>
+                  <ChapterAccordion
+                    title="Research"
+                    chapter={1}
+                    expandedChapter={expandedChapter}
+                    toggleExpandedChapter={toggleExpandedChapter}
+                  >
+                    <Link href="/research/1" passHref>
+                      <Box sx={chapterStyles}>Chapter 1</Box>
+                    </Link>
+                    <Link href="/research/2" passHref>
+                      <Box sx={chapterStyles}>Chapter 2</Box>
+                    </Link>
+                    <Link href="/research/3" passHref>
+                      <Box sx={chapterStyles}>Chapter 3</Box>
+                    </Link>
+                  </ChapterAccordion>
+                  <ChapterAccordion
+                    title="Ideation"
+                    chapter={2}
+                    expandedChapter={expandedChapter}
+                    toggleExpandedChapter={toggleExpandedChapter}
+                  >
+                    <Link href="/ideation/1" passHref>
+                      <Box sx={chapterStyles}>Chapter 1</Box>
+                    </Link>
+                  </ChapterAccordion>
+                  <ChapterAccordion
+                    title="Prototyping / Building"
+                    chapter={3}
+                    expandedChapter={expandedChapter}
+                    toggleExpandedChapter={toggleExpandedChapter}
+                  >
+                    <Link href="/prototyping/1" passHref>
+                      <Box sx={chapterStyles}>Chapter 1</Box>
+                    </Link>
+                  </ChapterAccordion>
+                  <ChapterAccordion
+                    title="Launching / Community Feedback"
+                    chapter={4}
+                    expandedChapter={expandedChapter}
+                    toggleExpandedChapter={toggleExpandedChapter}
+                  >
+                    <Link href="/launching/1" passHref>
+                      <Box sx={chapterStyles}>Chapter 1</Box>
+                    </Link>
+                  </ChapterAccordion>
+                  <ChapterAccordion
+                    title="Looking to Future / Next Steps"
+                    chapter={5}
+                    expandedChapter={expandedChapter}
+                    toggleExpandedChapter={toggleExpandedChapter}
+                  >
+                    <Link href="/future/1" passHref>
+                      <Box sx={chapterStyles}>Chapter 1</Box>
+                    </Link>
+                  </ChapterAccordion>
+                  <Box sx={mainMenuItemStyles}>
+                    <Link href="/resources">Resources</Link>
+                  </Box>
+                  <Box sx={mainMenuItemStyles}>
+                    <Link href="/glossary">Glossary</Link>
+                  </Box>
                 </Box>
               </Box>
+            </Grid>
+
+            <Grid item>
               <Link href="https://twitter.com" passHref>
                 <IconButton sx={{ color: "white" }}>
                   <Twitter />
@@ -140,7 +152,7 @@ export const Menu = () => {
                   <Box sx={{ ml: 1 }}>Instagram</Box>
                 </IconButton>
               </Link>
-            </Box>
+            </Grid>
           </Grid>
         ) : null}
         <Grid
@@ -151,6 +163,7 @@ export const Menu = () => {
           justifyContent="space-between"
           xs={1}
           sx={{ width: "60px" }}
+          onClick={() => setMenuOpen(!menuOpen)}
         >
           <Grid item>
             <Button
@@ -177,9 +190,9 @@ export const Menu = () => {
                 src={LogoWhite.src}
                 alt=""
                 style={{
-                  width: "84vh",
+                  width: "74vh",
                   marginTop: 15,
-                  marginLeft: -270,
+                  marginLeft: "-32vh",
                 }}
               />
             </Box>

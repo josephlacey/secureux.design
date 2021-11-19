@@ -66,7 +66,7 @@ export const Diagram = () => (
         animation: `${spin} 10s infinite linear`,
         position: "absolute",
         top: 300,
-        right: 300,
+        right: 320,
       }}
     >
       <img src={Logo.src} alt="" />
