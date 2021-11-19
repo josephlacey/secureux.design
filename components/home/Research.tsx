@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Link from "next/link";
 import { useAppContext } from "components/AppProvider";
 
 export const Research: FC = () => {
@@ -18,15 +19,17 @@ export const Research: FC = () => {
             .pill:hover { fill: ${brightBlue} }
             .title { font: bold 30px sans-serif; color: black; }`}
       </style>
-      <rect
-        x="15"
-        y="15"
-        width="470"
-        height="270"
-        ry="235"
-        rx="135"
-        className="pill"
-      />
+      <Link href="/research/2" passHref>
+        <rect
+          x="15"
+          y="15"
+          width="470"
+          height="270"
+          ry="235"
+          rx="135"
+          className="pill"
+        />
+      </Link>
       <marker
         id="arrowhead"
         markerWidth="10"

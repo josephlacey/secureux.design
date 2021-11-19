@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Link from "next/link";
 import { useAppContext } from "components/AppProvider";
 
 export const IdeationPrototyping: FC = () => {
@@ -16,19 +17,23 @@ export const IdeationPrototyping: FC = () => {
       <style>
         {`.pill1 { fill: ${mintGreen} }
             .pill1:hover { fill: ${brightBlue} }
+            .pill1:hover ~ .testPath { transition: 0.5s; d: path("M 250 15 L 450,15 A 130 130, 0, 0, 1, 585 150 A 130 130, 0, 0, 0, 715 280");}
             .pill2 { fill: ${limeGreen} }
             .pill2:hover { fill: ${brightBlue} }
-            .title { font: bold 30px sans-serif; color: black; }`}
+            .title { font: 400 25px Helvetica; color: black; }`}
       </style>
-      <rect
-        x="15"
-        y="15"
-        width="470"
-        height="270"
-        ry="235"
-        rx="135"
-        className="pill1"
-      />
+      <Link href="/ideation/1" passHref>
+        <rect
+          x="15"
+          y="15"
+          width="570"
+          height="270"
+          ry="235"
+          rx="135"
+          className="pill1"
+          cursor="pointer"
+        />
+      </Link>
       <marker
         id="arrowhead"
         markerWidth="10"
@@ -37,45 +42,67 @@ export const IdeationPrototyping: FC = () => {
         refY="3.5"
         orient="auto"
       >
-        <polygon points="0 0, 7 3.5, 0 7" />
+        <polygon points="0 0, 10 5, 0 10" />
       </marker>
-      <path
-        d="M150,285 A 1 1 0 0 1 150 15 L285,15"
-        fill="none"
-        stroke="black"
-        strokeWidth="4"
-        markerEnd="url(#arrowhead)"
-      />
-      <path
-        d="M350,15 A 1 1 0 0 1 350 285 L220,285"
-        fill="none"
-        stroke="black"
-        strokeWidth="4"
-        markerEnd="url(#arrowhead)"
-      />
-      <text x="150" y="160" className="title">
+
+      <text x="210" y="160" className="title">
         2 IDEATION
       </text>
-
-      <rect
-        x="600"
-        y="150"
-        width="270"
-        height="470"
-        ry="135"
-        rx="235"
-        className="pill2"
-      />
+      <Link href="/prototyping/1" passHref>
+        <rect
+          x="580"
+          y="280"
+          width="270"
+          height="470"
+          ry="135"
+          rx="235"
+          className="pill2"
+          cursor="pointer"
+        />
+      </Link>
       <text
-        x="530"
-        y="360"
+        x="650"
+        y="390"
         className="title"
         textAnchor="middle"
         dominantBaseline="central"
         transform="rotate(90, 620, 480)"
       >
-        2 PROTOTYPING
+        3 PROTOTYPING
       </text>
+
+      <path
+        d="M 220 15
+           L 450,15
+           A 130 130, 0, 0, 1, 585 150
+           A 130 130, 0, 0, 0, 715 280"
+        fill="none"
+        stroke="black"
+        strokeWidth="4"
+        markerEnd="url(#arrowhead)"
+        className="testPath"
+      />
+      <path
+        d="M 770 290
+           A 130 130, 0, 0, 1, 845 410
+           L845,610
+           A 1 1, 0, 0, 1, 580 630"
+        fill="none"
+        stroke="black"
+        strokeWidth="4"
+        markerEnd="url(#arrowhead)"
+      />
+      <path
+        d="M 580 580
+        L 580,400
+        A 130 130, 0, 0, 0, 450 280
+        L 150,285
+        A 1 1 0 0 1 150 15 L165,15"
+        fill="none"
+        stroke="black"
+        strokeWidth="4"
+        markerEnd="url(#arrowhead)"
+      />
     </svg>
   );
 };

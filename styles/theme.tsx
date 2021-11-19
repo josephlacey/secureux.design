@@ -229,35 +229,32 @@ export const components = (color: string = colors.black) => ({
       </Box>
     </Grid>
   ),
-  ol: (props) => {
-    console.log(props);
-    return (
-      <Grid item xs={2}>
-        <Box
-          component="ol"
-          sx={{
-            ...typography.h5,
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "flex-start",
-            mb: "40px",
+  ol: (props) => (
+    <Grid item xs={2}>
+      <Box
+        component="ol"
+        sx={{
+          ...typography.h5,
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "flex-start",
+          mb: "40px",
 
-            "& li": {
-              backgroundColor: colors.lightBlue,
-              borderRadius: "50px",
-              display: "flex",
-              marginRight: "20px",
-              paddingLeft: "10px",
-              paddingRight: "10px",
-            },
-            listStyleType: "none",
-          }}
-        >
-          {props.children}
-        </Box>
-      </Grid>
-    );
-  },
+          "& li": {
+            backgroundColor: colors.lightBlue,
+            borderRadius: "50px",
+            display: "flex",
+            marginRight: "20px",
+            paddingLeft: "10px",
+            paddingRight: "10px",
+          },
+          listStyleType: "none",
+        }}
+      >
+        {props.children}
+      </Box>
+    </Grid>
+  ),
   code: ({ children }) => (
     <Grid item xs={7}>
       <Box
