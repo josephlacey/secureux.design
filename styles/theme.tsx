@@ -1,6 +1,9 @@
 import { Box, Grid } from "@mui/material";
 import { Definition } from "components/Definition";
 
+const isProd = process.env.NODE_ENV === "production";
+const prefix = isProd ? "/secureux.design" : "";
+
 export const colors: any = {
   white: "#ffffff",
   black: "#000000",
@@ -321,7 +324,7 @@ export const components = (color: string = colors.black) => ({
   img: ({ src, alt }) => (
     <Grid item xs={6} sx={{ maxWidth: "100%", textAlign: "center" }}>
       <img
-        src={src}
+        src={`${prefix}${src}`}
         alt={alt}
         style={{
           margin: "0 auto",

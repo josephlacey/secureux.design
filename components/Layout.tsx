@@ -36,6 +36,7 @@ export const Layout: FC = ({ children }) => {
           sx={{
             position: "fixed",
             width: "100vw",
+            maxWidth: "100vw",
             height: "40px",
             marginTop: "-40px",
             marginLeft: "56px",
