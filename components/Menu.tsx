@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Router from "next/router";
 import Link from "next/link";
 import { Grid, Drawer, Box, IconButton, Button } from "@mui/material";
 import { InfoOutlined, Twitter, Instagram } from "@mui/icons-material";
@@ -9,6 +10,7 @@ import { useAppContext } from "./AppProvider";
 export const Menu = () => {
   const {
     typography: { h1 },
+    colors: { white, brightBlue },
   } = useAppContext();
   const [menuOpen, setMenuOpen] = useState(false);
   const [expandedChapter, setExpandedChapter] = useState(1);
@@ -21,14 +23,35 @@ export const Menu = () => {
   };
   const mainMenuItemStyles = {
     ...h1,
-    "& a": { color: "white" },
-    "& a:hover": { color: "#0000ff" },
+    "& a": { color: white },
+    "& a:hover": { color: brightBlue },
   };
   const chapterStyles: any = {
-    fontFamily: "Helvetica",
+    fontFamily: "Helvetica, sans-serif",
     fontSize: 20,
     textTransform: "uppercase",
+    cursor: "pointer",
+    ml: "28px",
+    "& a": {
+      color: white,
+    },
+    "& :hover": {
+      color: brightBlue,
+    },
+    "& a:visited": {
+      color: white,
+    },
   };
+
+  useEffect(() => {
+    const closeMenu = () => {
+      setMenuOpen(false);
+    };
+    Router.events.on("routeChangeComplete", closeMenu);
+    return () => {
+      Router.events.off("routeChangeComplete", closeMenu);
+    };
+  }, []);
 
   return (
     <Drawer
@@ -79,15 +102,15 @@ export const Menu = () => {
                     expandedChapter={expandedChapter}
                     toggleExpandedChapter={toggleExpandedChapter}
                   >
-                    <Link href="/research/1" passHref>
-                      <Box sx={chapterStyles}>Chapter 1</Box>
-                    </Link>
-                    <Link href="/research/2" passHref>
-                      <Box sx={chapterStyles}>Chapter 2</Box>
-                    </Link>
-                    <Link href="/research/3" passHref>
-                      <Box sx={chapterStyles}>Chapter 3</Box>
-                    </Link>
+                    <Box sx={chapterStyles}>
+                      <Link href="/research/1">Chapter 1</Link>
+                    </Box>
+                    <Box sx={chapterStyles}>
+                      <Link href="/research/2">Chapter 2</Link>
+                    </Box>
+                    <Box sx={chapterStyles}>
+                      <Link href="/research/3">Chapter 3</Link>
+                    </Box>
                   </ChapterAccordion>
                   <ChapterAccordion
                     title="Ideation"
@@ -95,9 +118,9 @@ export const Menu = () => {
                     expandedChapter={expandedChapter}
                     toggleExpandedChapter={toggleExpandedChapter}
                   >
-                    <Link href="/ideation/1" passHref>
-                      <Box sx={chapterStyles}>Chapter 1</Box>
-                    </Link>
+                    <Box sx={chapterStyles}>
+                      <Link href="/ideation/1">Chapter 1</Link>
+                    </Box>
                   </ChapterAccordion>
                   <ChapterAccordion
                     title="Prototyping / Building"
@@ -105,9 +128,9 @@ export const Menu = () => {
                     expandedChapter={expandedChapter}
                     toggleExpandedChapter={toggleExpandedChapter}
                   >
-                    <Link href="/prototyping/1" passHref>
-                      <Box sx={chapterStyles}>Chapter 1</Box>
-                    </Link>
+                    <Box sx={chapterStyles}>
+                      <Link href="/prototyping/1">Chapter 1</Link>
+                    </Box>
                   </ChapterAccordion>
                   <ChapterAccordion
                     title="Launching / Community Feedback"
@@ -115,9 +138,9 @@ export const Menu = () => {
                     expandedChapter={expandedChapter}
                     toggleExpandedChapter={toggleExpandedChapter}
                   >
-                    <Link href="/launching/1" passHref>
-                      <Box sx={chapterStyles}>Chapter 1</Box>
-                    </Link>
+                    <Box sx={chapterStyles}>
+                      <Link href="/launching/1">Chapter 1</Link>
+                    </Box>
                   </ChapterAccordion>
                   <ChapterAccordion
                     title="Looking to Future / Next Steps"
@@ -125,9 +148,11 @@ export const Menu = () => {
                     expandedChapter={expandedChapter}
                     toggleExpandedChapter={toggleExpandedChapter}
                   >
-                    <Link href="/future/1" passHref>
-                      <Box sx={chapterStyles}>Chapter 1</Box>
-                    </Link>
+                    <Box sx={chapterStyles}>
+                      <Link href="/future/1" passHref>
+                        Chapter 1
+                      </Link>
+                    </Box>
                   </ChapterAccordion>
                   <Box sx={mainMenuItemStyles}>
                     <Link href="/resources">Resources</Link>

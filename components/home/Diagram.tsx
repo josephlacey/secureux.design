@@ -31,7 +31,9 @@ export const Diagram = () => (
     sx={{
       position: "relative",
       height: "100vh",
+      minHeight: "700px",
       width: "100%",
+      minWidth: "700px",
     }}
   >
     <Box sx={{ width: 400 }}>
