@@ -34,13 +34,21 @@ export const Diagram = () => (
       minHeight: "700px",
       width: "100%",
       minWidth: "700px",
+      pl: "20px",
     }}
   >
-    <Box sx={{ width: 400 }}>
+    <Box sx={{ width: 350, position: "absolute", top: 0, left: 80 }}>
       <Research />
     </Box>
 
-    <Box sx={{ width: 800, position: "absolute", top: 0, right: -100 }}>
+    <Box
+      sx={{
+        width: 580,
+        position: "absolute",
+        top: 0,
+        right: 0,
+      }}
+    >
       <IdeationPrototyping />
     </Box>
 
@@ -48,8 +56,8 @@ export const Diagram = () => (
       sx={{
         width: 80,
         position: "absolute",
-        top: 660,
-        right: 80,
+        top: 540,
+        right: 70,
         animationDelay: "0.25s",
         animation: `${pulse} 2s infinite ease-in-out`,
         animationDirection: "alternate",
@@ -58,16 +66,23 @@ export const Diagram = () => (
       <img src={Hand.src} alt="" />
     </Box>
 
-    <Box sx={{ width: 800, position: "absolute", bottom: 100, right: 200 }}>
+    <Box
+      sx={{
+        width: 660,
+        position: "absolute",
+        bottom: 40,
+        right: 250,
+      }}
+    >
       <LaunchingFuture />
     </Box>
 
     <Box
       sx={{
-        width: 200,
+        width: 180,
         animation: `${spin} 10s infinite linear`,
         position: "absolute",
-        top: 300,
+        top: 240,
         right: 320,
       }}
     >
@@ -78,7 +93,7 @@ export const Diagram = () => (
       sx={{
         width: 100,
         position: "absolute",
-        top: 450,
+        top: 360,
         left: 70,
         animationDelay: "0.5s",
         animation: `${pulse} 3s infinite ease-in-out`,
@@ -90,10 +105,10 @@ export const Diagram = () => (
 
     <Box
       sx={{
-        width: 100,
+        width: 80,
         position: "absolute",
-        top: 50,
-        right: 70,
+        top: 40,
+        right: 58,
         animation: `${pulse} 4s infinite ease-in-out`,
         animationDirection: "alternate",
       }}
