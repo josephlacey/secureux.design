@@ -12,60 +12,70 @@ export const colors: any = {
   brightBlue: "#0000ff",
 };
 
-// const breakSmall = `@media (maxWidth: 400px)`;
-
 export const typography: any = {
-  fontFamily: "Helvetica",
+  // chapter title
   h1: {
+    fontFamily: "Helvetica, sans-serif",
     fontSize: "75px",
-    lineHeight: "85px",
+    lineHeight: "80px",
     textTransform: "uppercase",
-    fontWeight: 500,
+    fontWeight: 400,
     margin: 0,
   },
+  // section title
   h2: {
+    fontFamily: "Helvetica, sans-serif",
     fontSize: "42px",
     lineHeight: "50px",
     textTransform: "uppercase",
-    fontWeight: 500,
+    fontWeight: 400,
     margin: 0,
   },
+  // section title with background
   h3: {
+    fontFamily: "Helvetica, sans-serif",
     fontSize: "42px",
-    lineHeight: "60px",
+    lineHeight: "56px",
     textTransform: "uppercase",
-    fontWeight: 500,
+    fontWeight: 400,
     margin: 0,
   },
+  // exercise title
   h4: {
+    fontFamily: "Helvetica, sans-serif",
     fontSize: "42px",
-    lineHeight: "60px",
+    lineHeight: "50px",
     textTransform: "uppercase",
-    fontWeight: 500,
+    fontWeight: 400,
     margin: 0,
   },
+  // tags
   h5: {
+    fontFamily: "Helvetica, sans-serif",
     fontSize: "18px",
-    lineHeight: "26px",
+    lineHeight: "22px",
     textTransform: "uppercase",
-    fontWeight: 500,
+    fontWeight: 400,
     margin: 0,
   },
+  // reading time
   h6: {
-    fontSize: "42px",
-    lineHeight: "60px",
-    textTransform: "uppercase",
-    fontWeight: 500,
+    fontFamily: "Helvetica, sans-serif",
+    fontSize: "34px",
+    lineHeight: "40px",
+    fontWeight: 400,
     margin: 0,
   },
   p: {
+    fontFamily: "Helvetica, sans-serif",
     fontSize: "24px",
     lineHeight: "28px",
-    fontWeight: 500,
+    fontWeight: 400,
     margin: 0,
   },
   blockquote: {
-    fontWeight: 500,
+    fontFamily: "Helvetica, sans-serif",
+    fontWeight: 400,
     margin: 0,
     p: 2,
     pl: 4,
@@ -84,14 +94,13 @@ export const typography: any = {
 };
 
 export const components = (color: string = colors.black) => ({
+  // chapter title
   h1: ({ children }) => (
     <Grid item xs={6}>
       <Box
         component="h1"
         sx={{
           ...typography.h1,
-          width: "100%",
-          mb: "80px",
           color,
         }}
       >
@@ -99,38 +108,38 @@ export const components = (color: string = colors.black) => ({
       </Box>
     </Grid>
   ),
+  // section title
   h2: ({ children }) => (
     <Grid item xs={7}>
       <Box
         component="h2"
         sx={{
           ...typography.h2,
-          width: "100%",
-          mb: "40px",
+          mt: "80px",
         }}
       >
         {children}
       </Box>
     </Grid>
   ),
+  // section title with background
   h3: ({ children }) => (
     <Grid item xs={7}>
       <Box
         component="h3"
         sx={{
           ...typography.h3,
-          width: "100%",
-          mb: "40px",
+          mt: "80px",
         }}
       >
         <mark
           style={{
             borderRadius: "500px",
-            backgroundColor: colors.lightBlue,
-            borderTop: `0px solid ${colors.lightBlue}`,
-            borderRight: `20px solid ${colors.lightBlue}`,
-            borderBottom: `0px solid ${colors.lightBlue}`,
-            borderLeft: `20px solid ${colors.lightBlue}`,
+            backgroundColor: color,
+            borderTop: `0px solid ${color}`,
+            borderRight: `20px solid ${color}`,
+            borderBottom: `0px solid ${color}`,
+            borderLeft: `20px solid ${color}`,
           }}
         >
           {children}
@@ -138,6 +147,7 @@ export const components = (color: string = colors.black) => ({
       </Box>
     </Grid>
   ),
+  // exercise title
   h4: ({ children }) => (
     <Grid item xs={7}>
       <Box
@@ -146,27 +156,19 @@ export const components = (color: string = colors.black) => ({
           ...typography.h4,
           width: "100%",
           borderRadius: "50px 50px 0px 0px",
-          backgroundColor: colors.lightBlue,
+          backgroundColor: color,
+          pt: "26px",
+          pl: "20px",
+          pr: "20px",
+          pb: 0,
+          mt: "80px",
         }}
       >
         {children}
       </Box>
     </Grid>
   ),
-  h5: ({ children }) => (
-    <Grid item xs={7}>
-      <Box
-        component="h5"
-        sx={{
-          ...typography.h5,
-          width: "100%",
-          mb: "40px",
-        }}
-      >
-        {children}
-      </Box>
-    </Grid>
-  ),
+  // reading time
   h6: ({ children }) => (
     <Box
       component="h6"
@@ -174,12 +176,12 @@ export const components = (color: string = colors.black) => ({
         ...typography.h6,
         position: "fixed",
         top: 0,
-        left: 100,
+        left: "60px",
+        pl: "20px",
         width: "100%",
-        mb: "40px",
       }}
     >
-      {children}
+      {`READING TIME ${children}`}
     </Box>
   ),
   p: ({ children }) => (
@@ -189,7 +191,7 @@ export const components = (color: string = colors.black) => ({
         sx={{
           ...typography.p,
           width: "100%",
-          mb: "40px",
+          mt: "40px",
         }}
       >
         {children}
@@ -203,6 +205,7 @@ export const components = (color: string = colors.black) => ({
 
     return <Definition id={id}>{text}</Definition>;
   },
+  // top tags
   ul: ({ children }) => (
     <Grid item xs={8}>
       <Box
@@ -212,15 +215,20 @@ export const components = (color: string = colors.black) => ({
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "flex-start",
+          p: 0,
+          m: 0,
+          mt: "25px",
           mb: "40px",
-
           "& li": {
             border: "1px solid black",
             borderRadius: "50px",
             display: "flex",
-            marginRight: "20px",
+            marginBottom: "14px",
+            marginRight: "14px",
             paddingLeft: "10px",
             paddingRight: "10px",
+            paddingTop: "4px",
+            paddingBottom: "4px",
           },
           listStyleType: "none",
         }}
@@ -229,47 +237,99 @@ export const components = (color: string = colors.black) => ({
       </Box>
     </Grid>
   ),
-  ol: (props) => (
+  // phase / chapter tags
+  ol: ({ children }) => (
     <Grid item xs={2}>
       <Box
         component="ol"
         sx={{
           ...typography.h5,
           display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "flex-start",
-          mb: "40px",
-
+          alignItems: "flex-start",
+          flexDirection: "column",
+          p: 0,
+          mt: "12px",
+          listStyleType: "none",
           "& li": {
-            backgroundColor: colors.lightBlue,
-            borderRadius: "50px",
             display: "flex",
-            marginRight: "20px",
+            alignSelf: "flex-start",
+            backgroundColor: color,
+            borderRadius: "50px",
+            marginBottom: "14px",
+            marginRight: "14px",
             paddingLeft: "10px",
             paddingRight: "10px",
+            paddingTop: "4px",
+            paddingBottom: "4px",
           },
-          listStyleType: "none",
-        }}
-      >
-        {props.children}
-      </Box>
-    </Grid>
-  ),
-  code: ({ children }) => (
-    <Grid item xs={7}>
-      <Box
-        component="p"
-        sx={{
-          fontFamily: "Helvetica !important",
-          width: "100%",
-          m: 0,
-          mb: "40px",
-          borderRadius: "0px 0px 50px 50px",
-          backgroundColor: colors.lightBlue,
         }}
       >
         {children}
       </Box>
+    </Grid>
+  ),
+  pre: ({
+    children: {
+      props: { children },
+    },
+  }) => (
+    <Grid item xs={7}>
+      <Grid
+        item
+        container
+        direction="row"
+        columns={7}
+        columnSpacing="20px"
+        justifyContent="flex-end"
+      >
+        <Grid
+          item
+          container
+          direction="row"
+          columns={7}
+          columnSpacing="20px"
+          justifyContent="flex-end"
+          sx={{
+            marginLeft: "20px",
+            backgroundColor: color,
+            borderRadius: "0px 0px 50px 50px",
+            pb: "40px",
+          }}
+        >
+          <Grid item xs={6}>
+            {children.split("\n").map((line, i) => (
+              <Box
+                key={i}
+                component="p"
+                sx={{
+                  ...typography.p,
+                  fontFamily: "Helvetica, sans-serif !important",
+                  width: "100%",
+                  m: 0,
+                  ml: "-34px",
+                  mt: "40px",
+                }}
+              >
+                {line}
+              </Box>
+            ))}
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
+  ),
+  img: ({ src, alt }) => (
+    <Grid item xs={6} sx={{ maxWidth: "100%", textAlign: "center" }}>
+      <img
+        src={src}
+        alt={alt}
+        style={{
+          margin: "0 auto",
+          marginTop: "80px",
+          marginBottom: "80px",
+          width: "100%",
+        }}
+      />
     </Grid>
   ),
 });

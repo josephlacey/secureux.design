@@ -1,13 +1,18 @@
 import { MDXProvider } from "@mdx-js/react";
 import { useAppContext as uac } from "components/AppProvider";
+import { colors } from "styles/theme";
 
 export default function Research2({ children }) {
-  return <MDXProvider components={uac().components}>{children}</MDXProvider>;
+  return (
+    <MDXProvider components={uac().components(colors.orange)}>
+      {children}
+    </MDXProvider>
+  );
 }
 
 [comment]: # "↓↓↓ Editable ↓↓↓"
 
-###### Reading time 30-60 minutes
+###### 30-60min
 
 - Intermediate Level
 - Security Assessment Exercise
@@ -47,16 +52,14 @@ It’s crucial to use tools that are familiar to the community you are working w
 
 One of our co-writers, Caroline, used to work with the Wikimedia Foundation, an open source1, educational nonprofit that powers Wikipedia. As a side note, it’s important to highlight that just because something is open source, that doesn’t make it necessarily human rights focused, or even equitable. Some open source projects can have really toxic communities that harm each other (Wikipedia included). That being said, there is a kind of accountability in an open source process. By sharing processes about how technology is made and allowing for community input, those developing open source code allows for a kind of public audit. For example, the Signal messaging app’s encryption system can be verified as secure because most of the code is made public, i.e. is “open source software” whereas Telegram’s cannot. Signal shares their protocol and open sources it- allowing others to test it, see how it was written and audit it; Telegram has not shared the code behind their encryption so it cannot be confirmed.
 
-![alt text](/images/uxs-logo.svg)
+![alt text](/images/uxs-icon-1.svg)
 
 One of our co-writers, Caroline, used to work with the Wikimedia Foundation, an open source1, educational nonprofit that powers Wikipedia. As a side note, it’s important to highlight that just because something is open source, that doesn’t make it necessarily human rights focused, or even equitable. Some open source projects can have really toxic communities that harm each other (Wikipedia included). That being said, there is a kind of accountability in an open source process. By sharing processes about how technology is made and allowing for community input, those developing open source code allows for a kind of public audit. For example, the Signal messaging app’s encryption system can be verified as secure because most of the code is made public, i.e. is “open source software” whereas Telegram’s cannot. Signal shares their protocol and open sources it- allowing others to test it, see how it was written and audit it; Telegram has not shared the code behind their encryption so it cannot be confirmed.
 
 #### Exercise 1: Assess how secure your communications are
 
 ```
-Before you start building the tool, platform, or technology, you want to know the
-people who will be using them. Consider collecting and analyzing information
-background to render a clear hierarchy visible from your stakeholders and research participants.
+Before you start building the tool, platform, or technology, you want to know the people who will be using them. Consider collecting and analyzing information background to render a clear hierarchy visible from your stakeholders and research participants.
 
-Another one
+Another paragaraph goes here.
 ```

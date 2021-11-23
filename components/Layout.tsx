@@ -9,7 +9,7 @@ export const Layout: FC = ({ children }) => {
   const router = useRouter();
   const currentChapter = router.asPath.split("/")[1];
   const {
-    colors: { lightBlue },
+    colors: { orange, mintGreen, limeGreen, lavender, lightBlue },
   } = useAppContext();
   const [scrollPosition, setScrollPosition] = useState(0);
   useScrollPosition(
@@ -20,37 +20,37 @@ export const Layout: FC = ({ children }) => {
     null,
     true
   );
-  const chapters = [
-    "research",
-    "ideation",
-    "prototyping",
-    "launching",
-    "future",
-  ];
+  const chapters = {
+    research: orange,
+    ideation: mintGreen,
+    prototyping: limeGreen,
+    launching: lavender,
+    future: lightBlue,
+  };
 
   return (
     <>
       <Menu />
-      {chapters.includes(currentChapter) ? (
+      {Object.keys(chapters).includes(currentChapter) ? (
         <Box
           sx={{
             position: "fixed",
-            width: "102%",
-            height: 46,
+            width: "100vw",
+            height: "40px",
             marginTop: "-40px",
-            marginLeft: "58px",
+            marginLeft: "56px",
             opacity: 0.95,
-            background: `linear-gradient(to right, #fff 0%, ${lightBlue} ${scrollPosition}%, #fff ${
-              scrollPosition + 0.0001
-            }%)`,
+            background: `linear-gradient(to right, #fff 0%, ${
+              chapters[currentChapter]
+            } ${scrollPosition}%, #fff ${scrollPosition + 0.0001}%)`,
           }}
         />
       ) : null}
-      <Box sx={{ m: "40px", ml: "100px", maxWidth: 1200 }}>
+      <Box sx={{ m: "40px", ml: "80px", maxWidth: 1200 }}>
         <Grid
           container
           columns={8}
-          columnSpacing={2}
+          columnSpacing="20px"
           direction="row"
           wrap="wrap"
           justifyContent="flex-end"
