@@ -31,22 +31,22 @@ export const Diagram = () => (
     sx={{
       position: "relative",
       height: "100vh",
-      minHeight: "700px",
+      minHeight: "900px",
       width: "100%",
       minWidth: "700px",
-      pl: "20px",
+      mb: "80px",
     }}
   >
-    <Box sx={{ width: 350, position: "absolute", top: 0, left: 80 }}>
+    <Box sx={{ width: "35%", position: "absolute", top: 0, left: "2%" }}>
       <Research />
     </Box>
 
     <Box
       sx={{
-        width: 580,
+        width: "60%",
         position: "absolute",
         top: 0,
-        right: 0,
+        left: "50%",
       }}
     >
       <IdeationPrototyping />
@@ -54,10 +54,10 @@ export const Diagram = () => (
 
     <Box
       sx={{
-        width: 80,
+        width: "8%",
         position: "absolute",
-        top: 540,
-        right: 70,
+        top: "77%",
+        left: "96%",
         animationDelay: "0.25s",
         animation: `${pulse} 2s infinite ease-in-out`,
         animationDirection: "alternate",
@@ -68,10 +68,10 @@ export const Diagram = () => (
 
     <Box
       sx={{
-        width: 660,
+        width: "75%",
         position: "absolute",
-        bottom: 40,
-        right: 250,
+        top: "43%",
+        left: "18%",
       }}
     >
       <LaunchingFuture />
@@ -79,11 +79,11 @@ export const Diagram = () => (
 
     <Box
       sx={{
-        width: 180,
+        width: "20%",
         animation: `${spin} 10s infinite linear`,
         position: "absolute",
-        top: 240,
-        right: 320,
+        top: "35%",
+        left: "63%",
       }}
     >
       <img src={Logo.src} alt="" />
@@ -91,10 +91,10 @@ export const Diagram = () => (
 
     <Box
       sx={{
-        width: 100,
+        width: "8%",
         position: "absolute",
-        top: 360,
-        left: 70,
+        top: "54%",
+        left: "6%",
         animationDelay: "0.5s",
         animation: `${pulse} 3s infinite ease-in-out`,
         animationDirection: "alternate",
@@ -105,10 +105,10 @@ export const Diagram = () => (
 
     <Box
       sx={{
-        width: 80,
+        width: "8%",
         position: "absolute",
-        top: 40,
-        right: 58,
+        top: "6%",
+        left: "96%",
         animation: `${pulse} 4s infinite ease-in-out`,
         animationDirection: "alternate",
       }}

@@ -96,21 +96,34 @@ export const typography: any = {
   },
 };
 
+const extractID = (rawText: string) => {
+  const matches = rawText.match(/(?<=\{#)(.*)(?=\}$)/)[0];
+  const id = matches && matches.length > 0 ? matches[0] : null;
+  const text = rawText.replace(/ \{#.*\}$/, "");
+
+  return [id, text];
+};
+
 export const components = (color: string = colors.black) => ({
   // chapter title
-  h1: ({ children }) => (
-    <Grid item xs={6}>
-      <Box
-        component="h1"
-        sx={{
-          ...typography.h1,
-          color,
-        }}
-      >
-        {children}
-      </Box>
-    </Grid>
-  ),
+  h1: ({ children }) => {
+    const rawText = children as string;
+    const [id, text] = extractID(rawText);
+    return (
+      <Grid item xs={6}>
+        <Box
+          id={id}
+          component="h1"
+          sx={{
+            ...typography.h1,
+            color,
+          }}
+        >
+          {text}
+        </Box>
+      </Grid>
+    );
+  },
   // section title
   h2: ({ children }) => (
     <Grid item xs={7}>
@@ -202,9 +215,8 @@ export const components = (color: string = colors.black) => ({
     </Grid>
   ),
   blockquote: ({ children }) => {
-    const rawText = children.props.children;
-    const id = (rawText as string).match(/(?<=\{#)(.*)(?=\}$)/)[0];
-    const text = (rawText as string).replace(/ \{#.*\}$/, "");
+    const rawText = children.props.children as string;
+    const [id, text] = extractID(rawText);
 
     return <Definition id={id}>{text}</Definition>;
   },

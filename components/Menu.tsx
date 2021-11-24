@@ -221,7 +221,6 @@ export const Menu = () => {
           alignContent="center"
           xs={1}
           sx={{ width: "30px", height: "100vh" }}
-          onClick={() => setMenuOpen(!menuOpen)}
         >
           <Grid item>
             <Button
@@ -237,7 +236,7 @@ export const Menu = () => {
               {menuOpen ? "Close" : "Open"}
             </Button>
           </Grid>
-          <Grid item>
+          <Grid item onClick={() => setMenuOpen(!menuOpen)}>
             <img
               src={LogoWhite.src}
               alt=""
@@ -249,9 +248,11 @@ export const Menu = () => {
             />
           </Grid>
           <Grid item container justifyContent="space-around" xs={1}>
-            <IconButton sx={{ color: "white" }}>
-              <InfoOutlined />
-            </IconButton>
+            <Link href="/#info" passHref>
+              <IconButton sx={{ color: "white" }}>
+                <InfoOutlined />
+              </IconButton>
+            </Link>
           </Grid>
         </Grid>
       </Box>
