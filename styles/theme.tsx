@@ -97,7 +97,7 @@ export const typography: any = {
 };
 
 const extractID = (rawText: string) => {
-  const matches = rawText.match(/(?<=\{#)(.*)(?=\}$)/)[0];
+  const matches = rawText.match(/(?<=\{#)(.*)(?=\}$)/);
   const id = matches && matches.length > 0 ? matches[0] : null;
   const text = rawText.replace(/ \{#.*\}$/, "");
 
