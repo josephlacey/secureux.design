@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Grid, Drawer, Box, IconButton, Button } from "@mui/material";
 import { InfoOutlined, Twitter, Instagram } from "@mui/icons-material";
 import LogoWhite from "public/images/logo-white-vertical.svg";
+import LogoSmallWhite from "public/images/uxs-icon-1-white.svg";
 import { ChapterAccordion } from "./ChapterAccordion";
 import { useAppContext } from "./AppProvider";
 
@@ -11,7 +12,9 @@ export const Menu = () => {
   const {
     typography: { h1 },
     colors: { white, brightBlue },
+    useMobile,
   } = useAppContext();
+  const isMobile = useMobile();
   const [menuOpen, setMenuOpen] = useState(false);
   const [expandedChapter, setExpandedChapter] = useState(1);
   const toggleExpandedChapter = (chapter: number) => {
@@ -23,7 +26,6 @@ export const Menu = () => {
   };
   const mainMenuItemStyles = {
     ...h1,
-    display: "block",
     "& a": { color: white },
     "& a:hover": { color: brightBlue },
   };
@@ -62,12 +64,19 @@ export const Menu = () => {
         scrollbarWidth: "none",
         backgroundColor: "black",
         width: menuOpen ? "75vw" : "60px",
+        maxWidth: "900px",
         transition: "width 0.25s ease-in-out",
         height: "100vh",
         "& .MuiDrawer-paper": {
           width: menuOpen ? "75vw" : "60px",
+          maxWidth: "900px",
           transition: "width 0.25s ease-in-out",
           backgroundColor: "black",
+          overflow: "hidden",
+          scrollbarWidth: "none",
+          "& ::-webkit-scrollbar": {
+            width: "0px",
+          },
         },
       }}
       variant="permanent"
@@ -80,11 +89,12 @@ export const Menu = () => {
         wrap="nowrap"
         sx={{
           height: "100vh",
-          width: "75vw",
-          marginRight: "60px",
+          width: "100%",
           overflowY: "scroll",
+          overflowX: "hidden",
           scrollbarWidth: "none",
           padding: "20px",
+          marginRight: "100px",
           display: menuOpen ? "inherit" : "none",
         }}
       >
@@ -210,7 +220,16 @@ export const Menu = () => {
         </Grid>
       </Grid>
 
-      <Box sx={{ position: "absolute", right: 0, top: 0 }}>
+      <Box
+        sx={{
+          position: "absolute",
+          right: 0,
+          top: 0,
+          width: "60px",
+          overflow: "hidden",
+          scrollbarWidth: "none",
+        }}
+      >
         <Grid
           item
           container
@@ -219,8 +238,12 @@ export const Menu = () => {
           justifyContent="space-between"
           alignItems="center"
           alignContent="center"
-          xs={1}
-          sx={{ width: "30px", height: "100vh" }}
+          sx={{
+            width: "60px",
+            height: "100vh",
+            overflow: "hidden",
+            scrollbarWidth: "none",
+          }}
         >
           <Grid item>
             <Button
@@ -229,27 +252,47 @@ export const Menu = () => {
                 textTransform: "uppercase",
                 fontSize: 12,
                 textAlign: "center",
-                marginTop: "4px",
+                mt: "6px",
               }}
               onClick={() => setMenuOpen(!menuOpen)}
             >
               {menuOpen ? "Close" : "Open"}
             </Button>
           </Grid>
-          <Grid item onClick={() => setMenuOpen(!menuOpen)}>
-            <img
-              src={LogoWhite.src}
-              alt=""
-              style={{
-                height: "74vh",
-                marginTop: "0 auto",
-                marginLeft: "4px",
-              }}
-            />
-          </Grid>
-          <Grid item container justifyContent="space-around" xs={1}>
+          {isMobile ? (
+            <Grid item onClick={() => setMenuOpen(!menuOpen)}>
+              <img
+                src={LogoSmallWhite.src}
+                alt=""
+                style={{
+                  height: "48px",
+                  margin: "0 auto",
+                  marginLeft: "4px",
+                }}
+              />
+            </Grid>
+          ) : (
+            <Grid item onClick={() => setMenuOpen(!menuOpen)}>
+              <img
+                src={LogoWhite.src}
+                alt=""
+                style={{
+                  height: "65vh",
+                  marginTop: "0 auto",
+                  marginLeft: "4px",
+                }}
+              />
+            </Grid>
+          )}
+          <Grid
+            item
+            container
+            justifyContent="space-around"
+            alignItems="flex-end"
+            xs={1}
+          >
             <Link href="/#info" passHref>
-              <IconButton sx={{ color: "white" }}>
+              <IconButton sx={{ color: "white", mb: "6px" }}>
                 <InfoOutlined />
               </IconButton>
             </Link>

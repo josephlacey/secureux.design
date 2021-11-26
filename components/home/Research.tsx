@@ -4,7 +4,7 @@ import { useAppContext } from "components/AppProvider";
 
 export const Research: FC = () => {
   const {
-    colors: { orange, brightBlue },
+    colors: { black, orange, brightBlue },
   } = useAppContext();
 
   return (
@@ -17,7 +17,7 @@ export const Research: FC = () => {
       <style>
         {`.pill { fill: ${orange} }
             .pill:hover { fill: ${brightBlue} }
-            .title { font: bold 30px sans-serif; color: black; }`}
+            .title { font: bold 30px sans-serif; color: ${black}; }`}
       </style>
       <Link href="/research/2" passHref>
         <rect

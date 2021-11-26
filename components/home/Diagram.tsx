@@ -28,16 +28,17 @@ const pulse = keyframes`
 
 export const Diagram = () => (
   <Box
+    id="top"
     sx={{
       position: "relative",
       height: "100vh",
-      minHeight: "900px",
-      width: "100%",
-      minWidth: "700px",
+      width: "90%",
+      aspectRatio: "3 / 2",
+      m: "0 auto",
       mb: "80px",
     }}
   >
-    <Box sx={{ width: "35%", position: "absolute", top: 0, left: "2%" }}>
+    <Box sx={{ width: "35%", position: "absolute", top: 0, left: "0%" }}>
       <Research />
     </Box>
 
@@ -46,7 +47,7 @@ export const Diagram = () => (
         width: "60%",
         position: "absolute",
         top: 0,
-        left: "50%",
+        left: "45%",
       }}
     >
       <IdeationPrototyping />
@@ -56,8 +57,8 @@ export const Diagram = () => (
       sx={{
         width: "8%",
         position: "absolute",
-        top: "77%",
-        left: "96%",
+        top: "75%",
+        left: "90%",
         animationDelay: "0.25s",
         animation: `${pulse} 2s infinite ease-in-out`,
         animationDirection: "alternate",
@@ -71,7 +72,7 @@ export const Diagram = () => (
         width: "75%",
         position: "absolute",
         top: "43%",
-        left: "18%",
+        left: "10%",
       }}
     >
       <LaunchingFuture />
@@ -83,7 +84,7 @@ export const Diagram = () => (
         animation: `${spin} 10s infinite linear`,
         position: "absolute",
         top: "35%",
-        left: "63%",
+        left: "58%",
       }}
     >
       <img src={Logo.src} alt="" />
@@ -94,7 +95,7 @@ export const Diagram = () => (
         width: "8%",
         position: "absolute",
         top: "54%",
-        left: "6%",
+        left: 0,
         animationDelay: "0.5s",
         animation: `${pulse} 3s infinite ease-in-out`,
         animationDirection: "alternate",
@@ -108,7 +109,7 @@ export const Diagram = () => (
         width: "8%",
         position: "absolute",
         top: "6%",
-        left: "96%",
+        left: "91%",
         animation: `${pulse} 4s infinite ease-in-out`,
         animationDirection: "alternate",
       }}

@@ -35,8 +35,8 @@ export const Layout: FC = ({ children }) => {
         <Box
           sx={{
             position: "fixed",
-            width: "100vw",
-            maxWidth: "100vw",
+            width: "120%",
+            maxWidth: "120%",
             height: "40px",
             marginTop: "-40px",
             marginLeft: "56px",
@@ -55,6 +55,7 @@ export const Layout: FC = ({ children }) => {
           direction="row"
           wrap="wrap"
           justifyContent="flex-end"
+          alignContent="flex-end"
         >
           {children}
         </Grid>

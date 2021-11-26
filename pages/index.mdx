@@ -1,11 +1,13 @@
 import { MDXProvider } from "@mdx-js/react";
 import { useAppContext as uac } from "components/AppProvider";
 import { Diagram } from "components/home/Diagram";
+import { Phases } from "components/home/Phases";
 
 export default function Home({ children }) {
   return (
     <>
       <Diagram />
+      <Phases />
       <MDXProvider components={uac().components}>{children}</MDXProvider>
     </>
   );

@@ -4,6 +4,8 @@ import { Definition } from "components/Definition";
 const isProd = process.env.NODE_ENV === "production";
 const prefix = isProd ? "/secureux.design" : "";
 
+const breakSmall = `@media (maxWidth: 400px)`;
+
 export const colors: any = {
   white: "#ffffff",
   black: "#000000",
@@ -24,6 +26,7 @@ export const typography: any = {
     textTransform: "uppercase",
     fontWeight: 400,
     margin: 0,
+    [breakSmall]: { fontSize: "45px", lineHeight: "50px" },
   },
   // section title
   h2: {
@@ -77,7 +80,6 @@ export const typography: any = {
     margin: 0,
   },
   blockquote: {
-    fontFamily: "Helvetica, sans-serif",
     fontWeight: 400,
     margin: 0,
     p: 2,
@@ -87,6 +89,7 @@ export const typography: any = {
       width: "100%",
     },
     "& p": {
+      fontFamily: "Helvetica, sans-serif",
       color: colors.brightBlue,
       fontSize: "18px",
       width: "100%",
