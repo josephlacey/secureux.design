@@ -4,7 +4,9 @@ import { colors } from "styles/theme";
 
 export default function Research2({ children }) {
   return (
-    <MDXProvider components={uac().components(colors.orange)}>
+    <MDXProvider
+      components={uac().components(colors.orange, uac().useMobile())}
+    >
       {children}
     </MDXProvider>
   );

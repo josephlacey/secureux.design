@@ -91,7 +91,7 @@ export const Menu = () => {
         direction="column"
         wrap="nowrap"
         sx={{
-          height: "100vh",
+          height: "100%",
           width: "100%",
           overflowY: "scroll",
           overflowX: "hidden",
@@ -202,17 +202,15 @@ export const Menu = () => {
           spacing="10px"
           sx={{ marginTop: "80px" }}
         >
-          <Grid item>
+          <Grid item sx={{ "& :hover": { color: brightBlue } }}>
             <Link href="https://twitter.com" passHref>
-              <IconButton
-                sx={{ color: "white", "& a:hover": { color: brightBlue } }}
-              >
+              <IconButton sx={{ color: "white" }}>
                 <Twitter />
                 <Box sx={{ ml: "8px" }}>Twitter</Box>
               </IconButton>
             </Link>
           </Grid>
-          <Grid item>
+          <Grid item sx={{ "& :hover": { color: brightBlue } }}>
             <Link href="https://instagram.com" passHref>
               <IconButton sx={{ color: "white" }}>
                 <Instagram />

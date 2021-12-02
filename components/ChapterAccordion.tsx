@@ -32,10 +32,11 @@ export const ChapterAccordion: FC<ChapterAccordionProps> = ({
       <Box
         sx={{
           color: "white",
-          fontSize: 34,
+          fontSize: "34px",
           fontFamily: "Helvetica",
           textTransform: "uppercase",
           ":hover": { color: "#0000ff" },
+          "@media (max-width: 400px)": { fontSize: "24px" },
         }}
       >{`${chapter} ${title}`}</Box>
     </AccordionSummary>

@@ -12,7 +12,7 @@ const useMobile = (): boolean => {
 const useTablet = (): boolean => {
   const theme = useTheme();
   return useMediaQuery(theme.breakpoints.down("lg"));
-}; 
+};
 
 const AppContext = createContext({
   colors,

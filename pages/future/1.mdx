@@ -1,11 +1,12 @@
-import Head from "next/head";
-import { useAppContext as uac } from "components/AppProvider";
 import { MDXProvider } from "@mdx-js/react";
+import { useAppContext as uac } from "components/AppProvider";
 import { colors } from "styles/theme";
 
 export default function Future1({ children }) {
   return (
-    <MDXProvider components={uac().components(colors.lightBlue)}>
+    <MDXProvider
+      components={uac().components(colors.lightBlue, uac().useMobile())}
+    >
       {children}
     </MDXProvider>
   );

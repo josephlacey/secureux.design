@@ -31,7 +31,7 @@ export const Diagram = () => (
     id="top"
     sx={{
       position: "relative",
-      height: "750px",
+      minHeight: "650px",
       width: "90%",
       aspectRatio: "3 / 2",
       m: "0 auto",
