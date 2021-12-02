@@ -31,11 +31,11 @@ export const Diagram = () => (
     id="top"
     sx={{
       position: "relative",
-      height: "100vh",
+      height: "750px",
       width: "90%",
       aspectRatio: "3 / 2",
       m: "0 auto",
-      mb: "80px",
+      mb: "100px",
     }}
   >
     <Box sx={{ width: "35%", position: "absolute", top: 0, left: "0%" }}>

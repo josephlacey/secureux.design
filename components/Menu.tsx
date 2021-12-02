@@ -56,6 +56,8 @@ export const Menu = () => {
     };
   }, []);
 
+  const menuWidth = isMobile ? "100%" : "75vw";
+
   return (
     <Drawer
       sx={{
@@ -63,12 +65,13 @@ export const Menu = () => {
         overflow: "hidden",
         scrollbarWidth: "none",
         backgroundColor: "black",
-        width: menuOpen ? "75vw" : "60px",
+        width: menuOpen ? menuWidth : "60px",
         maxWidth: "900px",
         transition: "width 0.25s ease-in-out",
         height: "100vh",
         "& .MuiDrawer-paper": {
-          width: menuOpen ? "75vw" : "60px",
+          width: menuOpen ? menuWidth : "60px",
+          pr: "60px",
           maxWidth: "900px",
           transition: "width 0.25s ease-in-out",
           backgroundColor: "black",
@@ -228,6 +231,7 @@ export const Menu = () => {
           width: "60px",
           overflow: "hidden",
           scrollbarWidth: "none",
+          height: "100%",
         }}
       >
         <Grid
@@ -240,7 +244,7 @@ export const Menu = () => {
           alignContent="center"
           sx={{
             width: "60px",
-            height: "100vh",
+            height: "100%",
             overflow: "hidden",
             scrollbarWidth: "none",
           }}

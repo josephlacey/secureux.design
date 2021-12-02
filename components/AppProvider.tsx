@@ -4,10 +4,6 @@ import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import { colors, typography, components } from "styles/theme";
 
-const basePath =
-  process.env.NODE_ENV === "production" ? "/secureux.design/" : "";
-const loader = (image: any) => `${basePath}${image.src}?${image.width ?? ""}`;
-
 const useMobile = (): boolean => {
   const theme = useTheme();
   return useMediaQuery(theme.breakpoints.down("sm"));
@@ -16,13 +12,12 @@ const useMobile = (): boolean => {
 const useTablet = (): boolean => {
   const theme = useTheme();
   return useMediaQuery(theme.breakpoints.down("lg"));
-};
+}; 
 
 const AppContext = createContext({
   colors,
   typography,
   components,
-  loader,
   useMobile,
   useTablet,
 });
@@ -32,7 +27,6 @@ export const AppProvider: FC = ({ children }) => {
     colors,
     typography,
     components,
-    loader,
     useMobile,
     useTablet,
   };
