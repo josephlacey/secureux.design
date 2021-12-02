@@ -7,6 +7,6 @@ const withMDX = require("@next/mdx")({
 module.exports = withMDX({
   reactStrictMode: true,
   basePath: isProd ? prefix : "",
-  trailingSlash: true,
-  pageExtensions: ["js", "jsx", "ts", "tsx", "mdx"],
+  assetPrefix: "",
+  pageExtensions: ["ts", "tsx", "mdx"],
 });
