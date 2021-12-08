@@ -2,7 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 import { useAppContext } from "components/AppProvider";
 
-export const IdeationPrototyping: FC = () => {
+export const ResearchPrototyping: FC = () => {
   const {
     colors: { mintGreen, limeGreen, brightBlue },
   } = useAppContext();
@@ -22,7 +22,7 @@ export const IdeationPrototyping: FC = () => {
             .pill2:hover { fill: ${brightBlue} }
             .title { font: 400 25px Helvetica; color: black; }`}
       </style>
-      <Link href="/ideation/1" passHref>
+      <Link href="/research/4" passHref>
         <rect
           x="15"
           y="15"
@@ -46,9 +46,9 @@ export const IdeationPrototyping: FC = () => {
       </marker>
 
       <text x="210" y="160" className="title">
-        2 IDEATION
+        2 RESEARCH
       </text>
-      <Link href="/prototyping/1" passHref>
+      <Link href="/prototyping/8" passHref>
         <rect
           x="580"
           y="280"

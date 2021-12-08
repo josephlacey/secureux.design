@@ -6,23 +6,23 @@ import {
   Box,
 } from "@mui/material";
 
-interface ChapterAccordionProps {
+interface PhaseAccordionProps {
   title: string;
-  chapter: number;
-  expandedChapter: number;
-  toggleExpandedChapter: any;
+  phase: number;
+  expandedPhase: number;
+  toggleExpandedPhase: any;
 }
 
-export const ChapterAccordion: FC<ChapterAccordionProps> = ({
+export const PhaseAccordion: FC<PhaseAccordionProps> = ({
   title,
-  chapter,
-  expandedChapter,
-  toggleExpandedChapter,
+  phase,
+  expandedPhase,
+  toggleExpandedPhase,
   children,
 }) => (
   <Accordion
-    expanded={expandedChapter === chapter}
-    onClick={() => toggleExpandedChapter(chapter)}
+    expanded={expandedPhase === phase}
+    onClick={() => toggleExpandedPhase(phase)}
     disableGutters
     elevation={0}
     square
@@ -38,7 +38,7 @@ export const ChapterAccordion: FC<ChapterAccordionProps> = ({
           ":hover": { color: "#0000ff" },
           "@media (max-width: 400px)": { fontSize: "24px" },
         }}
-      >{`${chapter} ${title}`}</Box>
+      >{`Phase ${phase}: ${title}`}</Box>
     </AccordionSummary>
     <AccordionDetails>
       <Box sx={{ color: "white" }}>{children}</Box>

@@ -5,8 +5,8 @@ import { Grid, Drawer, Box, IconButton, Button } from "@mui/material";
 import { InfoOutlined, Twitter, Instagram } from "@mui/icons-material";
 import LogoWhite from "public/images/logo-white-vertical.svg";
 import LogoSmallWhite from "public/images/uxs-icon-1-white.svg";
-import { ChapterAccordion } from "./ChapterAccordion";
-import { useAppContext } from "./AppProvider";
+import { PhaseAccordion } from "components/PhaseAccordion";
+import { useAppContext } from "components/AppProvider";
 
 export const Menu = () => {
   const {
@@ -109,78 +109,118 @@ export const Menu = () => {
 
         <Grid item>
           <Box sx={mainMenuItemStyles}>
-            <Link href="/research/1">Phases</Link>
+            <Link href="/centering/1">Phases</Link>
           </Box>
-          <ChapterAccordion
-            title="Research"
-            chapter={1}
-            expandedChapter={expandedChapter}
-            toggleExpandedChapter={toggleExpandedChapter}
+          <PhaseAccordion
+            title="Centering"
+            phase={1}
+            expandedPhase={expandedChapter}
+            toggleExpandedPhase={toggleExpandedChapter}
           >
             <Box sx={chapterStyles}>
-              <Link href="/research/1">Chapter 1</Link>
+              <Link href="/centering/how-to-use">How to Use</Link>
             </Box>
             <Box sx={chapterStyles}>
-              <Link href="/research/2">Chapter 2</Link>
+              <Link href="/centering/intro">Intro</Link>
             </Box>
             <Box sx={chapterStyles}>
-              <Link href="/research/3">Chapter 3</Link>
-            </Box>
-          </ChapterAccordion>
-        </Grid>
-
-        <Grid item>
-          <ChapterAccordion
-            title="Ideation"
-            chapter={2}
-            expandedChapter={expandedChapter}
-            toggleExpandedChapter={toggleExpandedChapter}
-          >
-            <Box sx={chapterStyles}>
-              <Link href="/ideation/1">Chapter 1</Link>
-            </Box>
-          </ChapterAccordion>
-        </Grid>
-
-        <Grid item>
-          <ChapterAccordion
-            title="Prototyping / Building"
-            chapter={3}
-            expandedChapter={expandedChapter}
-            toggleExpandedChapter={toggleExpandedChapter}
-          >
-            <Box sx={chapterStyles}>
-              <Link href="/prototyping/1">Chapter 1</Link>
-            </Box>
-          </ChapterAccordion>
-        </Grid>
-
-        <Grid item>
-          <ChapterAccordion
-            title="Launching / Community Feedback"
-            chapter={4}
-            expandedChapter={expandedChapter}
-            toggleExpandedChapter={toggleExpandedChapter}
-          >
-            <Box sx={chapterStyles}>
-              <Link href="/launching/1">Chapter 1</Link>
-            </Box>
-          </ChapterAccordion>
-        </Grid>
-
-        <Grid item>
-          <ChapterAccordion
-            title="Looking to Future / Next Steps"
-            chapter={5}
-            expandedChapter={expandedChapter}
-            toggleExpandedChapter={toggleExpandedChapter}
-          >
-            <Box sx={chapterStyles}>
-              <Link href="/future/1" passHref>
-                Chapter 1
+              <Link href="/centering/1">
+                Chapter 1 – Figuring Out the Problem
               </Link>
             </Box>
-          </ChapterAccordion>
+            <Box sx={chapterStyles}>
+              <Link href="/centering/2">
+                Chapter 2 — Working With a Community
+              </Link>
+            </Box>
+            <Box sx={chapterStyles}>
+              <Link href="/centering/3">
+                Chapter 3 – Understanding Harm (Threat Modeling)
+              </Link>
+            </Box>
+          </PhaseAccordion>
+        </Grid>
+
+        <Grid item>
+          <PhaseAccordion
+            title="Research"
+            phase={2}
+            expandedPhase={expandedChapter}
+            toggleExpandedPhase={toggleExpandedChapter}
+          >
+            <Box sx={chapterStyles}>
+              <Link href="/research/4">Chapter 4 – Research</Link>
+            </Box>
+            <Box sx={chapterStyles}>
+              <Link href="/research/5">Chapter 5 – Designing for Everyone</Link>
+            </Box>
+            <Box sx={chapterStyles}>
+              <Link href="/research/6">Chapter 6 – Personas</Link>
+            </Box>
+            <Box sx={chapterStyles}>
+              <Link href="/research/7">
+                Chapter 7 – Ideation / Validating Research Findings
+              </Link>
+            </Box>
+          </PhaseAccordion>
+        </Grid>
+
+        <Grid item>
+          <PhaseAccordion
+            title="Prototyping"
+            phase={3}
+            expandedPhase={expandedChapter}
+            toggleExpandedPhase={toggleExpandedChapter}
+          >
+            <Box sx={chapterStyles}>
+              <Link href="/prototyping/8">
+                Chapter 8 – Community Feedback and Testing
+              </Link>
+            </Box>
+            <Box sx={chapterStyles}>
+              <Link href="/prototyping/9">
+                Chapter 9 – Revising the Prototype
+              </Link>
+            </Box>
+          </PhaseAccordion>
+        </Grid>
+
+        <Grid item>
+          <PhaseAccordion
+            title="Launching"
+            phase={4}
+            expandedPhase={expandedChapter}
+            toggleExpandedPhase={toggleExpandedChapter}
+          >
+            <Box sx={chapterStyles}>
+              <Link href="/launching/10">
+                Chapter 10 – Building a Secure, Ethical Prototype
+              </Link>
+            </Box>
+            <Box sx={chapterStyles}>
+              <Link href="/launching/11">Chapter 11 – Iteration</Link>
+            </Box>
+          </PhaseAccordion>
+        </Grid>
+
+        <Grid item>
+          <PhaseAccordion
+            title="Looking to Future"
+            phase={5}
+            expandedPhase={expandedChapter}
+            toggleExpandedPhase={toggleExpandedChapter}
+          >
+            <Box sx={chapterStyles}>
+              <Link href="/future/12" passHref>
+                Chapter 12 – Sustainability
+              </Link>
+            </Box>
+            <Box sx={chapterStyles}>
+              <Link href="/future/13" passHref>
+                Chapter 13 – Importance of This Work
+              </Link>
+            </Box>
+          </PhaseAccordion>
         </Grid>
 
         <Grid item>

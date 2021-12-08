@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import { Research } from "components/home/Research";
-import { IdeationPrototyping } from "components/home/IdeationPrototyping";
+import { Centering } from "components/home/Centering";
+import { ResearchPrototyping } from "components/home/ResearchPrototyping";
 import { LaunchingFuture } from "components/home/LaunchingFuture";
 import Logo from "public/images/uxs-icon-1.svg";
 import Hand from "public/images/uxs-icon-2.svg";
@@ -39,7 +39,7 @@ export const Diagram = () => (
     }}
   >
     <Box sx={{ width: "35%", position: "absolute", top: 0, left: "0%" }}>
-      <Research />
+      <Centering />
     </Box>
 
     <Box
@@ -50,7 +50,7 @@ export const Diagram = () => (
         left: "45%",
       }}
     >
-      <IdeationPrototyping />
+      <ResearchPrototyping />
     </Box>
 
     <Box

@@ -2,7 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 import { useAppContext } from "components/AppProvider";
 
-export const Research: FC = () => {
+export const Centering: FC = () => {
   const {
     colors: { black, orange, brightBlue },
   } = useAppContext();
@@ -19,7 +19,7 @@ export const Research: FC = () => {
             .pill:hover { fill: ${brightBlue} }
             .title { font: bold 30px sans-serif; color: ${black}; }`}
       </style>
-      <Link href="/research/2" passHref>
+      <Link href="/centering/intro" passHref>
         <rect
           x="15"
           y="15"
@@ -55,7 +55,7 @@ export const Research: FC = () => {
         markerEnd="url(#arrowhead)"
       />
       <text x="150" y="160" className="title">
-        1 RESEARCH
+        1 CENTERING
       </text>
     </svg>
   );
