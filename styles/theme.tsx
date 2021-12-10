@@ -238,8 +238,21 @@ export const components = (
 
     return <Definition id={id}>{text}</Definition>;
   },
-  // top tags
   ul: ({ children }) => (
+    <Grid item xs={6}>
+      <Box
+        component="ul"
+        sx={{
+          ...typography.p,
+          mt: "25px",
+        }}
+      >
+        {children}
+      </Box>
+    </Grid>
+  ),
+  // top tags
+  h5: ({ children }) => (
     <Grid item xs={8}>
       <Box
         component="ul"

@@ -22,7 +22,7 @@ export const ResearchPrototyping: FC = () => {
             .pill2:hover { fill: ${brightBlue} }
             .title { font: 400 25px Helvetica; color: black; }`}
       </style>
-      <Link href="/research/4" passHref>
+      <Link href="/research/" passHref>
         <rect
           x="15"
           y="15"
@@ -48,7 +48,7 @@ export const ResearchPrototyping: FC = () => {
       <text x="210" y="160" className="title">
         2 RESEARCH
       </text>
-      <Link href="/prototyping/8" passHref>
+      <Link href="/prototyping/" passHref>
         <rect
           x="580"
           y="280"
