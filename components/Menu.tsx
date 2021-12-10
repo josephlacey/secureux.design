@@ -108,14 +108,12 @@ export const Menu = () => {
         </Grid>
 
         <Grid item>
-          <Box sx={mainMenuItemStyles}>
-            <Link href="/centering/1">Phases</Link>
-          </Box>
           <PhaseAccordion
-            title="Centering"
+            title="Centering Human Rights"
             phase={1}
             expandedPhase={expandedChapter}
             toggleExpandedPhase={toggleExpandedChapter}
+            link="/centering/"
           >
             <Box sx={chapterStyles}>
               <Link href="/centering/how-to-use">How to Use</Link>
@@ -147,6 +145,7 @@ export const Menu = () => {
             phase={2}
             expandedPhase={expandedChapter}
             toggleExpandedPhase={toggleExpandedChapter}
+            link="/research/"
           >
             <Box sx={chapterStyles}>
               <Link href="/research/4">Chapter 4 – Research</Link>
@@ -171,6 +170,7 @@ export const Menu = () => {
             phase={3}
             expandedPhase={expandedChapter}
             toggleExpandedPhase={toggleExpandedChapter}
+            link="/prototyping/"
           >
             <Box sx={chapterStyles}>
               <Link href="/prototyping/8">
@@ -191,6 +191,7 @@ export const Menu = () => {
             phase={4}
             expandedPhase={expandedChapter}
             toggleExpandedPhase={toggleExpandedChapter}
+            link="/launching/"
           >
             <Box sx={chapterStyles}>
               <Link href="/launching/10">
@@ -209,6 +210,7 @@ export const Menu = () => {
             phase={5}
             expandedPhase={expandedChapter}
             toggleExpandedPhase={toggleExpandedChapter}
+            link="/future/"
           >
             <Box sx={chapterStyles}>
               <Link href="/future/12" passHref>

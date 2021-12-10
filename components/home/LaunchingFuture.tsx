@@ -22,7 +22,7 @@ export const LaunchingFuture: FC = () => {
               .pill4:hover { fill: ${brightBlue} }
               .title { font: 400 25px Helvetica; color: black; }`}
       </style>
-      <Link href="/future/12" passHref>
+      <Link href="/future/" passHref>
         <rect
           x="15"
           y="15"
@@ -48,7 +48,7 @@ export const LaunchingFuture: FC = () => {
       <text x="80" y="160" className="title">
         5 LOOKING TO THE FUTURE
       </text>
-      <Link href="/launching/10" passHref>
+      <Link href="/launching/" passHref>
         <rect
           x="500"
           y="280"

@@ -19,7 +19,7 @@ export const Centering: FC = () => {
             .pill:hover { fill: ${brightBlue} }
             .title { font: bold 30px sans-serif; color: ${black}; }`}
       </style>
-      <Link href="/centering/intro" passHref>
+      <Link href="/centering/" passHref>
         <rect
           x="15"
           y="15"
@@ -54,8 +54,8 @@ export const Centering: FC = () => {
         strokeWidth="4"
         markerEnd="url(#arrowhead)"
       />
-      <text x="150" y="160" className="title">
-        1 CENTERING
+      <text x="64" y="160" className="title">
+        1 CENTERING HUMAN RIGHTS
       </text>
     </svg>
   );
