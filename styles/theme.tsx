@@ -280,7 +280,9 @@ export const components = (
           listStyleType: "none",
         }}
       >
-        {children}
+        {children.split(" | ").map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
       </Box>
     </Grid>
   ),
@@ -308,7 +310,6 @@ export const components = (
             paddingRight: "10px",
             paddingTop: "4px",
             paddingBottom: "4px",
-            whiteSpace: "nowrap",
           },
         }}
       >

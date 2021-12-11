@@ -7,7 +7,7 @@ import { useAppContext } from "./AppProvider";
 
 export const Layout: FC = ({ children }) => {
   const router = useRouter();
-  const currentChapter = router.asPath.split("/")[1];
+  const currentPhase = router.asPath.split("/")[1];
   const {
     colors: { orange, mintGreen, limeGreen, lavender, lightBlue },
   } = useAppContext();
@@ -20,18 +20,18 @@ export const Layout: FC = ({ children }) => {
     null,
     true
   );
-  const chapters = {
-    research: orange,
-    ideation: mintGreen,
-    prototyping: limeGreen,
-    launching: lavender,
-    future: lightBlue,
+  const phases = {
+    centering: { color: orange, number: 1 },
+    research: { color: mintGreen, number: 2 },
+    prototyping: { color: limeGreen, number: 3 },
+    launching: { color: lavender, number: 4 },
+    future: { color: lightBlue, number: 5 },
   };
 
   return (
     <>
-      <Menu />
-      {Object.keys(chapters).includes(currentChapter) ? (
+      <Menu currentPhase={phases[currentPhase]?.number} />
+      {Object.keys(phases).includes(currentPhase) ? (
         <Box
           sx={{
             position: "fixed",
@@ -42,7 +42,7 @@ export const Layout: FC = ({ children }) => {
             marginLeft: "56px",
             opacity: 0.95,
             background: `linear-gradient(to right, #fff 0%, ${
-              chapters[currentChapter]
+              phases[currentPhase]?.color
             } ${scrollPosition}%, #fff ${scrollPosition + 0.0001}%)`,
           }}
         />
