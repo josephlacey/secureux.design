@@ -52,6 +52,10 @@ export const Menu = ({ currentPhase }) => {
   };
 
   useEffect(() => {
+    setExpandedPhase(currentPhase);
+  }, [currentPhase]);
+
+  useEffect(() => {
     const closeMenu = () => {
       setMenuOpen(false);
     };
