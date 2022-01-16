@@ -232,12 +232,37 @@ export const components = (
       </Box>
     </Grid>
   ),
-  blockquote: ({ children }) => {
-    const rawText = children.props.children as string;
-    const [id, text] = extractID(rawText);
-
-    return <Definition id={id}>{text}</Definition>;
-  },
+  blockquote: ({ children }) => (
+    <Grid item xs={isMobile ? 8 : 7}>
+      <Grid
+        item
+        container
+        direction="row"
+        columns={isMobile ? 8 : 7}
+        columnSpacing="20px"
+        justifyContent="flex-end"
+      >
+        <Grid
+          item
+          container
+          direction="row"
+          columns={isMobile ? 8 : 7}
+          columnSpacing="20px"
+          justifyContent="flex-end"
+          sx={{
+            marginLeft: "20px",
+            backgroundColor: color,
+            borderRadius: "0px 0px 50px 50px",
+            pb: "40px",
+          }}
+        >
+          <Grid item xs={isMobile ? 8 : 6}>
+            {children}
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
+  ),
   ul: ({ children }) => (
     <Grid item xs={6}>
       <Box
@@ -317,56 +342,12 @@ export const components = (
       </Box>
     </Grid>
   ),
-  pre: ({
-    children: {
-      props: { children },
-    },
-  }) => (
-    <Grid item xs={isMobile ? 8 : 7}>
-      <Grid
-        item
-        container
-        direction="row"
-        columns={isMobile ? 8 : 7}
-        columnSpacing="20px"
-        justifyContent="flex-end"
-      >
-        <Grid
-          item
-          container
-          direction="row"
-          columns={isMobile ? 8 : 7}
-          columnSpacing="20px"
-          justifyContent="flex-end"
-          sx={{
-            marginLeft: "20px",
-            backgroundColor: color,
-            borderRadius: "0px 0px 50px 50px",
-            pb: "40px",
-          }}
-        >
-          <Grid item xs={isMobile ? 8 : 6}>
-            {children.split("\n").map((line, i) => (
-              <Box
-                key={i}
-                component="p"
-                sx={{
-                  ...typography.p,
-                  fontFamily: "Helvetica, sans-serif !important",
-                  width: "100%",
-                  m: 0,
-                  ml: isMobile ? "-20px" : "-34px",
-                  mt: "40px",
-                }}
-              >
-                {line}
-              </Box>
-            ))}
-          </Grid>
-        </Grid>
-      </Grid>
-    </Grid>
-  ),
+  pre: ({ children }) => {
+    const rawText = children.props.children as string;
+    const [id, text] = extractID(rawText);
+
+    return <Definition id={id}>{text}</Definition>;
+  },
   img: ({ src, alt }) => (
     <Grid
       item
