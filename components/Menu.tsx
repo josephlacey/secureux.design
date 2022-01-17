@@ -122,8 +122,10 @@ export const Menu = ({ currentPhase }) => {
             phase={1}
             expandedPhase={expandedPhase}
             toggleExpandedPhase={toggleExpandedPhase}
-            link="/centering/"
           >
+            <Box sx={chapterStyles}>
+              <Link href="/centering/">Overview</Link>
+            </Box>
             <Box sx={chapterStyles}>
               <Link href="/centering/how-to-use">How to Use</Link>
             </Box>
@@ -154,8 +156,10 @@ export const Menu = ({ currentPhase }) => {
             phase={2}
             expandedPhase={expandedPhase}
             toggleExpandedPhase={toggleExpandedPhase}
-            link="/research/"
           >
+            <Box sx={chapterStyles}>
+              <Link href="/research/">Overview</Link>
+            </Box>
             <Box sx={chapterStyles}>
               <Link href="/research/4">Chapter 4 – Research</Link>
             </Box>
@@ -179,8 +183,10 @@ export const Menu = ({ currentPhase }) => {
             phase={3}
             expandedPhase={expandedPhase}
             toggleExpandedPhase={toggleExpandedPhase}
-            link="/prototyping/"
           >
+            <Box sx={chapterStyles}>
+              <Link href="/prototyping/">Overview</Link>
+            </Box>
             <Box sx={chapterStyles}>
               <Link href="/prototyping/8">
                 Chapter 8 – Community Feedback and Testing
@@ -200,8 +206,10 @@ export const Menu = ({ currentPhase }) => {
             phase={4}
             expandedPhase={expandedPhase}
             toggleExpandedPhase={toggleExpandedPhase}
-            link="/launching/"
           >
+            <Box sx={chapterStyles}>
+              <Link href="/launching/">Overview</Link>
+            </Box>
             <Box sx={chapterStyles}>
               <Link href="/launching/10">
                 Chapter 10 – Building a Secure, Ethical Prototype
@@ -219,8 +227,10 @@ export const Menu = ({ currentPhase }) => {
             phase={5}
             expandedPhase={expandedPhase}
             toggleExpandedPhase={toggleExpandedPhase}
-            link="/future/"
           >
+            <Box sx={chapterStyles}>
+              <Link href="/launching/">Overview</Link>
+            </Box>
             <Box sx={chapterStyles}>
               <Link href="/future/12" passHref>
                 Chapter 12 – Sustainability

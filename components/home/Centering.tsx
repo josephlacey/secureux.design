@@ -4,7 +4,7 @@ import { useAppContext } from "components/AppProvider";
 
 export const Centering: FC = () => {
   const {
-    colors: { black, orange, brightBlue },
+    colors: { black, white, red, darkRed },
   } = useAppContext();
 
   return (
@@ -15,9 +15,10 @@ export const Centering: FC = () => {
       viewBox="0 0 500 300"
     >
       <style>
-        {`.pill { fill: ${orange} }
-            .pill:hover { fill: ${brightBlue} }
-            .title { font: bold 30px sans-serif; color: ${black}; }`}
+        {`.centering { fill: ${red} }
+            .centering:hover { fill: ${darkRed}; }
+            .centering-title { font-weight: bold; font-size: 26px; font-family: Helvetica; fill: ${black}; }
+            .centering:hover ~ .centering-title { fill: ${white}; }`}
       </style>
       <Link href="/centering/" passHref>
         <rect
@@ -27,7 +28,7 @@ export const Centering: FC = () => {
           height="270"
           ry="235"
           rx="135"
-          className="pill"
+          className="centering"
         />
       </Link>
       <marker
@@ -54,7 +55,7 @@ export const Centering: FC = () => {
         strokeWidth="4"
         markerEnd="url(#arrowhead)"
       />
-      <text x="64" y="160" className="title">
+      <text x="58" y="160" className="centering-title">
         1 CENTERING HUMAN RIGHTS
       </text>
     </svg>

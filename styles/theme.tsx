@@ -6,11 +6,16 @@ const breakSmall = "@media (max-width: 400px)";
 export const colors: any = {
   white: "#ffffff",
   black: "#000000",
-  orange: "#f94b26",
+  red: "#f94b26",
+  darkRed: "#3c0c02",
   mintGreen: "#a9d8b8",
-  limeGreen: "#d3fc7a",
+  darkMintGreen: "#224428",
+  mustardYellow: "#ffdb57",
+  darkMustardYellow: "#e0b000",
   lavender: "#e2c5e4",
+  darkLavender: "#432046",
   lightBlue: "#42acf7",
+  darkLightBlue: "#02243c",
   brightBlue: "#0000ff",
 };
 
