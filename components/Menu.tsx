@@ -15,7 +15,9 @@ import { useAppContext } from "components/AppProvider";
 
 const Link = ({ href, children, ...props }) => (
   <NextLink href={href} passHref {...props}>
-    <Box onClick={(e) => e.stopPropagation()}>{children}</Box>
+    <Box component="a" onClick={(e: any) => e.stopPropagation()}>
+      {children}
+    </Box>
   </NextLink>
 );
 
