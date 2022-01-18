@@ -5,7 +5,11 @@ import { colors } from "styles/theme";
 export default function Future13({ children }) {
   return (
     <MDXProvider
-      components={uac().components(colors.lightBlue, uac().useMobile())}
+      components={uac().components(
+        colors.lightBlue,
+        colors.darkLightBlue,
+        uac().useMobile()
+      )}
     >
       {children}
     </MDXProvider>

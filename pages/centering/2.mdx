@@ -5,7 +5,11 @@ import { colors } from "styles/theme";
 export default function Centering2({ children }) {
   return (
     <MDXProvider
-      components={uac().components(colors.orange, uac().useMobile())}
+      components={uac().components(
+        colors.red,
+        colors.darkRed,
+        uac().useMobile()
+      )}
     >
       {children}
     </MDXProvider>

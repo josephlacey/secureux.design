@@ -6,6 +6,7 @@ const breakSmall = "@media (max-width: 400px)";
 export const colors: any = {
   white: "#ffffff",
   black: "#000000",
+  gray: "#666666",
   red: "#f94b26",
   darkRed: "#3c0c02",
   mintGreen: "#a9d8b8",
@@ -126,6 +127,7 @@ const extractID = (rawText: string) => {
 
 export const components = (
   color: string = colors.black,
+  darkColor: string = colors.gray,
   isMobile: boolean = false
 ) => ({
   // chapter title
@@ -139,7 +141,7 @@ export const components = (
           component="h1"
           sx={{
             ...typography.h1,
-            color,
+            color: darkColor,
           }}
         >
           {text}

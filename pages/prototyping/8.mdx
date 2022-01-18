@@ -5,7 +5,11 @@ import { colors } from "styles/theme";
 export default function Prototyping8({ children }) {
   return (
     <MDXProvider
-      components={uac().components(colors.limeGreen, uac().useMobile())}
+      components={uac().components(
+        colors.mustardYellow,
+        colors.darkMustardYellow,
+        uac().useMobile()
+      )}
     >
       {children}
     </MDXProvider>

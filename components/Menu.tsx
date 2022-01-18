@@ -58,12 +58,13 @@ export const Menu = ({ currentPhase }) => {
   useEffect(() => {
     const closeMenu = () => {
       setMenuOpen(false);
+      setExpandedPhase(currentPhase);
     };
     Router.events.on("routeChangeComplete", closeMenu);
     return () => {
       Router.events.off("routeChangeComplete", closeMenu);
     };
-  }, []);
+  }, [currentPhase]);
 
   const menuWidth = isMobile ? "100%" : "75vw";
 
