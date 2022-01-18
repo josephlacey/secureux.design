@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import Router from "next/router";
-import Link from "next/link";
+import NextLink from "next/link";
 import { Grid, Drawer, Box, IconButton } from "@mui/material";
 import {
   Home as HomeIcon,
@@ -12,6 +12,12 @@ import LogoWhite from "public/images/logo-white-vertical.svg";
 import LogoSmallWhite from "public/images/uxs-icon-1-white.svg";
 import { PhaseAccordion } from "components/PhaseAccordion";
 import { useAppContext } from "components/AppProvider";
+
+const Link = ({ href, children, ...props }) => (
+  <NextLink href={href} passHref {...props}>
+    <Box onClick={(e) => e.stopPropagation()}>{children}</Box>
+  </NextLink>
+);
 
 export const Menu = ({ currentPhase }) => {
   const {
@@ -51,20 +57,19 @@ export const Menu = ({ currentPhase }) => {
     },
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setExpandedPhase(currentPhase);
   }, [currentPhase]);
 
   useEffect(() => {
     const closeMenu = () => {
       setMenuOpen(false);
-      setExpandedPhase(currentPhase);
     };
     Router.events.on("routeChangeComplete", closeMenu);
     return () => {
       Router.events.off("routeChangeComplete", closeMenu);
     };
-  }, [currentPhase]);
+  }, []);
 
   const menuWidth = isMobile ? "100%" : "75vw";
 
@@ -134,7 +139,7 @@ export const Menu = ({ currentPhase }) => {
               <Link href="/centering/intro">Intro</Link>
             </Box>
             <Box sx={chapterStyles}>
-              <Link href="/centering/1">
+              <Link href="/centering/1" onClick={undefined}>
                 Chapter 1 – Figuring Out the Problem
               </Link>
             </Box>
