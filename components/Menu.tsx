@@ -3,7 +3,6 @@ import Router from "next/router";
 import NextLink from "next/link";
 import { Grid, Drawer, Box, IconButton } from "@mui/material";
 import {
-  Home as HomeIcon,
   Menu as MenuIcon,
   Twitter as TwitterIcon,
   Instagram as InstagramIcon,
@@ -23,7 +22,7 @@ const Link = ({ href, children, ...props }) => (
 
 export const Menu = ({ currentPhase }) => {
   const {
-    typography: { h1 },
+    typography: { h1, h5 },
     colors: { white, brightBlue },
     useMobile,
   } = useAppContext();
@@ -357,9 +356,7 @@ export const Menu = ({ currentPhase }) => {
             xs={1}
           >
             <Link href="/" passHref>
-              <IconButton sx={{ color: "white", mb: "6px" }}>
-                <HomeIcon />
-              </IconButton>
+              <Box sx={{ ...h5, color: "white", ml: -1, mb: 1 }}>Home</Box>
             </Link>
           </Grid>
         </Grid>
