@@ -1,5 +1,3 @@
-const isProd = process.env.NODE_ENV === "production";
-const prefix = "/secureux.design";
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
 });
@@ -9,4 +7,8 @@ module.exports = withMDX({
   basePath: "",
   assetPrefix: "",
   pageExtensions: ["ts", "tsx", "mdx"],
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 });

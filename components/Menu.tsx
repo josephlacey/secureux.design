@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 import Router from "next/router";
 import NextLink from "next/link";
 import { Grid, Drawer, Box, IconButton } from "@mui/material";
@@ -58,7 +58,7 @@ export const Menu = ({ currentPhase }) => {
     },
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setExpandedPhase(currentPhase);
   }, [currentPhase]);
 
@@ -319,6 +319,7 @@ export const Menu = ({ currentPhase }) => {
             <IconButton
               onClick={() => setMenuOpen(!menuOpen)}
               sx={{ color: "white", mb: "6px" }}
+              aria-label="Menu"
             >
               <MenuIcon />
             </IconButton>

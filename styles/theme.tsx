@@ -28,9 +28,10 @@ export const typography: any = {
     textTransform: "uppercase",
     fontWeight: 400,
     margin: 0,
+
     [breakSmall]: {
-      fontSize: "55px",
-      lineHeight: "60px",
+      fontSize: "40px",
+      lineHeight: "50px",
     },
   },
   // section title
@@ -42,8 +43,8 @@ export const typography: any = {
     fontWeight: 400,
     margin: 0,
     [breakSmall]: {
-      fontSize: "32px",
-      lineHeight: "40px",
+      fontSize: "30px",
+      lineHeight: "38px",
     },
   },
   // section title with background
@@ -55,8 +56,8 @@ export const typography: any = {
     fontWeight: 400,
     margin: 0,
     [breakSmall]: {
-      fontSize: "32px",
-      lineHeight: "40px",
+      fontSize: "30px",
+      lineHeight: "38px",
     },
   },
   // exercise title
@@ -67,6 +68,7 @@ export const typography: any = {
     textTransform: "uppercase",
     fontWeight: 400,
     margin: 0,
+    wordBreak: "break-all",
   },
   // tags
   h5: {
@@ -117,7 +119,7 @@ export const typography: any = {
 };
 
 const extractID = (rawText: string) => {
-  const matches = rawText.match(/(?<=\{#)(.*)(?=\}$)/);
+  const matches = []; // rawText.match(/(?<=\{#)(.*)(?=\}$)/);
   const id = matches && matches.length > 0 ? matches[0] : null;
   const text = rawText.replace(/ \{#.*\}$/, "");
 
@@ -134,7 +136,7 @@ export const components = (
     const rawText = children as string;
     const [id, text] = extractID(rawText);
     return (
-      <Grid item xs={isMobile ? 8 : 6}>
+      <Grid item xs={8} sm={6}>
         <Box
           id={id}
           component="h1"
@@ -150,7 +152,7 @@ export const components = (
   },
   // section title
   h2: ({ children }) => (
-    <Grid item xs={isMobile ? 8 : 7}>
+    <Grid item xs={8} sm={7}>
       <Box
         component="h2"
         sx={{
@@ -164,7 +166,7 @@ export const components = (
   ),
   // section title with background
   h3: ({ children }) => (
-    <Grid item xs={isMobile ? 8 : 7}>
+    <Grid item xs={8} sm={7}>
       <Box
         component="h3"
         sx={{
@@ -189,7 +191,7 @@ export const components = (
   ),
   // exercise title
   h4: ({ children }) => (
-    <Grid item xs={isMobile ? 8 : 7}>
+    <Grid item xs={8} sm={7}>
       <Box
         component="h4"
         sx={{
@@ -225,7 +227,7 @@ export const components = (
     </Box>
   ),
   p: ({ children }) => (
-    <Grid item xs={isMobile ? 8 : 6}>
+    <Grid item xs={8} sm={6}>
       <Box
         component="p"
         sx={{
@@ -239,7 +241,7 @@ export const components = (
     </Grid>
   ),
   blockquote: ({ children }) => (
-    <Grid item xs={isMobile ? 8 : 7}>
+    <Grid item xs={8} sm={7}>
       <Grid
         item
         container
@@ -262,7 +264,7 @@ export const components = (
             pb: "40px",
           }}
         >
-          <Grid item xs={isMobile ? 8 : 6}>
+          <Grid item xs={8} sm={6}>
             {children}
           </Grid>
         </Grid>
@@ -270,7 +272,7 @@ export const components = (
     </Grid>
   ),
   ul: ({ children }) => (
-    <Grid item xs={6}>
+    <Grid item xs={8} sm={6}>
       <Box
         component="ul"
         sx={{
@@ -306,7 +308,6 @@ export const components = (
             paddingRight: "10px",
             paddingTop: "4px",
             paddingBottom: "4px",
-            whiteSpace: "nowrap",
           },
           listStyleType: "none",
         }}
@@ -319,7 +320,7 @@ export const components = (
   ),
   // phase / chapter tags
   ol: ({ children }) => (
-    <Grid item xs={isMobile ? 8 : 2}>
+    <Grid item xs={8} sm={2}>
       <Box
         component="ol"
         sx={{
@@ -355,11 +356,7 @@ export const components = (
     return <Definition id={id}>{text}</Definition>;
   },
   img: ({ src, alt }) => (
-    <Grid
-      item
-      xs={isMobile ? 8 : 6}
-      sx={{ maxWidth: "100%", textAlign: "center" }}
-    >
+    <Grid item xs={8} sm={6} sx={{ maxWidth: "100%", textAlign: "center" }}>
       <img
         src={src}
         alt={alt}
