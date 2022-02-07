@@ -7,8 +7,4 @@ module.exports = withMDX({
   basePath: "",
   assetPrefix: "",
   pageExtensions: ["ts", "tsx", "mdx"],
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
 });
