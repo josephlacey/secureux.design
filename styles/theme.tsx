@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import { Definition } from "components/Definition";
 
-export const breakSmall = "@media (max-width: 400px)";
+export const breakSmall = "@media (max-width: 500px)";
 
 export const colors: any = {
   white: "#ffffff",
