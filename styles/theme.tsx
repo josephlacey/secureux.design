@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import { Definition } from "components/Definition";
 
-const breakSmall = "@media (max-width: 400px)";
+export const breakSmall = "@media (max-width: 400px)";
 
 export const colors: any = {
   white: "#ffffff",
@@ -28,7 +28,6 @@ export const typography: any = {
     textTransform: "uppercase",
     fontWeight: 400,
     margin: 0,
-
     [breakSmall]: {
       fontSize: "40px",
       lineHeight: "50px",
@@ -68,7 +67,11 @@ export const typography: any = {
     textTransform: "uppercase",
     fontWeight: 400,
     margin: 0,
-    wordBreak: "break-all",
+    [breakSmall]: {
+      fontSize: "30px",
+      lineHeight: "38px",
+      overflowWrap: "anywhere",
+    },
   },
   // tags
   h5: {
@@ -78,6 +81,9 @@ export const typography: any = {
     textTransform: "uppercase",
     fontWeight: 400,
     margin: 0,
+    [breakSmall]: {
+      overflowWrap: "anywhere",
+    },
   },
   // reading time
   h6: {
@@ -97,6 +103,11 @@ export const typography: any = {
     lineHeight: "28px",
     fontWeight: 400,
     margin: 0,
+    overflowWrap: "anywhere",
+    [breakSmall]: {
+      fontSize: "19px",
+      lineHeight: "24px",
+    },
   },
   blockquote: {
     fontWeight: 400,
@@ -104,13 +115,17 @@ export const typography: any = {
     p: 2,
     pl: 4,
     pr: 4,
+    [breakSmall]: {
+      p: 1,
+      pl: 1,
+      pr: 1,
+    },
     "& div": {
       width: "100%",
     },
     "& p": {
       fontFamily: "Helvetica, sans-serif",
       color: colors.brightBlue,
-      fontSize: "18px",
       width: "100%",
     },
     border: `1px solid ${colors.brightBlue}`,
@@ -259,6 +274,9 @@ export const components = (
           justifyContent="flex-end"
           sx={{
             marginLeft: "20px",
+            [breakSmall]: {
+              marginLeft: "10px",
+            },
             backgroundColor: color,
             borderRadius: "0px 0px 50px 50px",
             pb: "40px",

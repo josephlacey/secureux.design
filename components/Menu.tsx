@@ -11,6 +11,7 @@ import LogoWhite from "public/images/logo-white-vertical.svg";
 import LogoSmallWhite from "public/images/uxs-icon-1-white.svg";
 import { PhaseAccordion } from "components/PhaseAccordion";
 import { useAppContext } from "components/AppProvider";
+import { breakSmall } from "styles/theme";
 
 const Link = ({ href, children, ...props }) => (
   <NextLink href={href} passHref {...props}>
@@ -72,7 +73,10 @@ export const Menu = ({ currentPhase }) => {
     };
   }, []);
 
-  const menuWidth = isMobile ? "100%" : "75vw";
+  const desktopMenuWidth = "75vw";
+  const mobileMenuWidth = "100%";
+  const closedDesktopMenuWidth = "60px";
+  const closedMobileMenuWidth = "40px";
 
   return (
     <Drawer
@@ -81,13 +85,20 @@ export const Menu = ({ currentPhase }) => {
         overflow: "hidden",
         scrollbarWidth: "none",
         backgroundColor: "black",
-        width: menuOpen ? menuWidth : "60px",
+        width: menuOpen ? desktopMenuWidth : closedDesktopMenuWidth,
+        [breakSmall]: {
+          width: menuOpen ? mobileMenuWidth : closedMobileMenuWidth,
+        },
         maxWidth: "900px",
         transition: "width 0.25s ease-in-out",
         height: "100vh",
         "& .MuiDrawer-paper": {
-          width: menuOpen ? menuWidth : "60px",
-          pr: "60px",
+          width: menuOpen ? desktopMenuWidth : closedDesktopMenuWidth,
+          pr: closedDesktopMenuWidth,
+          [breakSmall]: {
+            width: menuOpen ? mobileMenuWidth : closedMobileMenuWidth,
+            pr: closedMobileMenuWidth,
+          },
           maxWidth: "900px",
           transition: "width 0.25s ease-in-out",
           backgroundColor: "black",
@@ -294,7 +305,10 @@ export const Menu = ({ currentPhase }) => {
           position: "absolute",
           right: 0,
           top: 0,
-          width: "60px",
+          width: closedDesktopMenuWidth,
+          [breakSmall]: {
+            width: closedMobileMenuWidth,
+          },
           overflow: "hidden",
           scrollbarWidth: "none",
           height: "100%",
@@ -309,7 +323,10 @@ export const Menu = ({ currentPhase }) => {
           alignItems="center"
           alignContent="center"
           sx={{
-            width: "60px",
+            width: closedDesktopMenuWidth,
+            [breakSmall]: {
+              width: closedMobileMenuWidth,
+            },
             height: "100%",
             overflow: "hidden",
             scrollbarWidth: "none",
@@ -330,9 +347,9 @@ export const Menu = ({ currentPhase }) => {
                 src={LogoSmallWhite.src}
                 alt=""
                 style={{
-                  height: "48px",
+                  height: "32px",
                   margin: "0 auto",
-                  marginLeft: "4px",
+                  marginLeft: "-4px",
                 }}
               />
             </Grid>
@@ -357,7 +374,20 @@ export const Menu = ({ currentPhase }) => {
             xs={1}
           >
             <Link href="/" passHref>
-              <Box sx={{ ...h5, color: "white", ml: -1, mb: 1 }}>Home</Box>
+              <Box
+                sx={{
+                  ...h5,
+                  color: "white",
+                  ml: -1,
+                  mb: 1,
+                  [breakSmall]: {
+                    fontSize: "12px",
+                    ml: 0,
+                  },
+                }}
+              >
+                Home
+              </Box>
             </Link>
           </Grid>
         </Grid>

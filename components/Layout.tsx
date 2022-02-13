@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { Box, Grid } from "@mui/material";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+import { breakSmall } from "styles/theme";
 import { Menu } from "./Menu";
 import { useAppContext } from "./AppProvider";
 
@@ -54,6 +55,10 @@ export const Layout: FC = ({ children }) => {
             height: "40px",
             marginTop: "-40px",
             marginLeft: "56px",
+            [breakSmall]: {
+              marginLeft: "36px",
+              height: "47px",
+            },
             opacity: 0.95,
             background: `linear-gradient(to right, #fff 0%, ${
               phases[currentPhase]?.color
@@ -61,7 +66,17 @@ export const Layout: FC = ({ children }) => {
           }}
         />
       ) : null}
-      <Box sx={{ m: "40px", ml: "80px", maxWidth: 1200 }}>
+      <Box
+        sx={{
+          m: "40px",
+          ml: "80px",
+          [breakSmall]: {
+            m: "20px",
+            ml: "60px",
+          },
+          maxWidth: 1200,
+        }}
+      >
         <Grid
           container
           columns={8}
