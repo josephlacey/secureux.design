@@ -387,4 +387,5 @@ export const components = (
       />
     </Grid>
   ),
+  table: ({ children }) => <table>{children}</table>,
 });

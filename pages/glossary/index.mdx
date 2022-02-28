@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { useAppContext as uac } from "components/AppProvider";
 import { MDXProvider } from "@mdx-js/react";
+import { GlossaryTable } from "components/GlossaryTable";
+import { GlossaryEntry } from "components/GlossaryEntry";
 
 export default function Glossary({ children }) {
   return <MDXProvider components={uac().components()}>{children}</MDXProvider>;
@@ -10,4 +12,60 @@ export default function Glossary({ children }) {
 
 # Glossary
 
-UX Security Curriculum is a project Imust doloris reperum quatist quos velitium volore nostia natqui volenem facest, volore reptae consecaest debitate porpore, ut adi velis endis de nis mi, excerep tatempel el maximpor maionemos eos expliquibus maio vellendendae sit que re de niente omnihit hici ut perorum int, conecae es res dignate maio et fugit que dolectatesto maio. Ra velestis nest renime volorer natemquasint autae dollabo. Ut millabo reptatem excepudam quam doles estrupis sequo et magniatius, opti tem quia quas dest que sum facerernatis et id quaepta tquatur aut volupta as mos asped et officae volum il magnis sit in esciasim ra doloreium none con ea dolorem nonseditiis velluptur? Estionem que re porem quatate nimenis sitisti busam autae dollabo. Ut millabo reptatem excepudam opti tem quia opti tem quia quam doles. Asped magnis non endi accatium hictur acerorem coreium fugia natectaernat ommodip samendi adi aliquaecus, sime nonsedici andandu cipsum quo volor as es dolut aut eum aliquaecus, sime nonsedici andandu cipsum quo volor as es dolut aut eum
+<GlossaryTable>
+  <GlossaryEntry>
+    at-risk-communities
+
+    chapter 1
+
+    Communities are considered to be “at risk” if they face the risk of a variety of human rights abuses from warrantless surveillance, communications &amp; internet shut-downs,
+    targeting, and harassment to more extreme violations like genocide, war
+    crimes, ethnic cleansing and crimes against humanity.
+
+    [un.org](https://un.org)
+
+  </GlossaryEntry>
+  <GlossaryEntry>
+    co-design
+
+    chapter 4
+
+    Co-design is about challenging the imbalance of
+    power held within groups of individuals, who make important decisions about
+    others lives, livelihoods and bodies. Often, with little to no involvement
+    of the people who will be most impacted by those decisions. Co-design seeks
+    to change that through building new relationships, capability and capacity
+    for boundless curiosity. It uses inclusive convening to share knowledge and
+    power.
+
+    [Article](https://open-archive.org)
+
+  </GlossaryEntry>
+  <GlossaryEntry>
+    human rights centered design
+
+    chapter 2
+
+    Human Rights Centered Design
+    insists on the same sovereignty and protection for the user of a product. In
+    essence, this means respecting a user’s privacy and data, thinking about the
+    digital rights of people across the world (instead of just in our own
+    backyards), and designing for all.
+
+    [Article](https://open-archive.org)
+
+  </GlossaryEntry>
+  <GlossaryEntry>
+    participatory research
+
+    chapter 5
+
+    Participatory Research (PR) is a research-to-action approach that emphasizes direct engagement of local
+    priorities and perspectives (Cornwall &amp; Jewkes, 1995). PR can be defined
+    as an umbrella term for research designs, methods, and frameworks that use
+    systematic inquiry in direct collaboration
+
+    [Article](https://open-archive.org)
+
+  </GlossaryEntry>
+</GlossaryTable>
