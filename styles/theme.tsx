@@ -290,12 +290,20 @@ export const components = (
     </Grid>
   ),
   ul: ({ children }) => (
-    <Grid item xs={8} sm={6}>
+    <Grid
+      item
+      xs={8}
+      sm={6}
+      sx={{
+        "& ul": { mb: "25px" },
+        "& li": { mb: "5px" },
+        "& li ul": { mb: "5px" },
+      }}
+    >
       <Box
         component="ul"
         sx={{
           ...typography.p,
-          mt: "25px",
         }}
       >
         {children}
