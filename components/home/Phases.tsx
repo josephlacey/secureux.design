@@ -2,6 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 import { Grid, Box } from "@mui/material";
 import { useAppContext } from "components/AppProvider";
+import { breakSmall } from "styles/theme"
 import { keyframes } from "@mui/system";
 
 const bounce = keyframes`
@@ -25,6 +26,9 @@ export const Phases: FC = () => {
       sx={{
         animation: `${bounce} 4s infinite ease-in-out`,
         alignSelf: "flex-end",
+        [breakSmall]: {
+          display: "none"
+        }
       }}
     >
       <Box sx={{ maxWidth: "50%" }}>
