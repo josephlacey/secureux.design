@@ -83,7 +83,7 @@ export const Diagram = () => (
         [breakSmall]: {
           left: "18%",
           width: "15%",
-          top: "79%"
+          top: "83%"
         }
       }}
     >
@@ -99,7 +99,7 @@ export const Diagram = () => (
         [breakSmall]: {
           left: "2%",
           width: "103%",
-          top: "60%"
+          top: "65%"
         }
       }}
     >
@@ -133,7 +133,7 @@ export const Diagram = () => (
         animation: `${pulse} 3s infinite ease-in-out`,
         animationDirection: "alternate",
         [breakSmall]: {
-          top: "58%",
+          top: "62%",
           left: "74%",
           width: "18%"
         }
