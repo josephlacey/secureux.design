@@ -41,12 +41,17 @@ export const GlossaryEntry = ({ children }) => {
           alignItems="center"
           wrap="nowrap"
           spacing={1}
+          sx={{
+            fontSize: "15px",
+          lineHeight: "21.6px",
+          "& a": { color: "black" },
+          }}
         >
           <Grid item>
             <img
               src={DiagonalArrow.src}
               alt=""
-              style={{ width: "13px", height: "13px" }}
+              style={{ width: "11px", height: "11px" }}
             />
           </Grid>
           <Grid item>{url}</Grid>
