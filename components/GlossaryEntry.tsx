@@ -1,6 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import DiagonalArrow from "public/images/diagonal-arrow.svg";
 import { useAppContext } from "./AppProvider";
+import { breakSmall } from "styles/theme";
 
 export const GlossaryEntry = ({ children }) => {
   const {
@@ -16,7 +17,49 @@ export const GlossaryEntry = ({ children }) => {
   const color = chapterColors[chapterNumber - 1];
 
   return (
-    <tr key={term} style={{ verticalAlign: "top" }}>
+    <>
+     <Box component="tr" key={term} sx={{ 
+        verticalAlign: "top", 
+        display: "none",
+        [breakSmall]: {
+          display: "block"
+        } }}>
+        <td colSpan={4}>
+    <Grid direction="column" >
+      <Grid item><Box sx={{...h5, fontSize: 15, mb: 1 }}>{term}</Box></Grid>
+      <Grid item><Box sx={{ ...h5,
+      ml: "-2px",
+      fontSize: 15,
+            display: "inline",
+            borderRadius: "500px",
+            backgroundColor: color,
+            padding: "4px 8px"}}>{chapter}</Box></Grid>
+      <Grid item><Box sx={{pt: 2, pb: 2}}>{definition}</Box></Grid>
+      <Grid
+          container
+          direction="row"
+          alignItems="center"
+          wrap="nowrap"
+          spacing={1}
+        >
+          <Grid item>
+            <img
+              src={DiagonalArrow.src}
+              alt=""
+              style={{ width: "13px", height: "13px" }}
+            />
+          </Grid>
+          <Grid item>{url}</Grid>
+        </Grid>
+    </Grid>
+    </td>
+    </Box>
+     <Box component="tr" key={term} sx={{ 
+        verticalAlign: "top", 
+        [breakSmall]: {
+            visibility: "hidden",
+            display: "none"
+        } }}>
       <td style={{ ...h5, width: "25%" }}>{term}</td>
       <td style={{ paddingTop: "20px" }}>
         <Box
@@ -60,6 +103,7 @@ export const GlossaryEntry = ({ children }) => {
           <Grid item>{url}</Grid>
         </Grid>
       </Box>
-    </tr>
+    </Box>
+    </>
   );
 };
