@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import DiagonalArrow from "public/images/diagonal-arrow.svg";
-import { useAppContext } from "./AppProvider";
 import { breakSmall } from "styles/theme";
+import { useAppContext } from "./AppProvider";
 
 export const GlossaryEntry = ({ children }) => {
   const {

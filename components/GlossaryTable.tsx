@@ -1,6 +1,6 @@
 import { Box, Grid } from "@mui/material";
-import { useAppContext } from "./AppProvider";
 import { breakSmall } from "styles/theme";
+import { useAppContext } from "./AppProvider";
 
 export const GlossaryTable = ({ children }) => {
   const {
@@ -21,7 +21,7 @@ export const GlossaryTable = ({ children }) => {
           },
         }}
       >
-        <Box component="thead" sx={{[breakSmall]: { visibility: "hidden", display: "none" }}}>
+        <Box component="thead" sx={{[breakSmall]: { display: "none" }}}>
           <tr
             style={{
               ...h5,
