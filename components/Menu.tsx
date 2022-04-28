@@ -378,7 +378,7 @@ export const Menu = ({ currentPhase }) => {
                 sx={{
                   ...h5,
                   color: "white",
-                  ml: -1,
+                  ml: 0,
                   mb: 1,
                   [breakSmall]: {
                     fontSize: "12px",
