@@ -11,6 +11,7 @@ export const Layout: FC = ({ children }) => {
   const router = useRouter();
   const currentPhase = router.asPath.split("/")[1];
   const chapter = router.asPath.split("/")[2];
+  console.log({chapter})
   const {
     colors: { red, mintGreen, mustardYellow, lavender, lightBlue },
   } = useAppContext();
@@ -46,7 +47,7 @@ export const Layout: FC = ({ children }) => {
         <title>{title.toUpperCase()}</title>
       </Head>
       <Menu currentPhase={phases[currentPhase]?.number} />
-      {Object.keys(phases).includes(currentPhase) ? (
+      {Object.keys(phases).includes(currentPhase) && chapter ? (
         <Box
           sx={{
             position: "fixed",
