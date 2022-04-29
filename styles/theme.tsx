@@ -6,6 +6,7 @@ export const breakSmall = "@media (max-width: 500px)";
 export const colors: any = {
   white: "#ffffff",
   black: "#000000",
+  grey: "#aaa",
   red: "#f94b26",
   darkRed: "#3c0c02",
   mintGreen: "#a9d8b8",

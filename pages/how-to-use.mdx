@@ -5,11 +5,7 @@ import { colors } from "styles/theme";
 export default function HowToUse({ children }) {
   return (
     <MDXProvider
-      components={uac().components(
-        colors.red,
-        colors.darkRed,
-        uac().useMobile()
-      )}
+      components={uac().components(colors.grey, colors.grey, uac().useMobile())}
     >
       {children}
     </MDXProvider>
@@ -17,12 +13,6 @@ export default function HowToUse({ children }) {
 }
 
 [comment]: # "↓↓↓ Editable ↓↓↓"
-
-###### 30-60min
-
-##### All Levels
-
-1. Phase 1: Centering Human Rights
 
 # How to Use the Secure UX Curriculum
 

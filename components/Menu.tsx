@@ -39,6 +39,7 @@ export const Menu = ({ currentPhase }) => {
   };
   const mainMenuItemStyles = {
     ...h1,
+    pl: "12px",
     "& a": { color: white },
     "& a:hover": { color: brightBlue },
   };
@@ -132,6 +133,12 @@ export const Menu = ({ currentPhase }) => {
           <Box sx={mainMenuItemStyles}>
             <Link href="/about">About</Link>
           </Box>
+          <Box sx={{ ...chapterStyles, pl: "14px" }}>
+            <Link href="/how-to-use">How to Use</Link>
+          </Box>
+          <Box sx={{ ...chapterStyles, pl: "14px" }}>
+            <Link href="/intro">Intro</Link>
+          </Box>
         </Grid>
 
         <Grid item>
@@ -144,12 +151,7 @@ export const Menu = ({ currentPhase }) => {
             <Box sx={chapterStyles}>
               <Link href="/centering/">Overview</Link>
             </Box>
-            <Box sx={chapterStyles}>
-              <Link href="/centering/how-to-use">How to Use</Link>
-            </Box>
-            <Box sx={chapterStyles}>
-              <Link href="/centering/intro">Intro</Link>
-            </Box>
+
             <Box sx={chapterStyles}>
               <Link href="/centering/1" onClick={undefined}>
                 Chapter 1 – Figuring Out the Problem
@@ -247,7 +249,7 @@ export const Menu = ({ currentPhase }) => {
             toggleExpandedPhase={toggleExpandedPhase}
           >
             <Box sx={chapterStyles}>
-              <Link href="/launching/">Overview</Link>
+              <Link href="/future/">Overview</Link>
             </Box>
             <Box sx={chapterStyles}>
               <Link href="/future/12" passHref>
