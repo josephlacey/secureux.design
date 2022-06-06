@@ -325,6 +325,7 @@ export const components = (
       xs={8}
       sm={6}
       sx={{
+        mt: "10px",
         "& ul": { mb: "25px" },
         "& li": { mb: "5px" },
         "& li ul": { mb: "5px" },
