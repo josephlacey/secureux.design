@@ -142,7 +142,7 @@ const extractID = (rawText: string) => {
   return [id, text];
 };
 
-const generateAnchor = (text: string) => text.toLowerCase().replace(/ /g, "-");
+const generateAnchor = (text: string) => text?.toLowerCase().replace(/ /g, "-");
 
 export const components = (
   color: string = colors.black,
@@ -151,8 +151,10 @@ export const components = (
 ) => ({
   // chapter title
   h1: ({ children }) => {
-    const text = children as string;
-    const anchor = generateAnchor(text);
+    let anchor;
+    if (typeof children === "string") {
+      anchor = generateAnchor(children as string);
+    }
 
     return (
       <Grid item xs={8} sm={6}>
@@ -163,16 +165,18 @@ export const components = (
             color: darkColor,
           }}
         >
-          <a id={anchor} />
-          {text}
+          {anchor ? <a id={anchor} /> : null}
+          {children}
         </Box>
       </Grid>
     );
   },
   // section title
   h2: ({ children }) => {
-    const text = children as string;
-    const anchor = generateAnchor(text);
+    let anchor;
+    if (typeof children === "string") {
+      anchor = generateAnchor(children as string);
+    }
 
     return (
       <Grid item xs={8} sm={7}>
@@ -191,8 +195,10 @@ export const components = (
   },
   // section title with background
   h3: ({ children }) => {
-    const text = children as string;
-    const anchor = generateAnchor(text);
+    let anchor;
+    if (typeof children === "string") {
+      anchor = generateAnchor(children as string);
+    }
 
     return (
       <Grid item xs={8} sm={7}>
@@ -222,8 +228,10 @@ export const components = (
   },
   // exercise title
   h4: ({ children }) => {
-    const text = children as string;
-    const anchor = generateAnchor(text);
+    let anchor;
+    if (typeof children === "string") {
+      anchor = generateAnchor(children as string);
+    }
 
     return (
       <Grid item xs={8} sm={7}>
