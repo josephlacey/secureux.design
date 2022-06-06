@@ -256,6 +256,14 @@ export const components = (
       </Box>
     </Grid>
   ),
+  a: ({ children, href }) =>
+    href.startsWith("http") ? (
+      <a href={href} target="_blank" rel="noopener">
+        {children}
+      </a>
+    ) : (
+      <a href={href}>{children}</a>
+    ),
   blockquote: ({ children }) => (
     <Grid item xs={8} sm={7}>
       <Grid
