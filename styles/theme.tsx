@@ -142,6 +142,8 @@ const extractID = (rawText: string) => {
   return [id, text];
 };
 
+const generateAnchor = (text: string) => text.toLowerCase().replace(/ /g, "-");
+
 export const components = (
   color: string = colors.black,
   darkColor: string = colors.black,
@@ -149,83 +151,102 @@ export const components = (
 ) => ({
   // chapter title
   h1: ({ children }) => {
-    const rawText = children as string;
-    const [id, text] = extractID(rawText);
+    const text = children as string;
+    const anchor = generateAnchor(text);
+
     return (
       <Grid item xs={8} sm={6}>
         <Box
-          id={id}
           component="h1"
           sx={{
             ...typography.h1,
             color: darkColor,
           }}
         >
+          <a id={anchor} />
           {text}
         </Box>
       </Grid>
     );
   },
   // section title
-  h2: ({ children }) => (
-    <Grid item xs={8} sm={7}>
-      <Box
-        component="h2"
-        sx={{
-          ...typography.h2,
-          mt: "80px",
-        }}
-      >
-        {children}
-      </Box>
-    </Grid>
-  ),
-  // section title with background
-  h3: ({ children }) => (
-    <Grid item xs={8} sm={7}>
-      <Box
-        component="h3"
-        sx={{
-          ...typography.h3,
-          mt: "80px",
-        }}
-      >
-        <mark
-          style={{
-            borderRadius: "500px",
-            backgroundColor: color,
-            borderTop: `0px solid ${color}`,
-            borderRight: `20px solid ${color}`,
-            borderBottom: `0px solid ${color}`,
-            borderLeft: `20px solid ${color}`,
+  h2: ({ children }) => {
+    const text = children as string;
+    const anchor = generateAnchor(text);
+
+    return (
+      <Grid item xs={8} sm={7}>
+        <Box
+          component="h2"
+          sx={{
+            ...typography.h2,
+            mt: "80px",
           }}
         >
+          <a id={anchor} />
           {children}
-        </mark>
-      </Box>
-    </Grid>
-  ),
+        </Box>
+      </Grid>
+    );
+  },
+  // section title with background
+  h3: ({ children }) => {
+    const text = children as string;
+    const anchor = generateAnchor(text);
+
+    return (
+      <Grid item xs={8} sm={7}>
+        <Box
+          component="h3"
+          sx={{
+            ...typography.h3,
+            mt: "80px",
+          }}
+        >
+          <mark
+            style={{
+              borderRadius: "500px",
+              backgroundColor: color,
+              borderTop: `0px solid ${color}`,
+              borderRight: `20px solid ${color}`,
+              borderBottom: `0px solid ${color}`,
+              borderLeft: `20px solid ${color}`,
+            }}
+          >
+            <a id={anchor} />
+            {children}
+          </mark>
+        </Box>
+      </Grid>
+    );
+  },
   // exercise title
-  h4: ({ children }) => (
-    <Grid item xs={8} sm={7}>
-      <Box
-        component="h4"
-        sx={{
-          ...typography.h4,
-          width: "100%",
-          borderRadius: "50px 50px 0px 0px",
-          backgroundColor: color,
-          pt: "26px",
-          pl: "20px",
-          pr: "20px",
-          pb: 0,
-          mt: "80px",
-        }}
-      >
-        {children}
-      </Box>
-    </Grid>
-  ),
+  h4: ({ children }) => {
+    const text = children as string;
+    const anchor = generateAnchor(text);
+
+    return (
+      <Grid item xs={8} sm={7}>
+        <Box
+          component="h4"
+          sx={{
+            ...typography.h4,
+            width: "100%",
+            borderRadius: "50px 50px 0px 0px",
+            backgroundColor: color,
+            pt: "26px",
+            pl: "20px",
+            pr: "20px",
+            pb: 0,
+            mt: "80px",
+          }}
+        >
+          <a id={anchor} />
+          {children}
+        </Box>
+      </Grid>
+    );
+  },
   // reading time
   h6: ({ children }) => (
     <Box
