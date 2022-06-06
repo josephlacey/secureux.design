@@ -40,7 +40,7 @@ export const Centering: FC = () => {
         refY="3.5"
         orient="auto"
       >
-        <polygon points="0 0, 7 3.5, 0 7"     cursor="pointer"/>
+        <polygon points="0 0, 7 3.5, 0 7" cursor="pointer" />
       </marker>
       <path
         d="M150,285 A 1 1 0 0 1 150 15 L285,15"

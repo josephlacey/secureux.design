@@ -7,7 +7,7 @@ export const colors: any = {
   white: "#ffffff",
   black: "#000000",
   grey: "#aaa",
-  red: "#f94b26",
+  red: "#ff6050",
   darkRed: "#3c0c02",
   mintGreen: "#a9d8b8",
   darkMintGreen: "#224428",
