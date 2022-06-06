@@ -44,4 +44,4 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./out
-          cname: web.humanrightscentered.design
+          cname: www.humanrightscentered.design
