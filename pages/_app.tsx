@@ -5,6 +5,7 @@ import { AppProvider } from "components/AppProvider";
 import { Layout } from "components/Layout";
 import "styles/global.css";
 import Favicon from "public/images/favicon.ico";
+import SiteIcon from "public/images/uxs-icon-1.png";
 
 const UXSecurityWeb = ({ Component, pageProps }: AppProps) => (
   <>
@@ -18,10 +19,7 @@ const UXSecurityWeb = ({ Component, pageProps }: AppProps) => (
         content="An online, open source curriculum focusing on how to center human rights throughout the research, design, and development processes."
       />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:image"
-        content="https://www.humanrightscentered.design/_next/static/media/uxs-icon-1.48c8c236.svg"
-      />
+      <meta name="twitter:image" content={SiteIcon.src} />
 
       <meta property="og:title" content="Human Rights Centered Design" />
       <meta property="og:type" content="website" />
@@ -33,10 +31,7 @@ const UXSecurityWeb = ({ Component, pageProps }: AppProps) => (
         name="og:description"
         content="An online, open source curriculum focusing on how to center human rights throughout the research, design, and development processes."
       />
-      <meta
-        property="og:image"
-        content="https://www.humanrightscentered.design/_next/static/media/uxs-icon-1.48c8c236.svg"
-      />
+      <meta property="og:image" content={SiteIcon.src} />
     </Head>
     <AppProvider>
       <CssBaseline />

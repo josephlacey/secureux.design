@@ -5,7 +5,7 @@ import { Grid, Drawer, Box, IconButton } from "@mui/material";
 import {
   Menu as MenuIcon,
   Twitter as TwitterIcon,
-  Instagram as InstagramIcon,
+  Mail as MailIcon,
 } from "@mui/icons-material";
 import LogoWhite from "public/images/logo-white-vertical.svg";
 import LogoSmallWhite from "public/images/uxs-icon-1-white.svg";
@@ -284,7 +284,7 @@ export const Menu = ({ currentPhase }) => {
           sx={{ marginTop: "80px" }}
         >
           <Grid item sx={{ "& :hover": { color: brightBlue } }}>
-            <Link href="https://twitter.com" passHref>
+            <Link href="https://twitter.com/rights_design" passHref>
               <IconButton sx={{ color: "white" }}>
                 <TwitterIcon />
                 <Box sx={{ ml: "8px" }}>Twitter</Box>
@@ -292,10 +292,10 @@ export const Menu = ({ currentPhase }) => {
             </Link>
           </Grid>
           <Grid item sx={{ "& :hover": { color: brightBlue } }}>
-            <Link href="https://instagram.com" passHref>
+            <Link href="mailto:secure.ux@gmail.com" passHref>
               <IconButton sx={{ color: "white" }}>
-                <InstagramIcon />
-                <Box sx={{ ml: "8px" }}>Instagram</Box>
+                <MailIcon />
+                <Box sx={{ ml: "8px" }}>Email</Box>
               </IconButton>
             </Link>
           </Grid>
