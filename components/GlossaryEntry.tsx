@@ -8,7 +8,21 @@ export const GlossaryEntry = ({ children }) => {
     typography: { h5 },
     colors: { red, mintGreen, mustardYellow, lavender, lightBlue, grey },
   } = useAppContext();
-  const chapterColors = [red, mintGreen, mustardYellow, lavender, lightBlue];
+  const chapterColors = [
+    red,
+    red,
+    red,
+    mintGreen,
+    mintGreen,
+    mintGreen,
+    mintGreen,
+    mustardYellow,
+    mustardYellow,
+    lavender,
+    lavender,
+    lightBlue,
+    lightBlue,
+  ];
   const term = children[0]?.props.children;
   const chapter = children[1].props.children;
   const chapterNumber = chapter?.split(" ")[1];
@@ -113,22 +127,24 @@ export const GlossaryEntry = ({ children }) => {
             width: "10%",
           }}
         >
-          <Grid
-            container
-            direction="row"
-            alignItems="center"
-            wrap="nowrap"
-            spacing={1}
-          >
-            <Grid item>
-              <img
-                src={DiagonalArrow.src}
-                alt=""
-                style={{ width: "13px", height: "13px" }}
-              />
+          {url ? (
+            <Grid
+              container
+              direction="row"
+              alignItems="center"
+              wrap="nowrap"
+              spacing={1}
+            >
+              <Grid item>
+                <img
+                  src={DiagonalArrow.src}
+                  alt=""
+                  style={{ width: "13px", height: "13px" }}
+                />
+              </Grid>
+              <Grid item>{url}</Grid>
             </Grid>
-            <Grid item>{url}</Grid>
-          </Grid>
+          ) : null}
         </Box>
       </Box>
     </>
