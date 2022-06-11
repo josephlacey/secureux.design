@@ -313,7 +313,7 @@ export const components = (
           sx={{
             marginLeft: "20px",
             [breakSmall]: {
-              marginLeft: "10px",
+              paddingRight: "20px",
             },
             backgroundColor: color,
             borderRadius: "0px 0px 50px 50px",
