@@ -232,7 +232,7 @@ export const Menu = ({ currentPhase }) => {
             </Box>
             <Box sx={chapterStyles}>
               <Link href="/launching/10">
-                Chapter 10 – Building a Secure, Ethical Prototype
+                Chapter 10 – Integrating Feedback and Launching
               </Link>
             </Box>
             <Box sx={chapterStyles}>
