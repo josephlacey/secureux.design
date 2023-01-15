@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
-import { createContext, useContext, FC } from "react";
+import { createContext, useContext, FC, PropsWithChildren } from "react";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import { colors, typography, components } from "styles/theme";
@@ -22,7 +22,7 @@ const AppContext = createContext({
   useTablet,
 });
 
-export const AppProvider: FC = ({ children }) => {
+export const AppProvider: FC<PropsWithChildren> = ({ children }) => {
   const value = {
     colors,
     typography,

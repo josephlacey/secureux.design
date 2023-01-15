@@ -157,7 +157,7 @@ export const components = (
     }
 
     return (
-      <Grid item xs={8} sm={6}>
+      <Grid item xs={8} sm={7}>
         <Box
           component="h1"
           sx={{
@@ -272,7 +272,7 @@ export const components = (
     </Box>
   ),
   p: ({ children }) => (
-    <Grid item xs={8} sm={6}>
+    <Grid item xs={8} sm={7}>
       <Box
         component="p"
         sx={{
@@ -287,7 +287,7 @@ export const components = (
   ),
   a: ({ children, href }) =>
     href.startsWith("http") ? (
-      <a href={href} target="_blank" rel="noopener">
+      <a href={href} target="_blank" rel="noreferrer">
         {children}
       </a>
     ) : (
@@ -299,7 +299,7 @@ export const components = (
         item
         container
         direction="row"
-        columns={isMobile ? 8 : 7}
+        columns={8}
         columnSpacing="20px"
         justifyContent="flex-end"
       >
@@ -320,7 +320,7 @@ export const components = (
             pb: "40px",
           }}
         >
-          <Grid item xs={8} sm={6}>
+          <Grid item xs={8} sm={7}>
             {children}
           </Grid>
         </Grid>
@@ -331,7 +331,7 @@ export const components = (
     <Grid
       item
       xs={8}
-      sm={6}
+      sm={7}
       sx={{
         mt: "15px",
         "& ul": { mb: "25px" },
@@ -385,7 +385,7 @@ export const components = (
   ),
   // phase / chapter tags
   ol: ({ children }) => (
-    <Grid item xs={8} sm={2}>
+    <Grid item xs={8} sm={7}>
       <Box
         component="ol"
         sx={{
@@ -421,10 +421,17 @@ export const components = (
     return <Definition id={id}>{text}</Definition>;
   },
   img: ({ src, alt }) => (
-    <Grid item xs={8} sm={6} sx={{ maxWidth: "100%", textAlign: "center" }}>
+    <Grid
+      item
+      xs={8}
+      sm={7}
+      sx={{ maxWidth: "100%", textAlign: "center" }}
+      className="whatthe"
+    >
       <img
         src={src}
         alt={alt}
+        className="nowwhat"
         style={{
           margin: "0 auto",
           marginTop: "80px",

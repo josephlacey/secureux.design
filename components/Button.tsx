@@ -3,11 +3,11 @@ import Link from "next/link";
 import { Button as MUIButton } from "@mui/material";
 import { useAppContext } from "./AppProvider";
 
-interface ButtonProps {
+type ButtonProps = {
   text: string;
   color: string;
   href: string;
-}
+};
 
 export const Button: FC<ButtonProps> = ({ text, color, href }) => {
   const {

@@ -1,9 +1,10 @@
+import { FC, PropsWithChildren } from "react";
 import { Box, Grid } from "@mui/material";
 import DiagonalArrow from "public/images/diagonal-arrow.svg";
 import { breakSmall } from "styles/theme";
 import { useAppContext } from "./AppProvider";
 
-export const GlossaryEntry = ({ children }) => {
+export const GlossaryEntry: FC<PropsWithChildren> = ({ children }) => {
   const {
     typography: { h5 },
     colors: { red, mintGreen, mustardYellow, lavender, lightBlue, grey },

@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { FC, PropsWithChildren, useState, useEffect } from "react";
 import Router from "next/router";
 import { Box, Grid } from "@mui/material";
 
-export const Definition = ({ id, children }) => {
+type DefinitionProps = PropsWithChildren<{ id: string }>;
+
+export const Definition: FC<DefinitionProps> = ({ id, children }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { FC, useState, useEffect } from "react";
 import Router from "next/router";
 import NextLink from "next/link";
 import { Grid, Drawer, Box, IconButton } from "@mui/material";
@@ -15,13 +15,15 @@ import { breakSmall } from "styles/theme";
 
 const Link = ({ href, children, ...props }) => (
   <NextLink href={href} passHref {...props}>
-    <Box component="a" onClick={(e: any) => e.stopPropagation()}>
-      {children}
-    </Box>
+    <Box onClick={(e: any) => e.stopPropagation()}>{children}</Box>
   </NextLink>
 );
 
-export const Menu = ({ currentPhase }) => {
+type MenuProps = {
+  currentPhase: number;
+};
+
+export const Menu: FC<MenuProps> = ({ currentPhase }) => {
   const {
     typography: { h1, h5 },
     colors: { white, brightBlue },

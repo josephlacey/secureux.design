@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, PropsWithChildren, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { Box, Grid } from "@mui/material";
@@ -7,7 +7,7 @@ import { breakSmall } from "styles/theme";
 import { Menu } from "./Menu";
 import { useAppContext } from "./AppProvider";
 
-export const Layout: FC = ({ children }) => {
+export const Layout: FC<PropsWithChildren> = ({ children }) => {
   const router = useRouter();
   const currentPhase = router.asPath.split("/")[1];
   const chapter = router.asPath.split("/")[2];

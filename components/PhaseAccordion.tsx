@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import {
   Accordion,
   AccordionSummary,
@@ -6,12 +6,12 @@ import {
   Box,
 } from "@mui/material";
 
-interface PhaseAccordionProps {
+type PhaseAccordionProps = PropsWithChildren<{
   title: string;
   phase: number;
   expandedPhase: number;
   toggleExpandedPhase: any;
-}
+}>;
 
 export const PhaseAccordion: FC<PhaseAccordionProps> = ({
   title,

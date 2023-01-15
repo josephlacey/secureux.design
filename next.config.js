@@ -11,8 +11,6 @@ const withMDX = mdx({
 
 const config = withMDX({
   reactStrictMode: true,
-  basePath: "",
-  assetPrefix: "",
   pageExtensions: ["ts", "tsx", "mdx"],
 });
 

@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { Box } from "@mui/material";
 import { Centering } from "components/home/Centering";
 import { ResearchPrototyping } from "components/home/ResearchPrototyping";
@@ -27,7 +28,7 @@ const pulse = keyframes`
   }
 `;
 
-export const Diagram = () => (
+export const Diagram: FC = () => (
   <Box
     id="top"
     sx={{
@@ -38,20 +39,22 @@ export const Diagram = () => (
       m: "0 auto",
       mb: "100px",
       [breakSmall]: {
-        aspectRatio: "inherit"
-      }
+        aspectRatio: "inherit",
+      },
     }}
   >
-    <Box sx={{ 
-      width: "35%", 
-      position: "absolute", 
-      top: 0, 
-      left: 0,
-      [breakSmall]: {
-        left: "10%",
-        width: "57%"
-      }
-    }}>
+    <Box
+      sx={{
+        width: "35%",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        [breakSmall]: {
+          left: "10%",
+          width: "57%",
+        },
+      }}
+    >
       <Centering />
     </Box>
 
@@ -64,8 +67,8 @@ export const Diagram = () => (
         [breakSmall]: {
           top: "20%",
           left: "5%",
-          width: "97%"
-        }
+          width: "97%",
+        },
       }}
     >
       <ResearchPrototyping />
@@ -83,8 +86,8 @@ export const Diagram = () => (
         [breakSmall]: {
           left: "18%",
           width: "15%",
-          top: "83%"
-        }
+          top: "83%",
+        },
       }}
     >
       <img src={Hand.src} alt="" />
@@ -99,8 +102,8 @@ export const Diagram = () => (
         [breakSmall]: {
           left: "2%",
           width: "103%",
-          top: "65%"
-        }
+          top: "65%",
+        },
       }}
     >
       <LaunchingFuture />
@@ -116,8 +119,8 @@ export const Diagram = () => (
         [breakSmall]: {
           width: "35%",
           left: "20%",
-          top: "38%"
-        }
+          top: "38%",
+        },
       }}
     >
       <img src={Logo.src} alt="" />
@@ -135,8 +138,8 @@ export const Diagram = () => (
         [breakSmall]: {
           top: "62%",
           left: "74%",
-          width: "18%"
-        }
+          width: "18%",
+        },
       }}
     >
       <img src={Globe.src} alt="" />
@@ -153,8 +156,8 @@ export const Diagram = () => (
         [breakSmall]: {
           width: "20%",
           top: "12%",
-          left: "77%"
-        }
+          left: "77%",
+        },
       }}
     >
       <img src={Eye.src} alt="" />

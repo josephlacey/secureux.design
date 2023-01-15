@@ -1,8 +1,9 @@
+import { FC, PropsWithChildren } from "react";
 import { Box, Grid } from "@mui/material";
 import { breakSmall } from "styles/theme";
 import { useAppContext } from "./AppProvider";
 
-export const GlossaryTable = ({ children }) => {
+export const GlossaryTable: FC<PropsWithChildren> = ({ children }) => {
   const {
     typography: { h5 },
   } = useAppContext();
@@ -21,7 +22,7 @@ export const GlossaryTable = ({ children }) => {
           },
         }}
       >
-        <Box component="thead" sx={{[breakSmall]: { display: "none" }}}>
+        <Box component="thead" sx={{ [breakSmall]: { display: "none" } }}>
           <tr
             style={{
               ...h5,
