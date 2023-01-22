@@ -36,7 +36,7 @@ export const PhaseAccordion: FC<PhaseAccordionProps> = ({
           fontFamily: "Helvetica",
           textTransform: "uppercase",
           ":hover": { color: "#0000ff" },
-          "@media (max-width: 400px)": { fontSize: "24px" },
+          "@media (maxWidth: 400px)": { fontSize: "24px" },
         }}
       >{`Phase ${phase}: ${title}`}</Box>
     </AccordionSummary>

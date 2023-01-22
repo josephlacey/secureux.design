@@ -373,6 +373,7 @@ export const components = (
             paddingRight: "10px",
             paddingTop: "4px",
             paddingBottom: "4px",
+            backgroundColor: `${color}44`,
           },
           listStyleType: "none",
         }}

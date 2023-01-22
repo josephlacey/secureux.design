@@ -1,1 +1,1 @@
-## SecureUX.Design
+## Human Rights Centered Design Curriculum

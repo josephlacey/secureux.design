@@ -30,10 +30,13 @@ export const GlossaryEntry: FC<PropsWithChildren> = ({ children }) => {
   const definition = children[2]?.props.children;
   const url = children[3]?.props.children;
   const color = chapterColors[chapterNumber - 1] ?? grey;
+  const generateAnchor = (text: string) =>
+    text?.toLowerCase().replace(/ /g, "-");
 
   return (
     <>
       <Box
+        id={generateAnchor(term)}
         component="tr"
         key={term}
         sx={{

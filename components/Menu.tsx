@@ -135,12 +135,22 @@ export const Menu: FC<MenuProps> = ({ currentPhase }) => {
           <Box sx={mainMenuItemStyles}>
             <Link href="/about">About</Link>
           </Box>
-          <Box sx={{ ...chapterStyles, pl: "14px" }}>
-            <Link href="/how-to-use">How to Use</Link>
-          </Box>
-          <Box sx={{ ...chapterStyles, pl: "14px" }}>
-            <Link href="/intro">Intro</Link>
-          </Box>
+        </Grid>
+
+        <Grid item>
+          <PhaseAccordion
+            title="Introduction"
+            phase={0}
+            expandedPhase={expandedPhase}
+            toggleExpandedPhase={toggleExpandedPhase}
+          >
+            <Box sx={chapterStyles}>
+              <Link href="/introduction/how-to-use">How to Use</Link>
+            </Box>
+            <Box sx={chapterStyles}>
+              <Link href="/introduction/intro">Intro</Link>
+            </Box>
+          </PhaseAccordion>
         </Grid>
 
         <Grid item>
@@ -174,7 +184,7 @@ export const Menu: FC<MenuProps> = ({ currentPhase }) => {
 
         <Grid item>
           <PhaseAccordion
-            title="Research"
+            title="Conducting Research"
             phase={2}
             expandedPhase={expandedPhase}
             toggleExpandedPhase={toggleExpandedPhase}

@@ -12,7 +12,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
   const currentPhase = router.asPath.split("/")[1];
   const chapter = router.asPath.split("/")[2];
   const {
-    colors: { red, mintGreen, mustardYellow, lavender, lightBlue },
+    colors: { grey, red, mintGreen, mustardYellow, lavender, lightBlue },
   } = useAppContext();
   const [scrollPosition, setScrollPosition] = useState(0);
   useScrollPosition(
@@ -24,6 +24,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
     true
   );
   const phases = {
+    introduction: { color: grey, number: 0 },
     centering: { color: red, number: 1 },
     research: { color: mintGreen, number: 2 },
     prototyping: { color: mustardYellow, number: 3 },
