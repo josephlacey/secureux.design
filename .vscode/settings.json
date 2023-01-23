@@ -1,3 +1,4 @@
 {
-  "window.title": "secureux"
+  "window.title": "secureux",
+  "debug.javascript.unmapMissingSources": true
 }

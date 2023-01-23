@@ -151,10 +151,10 @@ export const Menu: FC<MenuProps> = ({ currentPhase }) => {
             toggleExpandedPhase={toggleExpandedPhase}
           >
             <Box sx={chapterStyles}>
-              <Link href="/introduction/how-to-use">How to Use</Link>
+              <Link href="/introduction/intro">Intro</Link>
             </Box>
             <Box sx={chapterStyles}>
-              <Link href="/introduction/intro">Intro</Link>
+              <Link href="/introduction/how-to-use">How to Use</Link>
             </Box>
           </PhaseAccordion>
         </Grid>

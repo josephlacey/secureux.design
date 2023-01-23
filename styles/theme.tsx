@@ -157,7 +157,7 @@ export const components = (
     }
 
     return (
-      <Grid item xs={8} sm={7}>
+      <Grid item xs={8} sm={6}>
         <Box
           component="h1"
           sx={{
@@ -272,7 +272,7 @@ export const components = (
     </Box>
   ),
   p: ({ children }) => (
-    <Grid item xs={8} sm={7}>
+    <Grid item xs={8} sm={6}>
       <Box
         component="p"
         sx={{
@@ -299,7 +299,7 @@ export const components = (
         item
         container
         direction="row"
-        columns={8}
+        columns={isMobile ? 8 : 7}
         columnSpacing="20px"
         justifyContent="flex-end"
       >
@@ -320,7 +320,7 @@ export const components = (
             pb: "40px",
           }}
         >
-          <Grid item xs={8} sm={7}>
+          <Grid item xs={8} sm={6}>
             {children}
           </Grid>
         </Grid>
@@ -331,7 +331,7 @@ export const components = (
     <Grid
       item
       xs={8}
-      sm={7}
+      sm={6}
       sx={{
         mt: "15px",
         "& ul": { mb: "25px" },
@@ -386,7 +386,7 @@ export const components = (
   ),
   // phase / chapter tags
   ol: ({ children }) => (
-    <Grid item xs={8} sm={7}>
+    <Grid item xs={8} sm={2}>
       <Box
         component="ol"
         sx={{
@@ -425,7 +425,7 @@ export const components = (
     <Grid
       item
       xs={8}
-      sm={7}
+      sm={6}
       sx={{ maxWidth: "100%", textAlign: "center" }}
       className="whatthe"
     >
