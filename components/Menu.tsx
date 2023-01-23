@@ -42,6 +42,7 @@ export const Menu: FC<MenuProps> = ({ currentPhase }) => {
   const mainMenuItemStyles = {
     ...h1,
     pl: "12px",
+    pb: "6px",
     "& a": { color: white },
     "& a:hover": { color: brightBlue },
   };
@@ -131,6 +132,11 @@ export const Menu: FC<MenuProps> = ({ currentPhase }) => {
           display: menuOpen ? "inherit" : "none",
         }}
       >
+        <Grid item>
+          <Box sx={mainMenuItemStyles}>
+            <Link href="/">Home</Link>
+          </Box>
+        </Grid>
         <Grid item>
           <Box sx={mainMenuItemStyles}>
             <Link href="/about">About</Link>
@@ -346,14 +352,35 @@ export const Menu: FC<MenuProps> = ({ currentPhase }) => {
             scrollbarWidth: "none",
           }}
         >
-          <Grid item>
-            <IconButton
-              onClick={() => setMenuOpen(!menuOpen)}
-              sx={{ color: "white", mb: "6px" }}
-              aria-label="Menu"
-            >
-              <MenuIcon />
-            </IconButton>
+          <Grid item container>
+            <Grid item>
+              <IconButton
+                size="large"
+                onClick={() => setMenuOpen(!menuOpen)}
+                sx={{ color: "white", mb: "6px" }}
+                aria-label="Menu"
+              >
+                <MenuIcon />
+              </IconButton>
+            </Grid>
+            <Grid item>
+              <Link href="/" passHref>
+                <Box
+                  sx={{
+                    ...h5,
+                    color: "white",
+                    ml: 0,
+                    mb: 1,
+                    [breakSmall]: {
+                      fontSize: "12px",
+                      ml: 0,
+                    },
+                  }}
+                >
+                  Home
+                </Box>
+              </Link>
+            </Grid>
           </Grid>
           {isMobile ? (
             <Grid item onClick={() => setMenuOpen(!menuOpen)}>
@@ -373,37 +400,15 @@ export const Menu: FC<MenuProps> = ({ currentPhase }) => {
                 src={LogoWhite.src}
                 alt=""
                 style={{
-                  height: "65vh",
+                  maxHeight: "65vh",
+                  maxWidth: "80%",
                   marginTop: "0 auto",
                   marginLeft: "4px",
                 }}
               />
             </Grid>
           )}
-          <Grid
-            item
-            container
-            justifyContent="space-around"
-            alignItems="flex-end"
-            xs={1}
-          >
-            <Link href="/" passHref>
-              <Box
-                sx={{
-                  ...h5,
-                  color: "white",
-                  ml: 0,
-                  mb: 1,
-                  [breakSmall]: {
-                    fontSize: "12px",
-                    ml: 0,
-                  },
-                }}
-              >
-                Home
-              </Box>
-            </Link>
-          </Grid>
+          <Grid item />
         </Grid>
       </Box>
     </Drawer>

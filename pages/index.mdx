@@ -4,18 +4,14 @@ import { Diagram } from "components/home/Diagram";
 import { Phases } from "components/home/Phases";
 
 export default function Home({ children }) {
-  return (
-    <>
-      <Diagram />
-      <Phases />
-      <MDXProvider components={uac().components}>{children}</MDXProvider>
-    </>
-  );
+  return <MDXProvider components={uac().components}>{children}</MDXProvider>;
 }
 
 [comment]: # "↓↓↓ Editable ↓↓↓"
 
 # The Human Rights Centered Design Curriculum
+
+<Diagram />
 
 Hello!
 

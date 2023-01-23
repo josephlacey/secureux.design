@@ -53,8 +53,8 @@ export const ResearchPrototyping: FC = () => {
         <polygon points="0 0, 10 5, 0 10" />
       </marker>
 
-      <text x="210" y="160" className="research-title">
-        2 RESEARCH
+      <text x="140" y="160" className="research-title">
+        2 CONDUCTING RESEARCH
       </text>
       <Link href="/prototyping/" passHref>
         <rect
