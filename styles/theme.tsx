@@ -407,13 +407,17 @@ export const components = (
             backgroundColor: color,
             borderRadius: "50px",
             marginBottom: "14px",
-            marginRight: "8px",
+            marginRight: "4px",
             paddingLeft: "10px",
             paddingRight: "10px",
             paddingTop: "4px",
             paddingBottom: "4px",
           },
-          "& :nth-child(2), & :nth-child(4)": {
+          "& :nth-of-type(1)": {
+            width: "100%",
+            textAlign: "center",
+          },
+          "& :nth-of-type(2), & :nth-of-type(4)": {
             background: "white",
             border: "1px solid black",
             a: {
