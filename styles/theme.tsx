@@ -185,6 +185,9 @@ export const components = (
           sx={{
             ...typography.h2,
             mt: "80px",
+            a: {
+              color,
+            }
           }}
         >
           <a id={anchor} />
@@ -392,23 +395,34 @@ export const components = (
         sx={{
           ...typography.h5,
           display: "flex",
+          flexWrap: "wrap",
           alignItems: "flex-start",
-          flexDirection: "column",
+          flexDirection: "row",
           p: 0,
           mt: "12px",
           listStyleType: "none",
-          "& li": {
+          "> li": {
             display: "flex",
             alignSelf: "flex-start",
             backgroundColor: color,
             borderRadius: "50px",
             marginBottom: "14px",
-            marginRight: "14px",
+            marginRight: "8px",
             paddingLeft: "10px",
             paddingRight: "10px",
             paddingTop: "4px",
             paddingBottom: "4px",
           },
+          "& :nth-child(2), & :nth-child(4)": {
+            background: "white",
+            border: "1px solid black",
+            a: {
+              color: "black !important",
+            },
+            "&:hover": {
+              backgroundColor: `${color}44`,
+            }
+          }
         }}
       >
         {children}
@@ -423,11 +437,11 @@ export const components = (
   },
   img: ({ src, alt }) => (
     <Grid
+      component="span"
       item
       xs={8}
       sm={6}
       sx={{ maxWidth: "100%", textAlign: "center" }}
-      className="whatthe"
     >
       <img
         src={src}

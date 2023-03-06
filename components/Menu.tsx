@@ -25,7 +25,7 @@ type MenuProps = {
 
 export const Menu: FC<MenuProps> = ({ currentPhase }) => {
   const {
-    typography: { h1, h5 },
+    typography: { h1 },
     colors: { white, brightBlue },
     useMobile,
   } = useAppContext();
@@ -332,7 +332,9 @@ export const Menu: FC<MenuProps> = ({ currentPhase }) => {
           overflow: "hidden",
           scrollbarWidth: "none",
           height: "100%",
+          cursor: "pointer",
         }}
+        onClick={() => setMenuOpen(!menuOpen)}
       >
         <Grid
           item
@@ -352,65 +354,49 @@ export const Menu: FC<MenuProps> = ({ currentPhase }) => {
             scrollbarWidth: "none",
           }}
         >
-          <Grid item container>
-            <Grid item>
+          <Grid item container alignItems="center" alignContent="center">
+            <Grid item sx={{ width: "100%", textAlign: "center" }}>
               <IconButton
                 size="large"
                 onClick={() => setMenuOpen(!menuOpen)}
-                sx={{ color: "white", mb: "6px" }}
+                sx={{ color: "white", m: "6px auto" }}
                 aria-label="Menu"
               >
                 <MenuIcon />
               </IconButton>
             </Grid>
-            <Grid item>
-              <Link href="/" passHref>
-                <Box
-                  sx={{
-                    ...h5,
-                    color: "white",
-                    ml: 0,
-                    mb: 1,
-                    [breakSmall]: {
-                      fontSize: "12px",
-                      ml: 0,
-                    },
-                  }}
-                >
-                  Home
-                </Box>
-              </Link>
-            </Grid>
           </Grid>
-          {isMobile ? (
-            <Grid item onClick={() => setMenuOpen(!menuOpen)}>
-              <img
-                src={LogoSmallWhite.src}
-                alt=""
-                style={{
-                  height: "32px",
-                  margin: "0 auto",
-                  marginLeft: "-4px",
-                }}
-              />
-            </Grid>
-          ) : (
-            <Grid item onClick={() => setMenuOpen(!menuOpen)}>
-              <img
-                src={LogoWhite.src}
-                alt=""
-                style={{
-                  maxHeight: "65vh",
-                  maxWidth: "80%",
-                  marginTop: "0 auto",
-                  marginLeft: "4px",
-                }}
-              />
-            </Grid>
-          )}
+          <Link href="/" onClick={(e: any) => { e.preventDefault() }}>
+            {isMobile ? (
+              <Grid item onClick={() => setMenuOpen(!menuOpen)}>
+                <img
+                  src={LogoSmallWhite.src}
+                  alt=""
+                  style={{
+                    height: "32px",
+                    margin: "0 auto",
+                    marginLeft: "-4px",
+                  }}
+                />
+              </Grid>
+            ) : (
+              <Grid item onClick={() => setMenuOpen(!menuOpen)}>
+                <img
+                  src={LogoWhite.src}
+                  alt=""
+                  style={{
+                    maxHeight: "65vh",
+                    maxWidth: "80%",
+                    marginTop: "0 auto",
+                    marginLeft: "4px",
+                  }}
+                />
+              </Grid>
+            )}
+          </Link>
           <Grid item />
         </Grid>
       </Box>
-    </Drawer>
+    </Drawer >
   );
 };
