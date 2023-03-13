@@ -61,9 +61,8 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
               height: "47px",
             },
             opacity: 0.95,
-            background: `linear-gradient(to right, #fff 0%, ${
-              phases[currentPhase]?.color
-            } ${scrollPosition}%, #fff ${scrollPosition + 0.0001}%)`,
+            background: `linear-gradient(to right, #fff 0%, ${phases[currentPhase]?.color
+              } ${scrollPosition}%, #fff ${scrollPosition + 0.0001}%)`,
           }}
         />
       ) : null}
@@ -76,6 +75,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
             ml: "60px",
           },
           maxWidth: 1200,
+          position: "relative"
         }}
       >
         <Grid

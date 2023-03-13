@@ -134,14 +134,6 @@ export const typography: any = {
   },
 };
 
-const extractID = (rawText: string) => {
-  const matches = []; // rawText.match(/(?<=\{#)(.*)(?=\}$)/);
-  const id = matches && matches.length > 0 ? matches[0] : null;
-  const text = rawText.replace(/ \{#.*\}$/, "");
-
-  return [id, text];
-};
-
 const generateAnchor = (text: string) => text?.toLowerCase().replace(/ /g, "-");
 
 export const components = (
@@ -288,14 +280,22 @@ export const components = (
       </Box>
     </Grid>
   ),
-  a: ({ children, href }) =>
-    href.startsWith("http") ? (
-      <a href={href} target="_blank" rel="noreferrer">
-        {children}
-      </a>
-    ) : (
-      <a href={href}>{children}</a>
-    ),
+  a: ({ children, href }) => {
+    if (href.startsWith("http")) {
+      return (
+        <a href={href} target="_blank" rel="noreferrer">
+          {children}
+        </a>)
+    }
+
+    if (href.includes("#")) {
+      return (
+        <a href={href} onMouseEnter={() => { window.location.hash = href.split("#").pop(); return false; }}>{children}</a>
+      );
+    }
+
+    return <a href={href}>{children}</a>
+  },
   blockquote: ({ children }) => (
     <Grid item xs={8} sm={7}>
       <Grid
@@ -387,57 +387,29 @@ export const components = (
       </Box>
     </Grid>
   ),
-  // phase / chapter tags
   ol: ({ children }) => (
-    <Grid item xs={8} sm={2}>
+    <Grid item xs={8} sm={6}>
       <Box
         component="ol"
         sx={{
-          ...typography.h5,
-          display: "flex",
-          flexWrap: "wrap",
-          alignItems: "flex-start",
-          flexDirection: "row",
-          p: 0,
-          mt: "12px",
-          listStyleType: "none",
-          "> li": {
-            display: "flex",
-            alignSelf: "flex-start",
-            backgroundColor: color,
-            borderRadius: "50px",
-            marginBottom: "14px",
-            marginRight: "4px",
-            paddingLeft: "10px",
-            paddingRight: "10px",
-            paddingTop: "4px",
-            paddingBottom: "4px",
-          },
-          "& :nth-of-type(1)": {
-            width: "100%",
-            textAlign: "center",
-          },
-          "& :nth-of-type(2), & :nth-of-type(4)": {
-            background: "white",
-            border: "1px solid black",
-            a: {
-              color: "black !important",
-            },
-            "&:hover": {
-              backgroundColor: `${color}44`,
-            }
-          }
+          ...typography.p,
+          width: "100%",
+          mt: "40px",
         }}
       >
         {children}
       </Box>
-    </Grid>
-  ),
-  pre: ({ children }) => {
-    const rawText = children.props.children as string;
-    const [id, text] = extractID(rawText);
+    </Grid>),
+  code: ({ children }) => {
+    console.log({ children })
+    if (!children) return null;
 
-    return <Definition id={id}>{text}</Definition>;
+    const rawText = children;
+    const items = rawText?.split("{#")
+    console.log({ items })
+    const [text, id] = [items[0], items[1]?.split("}")?.[0]]
+
+    return <Definition id={id} darkColor={darkColor}>{text}</Definition>;
   },
   img: ({ src, alt }) => (
     <Grid
@@ -450,7 +422,6 @@ export const components = (
       <img
         src={src}
         alt={alt}
-        className="nowwhat"
         style={{
           margin: "0 auto",
           marginTop: "80px",

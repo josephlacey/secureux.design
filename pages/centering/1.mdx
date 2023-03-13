@@ -1,5 +1,6 @@
 import { MDXProvider } from "@mdx-js/react";
 import { useAppContext as uac } from "components/AppProvider";
+import { ChapterInfo } from "components/ChapterInfo";
 import { colors } from "styles/theme";
 
 export default function Centering1({ children }) {
@@ -22,10 +23,16 @@ export default function Centering1({ children }) {
 
 ##### All Levels | 6 Exercises to aid conceptualization and determine viability: Mapping out the Ecosystem, Why & Who, Checking Assumptions, Building on Assumptions, Are We The Best to Solve this Problem? | Sticky-notes/post-its, writing tool + paper or text file
 
-1. Phase 1: Centering Human Rights
-2. [0 ←](/intro)
-3. Chapter 1
-4. [→ 2](/centering/2)
+<ChapterInfo color={colors.red}>
+Phase 1: Centering Human Rights
+
+[0 ←](/intro)
+
+Chapter 1
+
+[→ 2](/centering/2)
+
+</ChapterInfo>
 
 # Figuring out the Problem and Whether You Are The Person to Help Solve it
 
@@ -49,9 +56,9 @@ Ecosystem mapping is one way of approaching these questions. The term ecosystem 
 
 We suggest that you begin the process of ecosystem mapping by examining the landscape of public-interest technology projects in your focus area:
 
-- Identify activists, researchers, policy makers, and technologists with similar concerns, and develop an understanding of their various projects.
-- Consider which problems they are working to solve, which communities they are actively serving, and, most importantly, which problems and communities remain underserved. Your project should be oriented toward these lesser-attended areas.
-- Identify the sphere in which you plan to work, familiarize yourself with similar projects that have preceded your own. Examine these precedents, determine their unique contributions, and appreciate their successes and mistakes.
+1. Identify activists, researchers, policy makers, and technologists with similar concerns, and develop an understanding of their various projects.
+2. Consider which problems they are working to solve, which communities they are actively serving, and, most importantly, which problems and communities remain underserved. Your project should be oriented toward these lesser-attended areas.
+3. Identify the sphere in which you plan to work, familiarize yourself with similar projects that have preceded your own. Examine these precedents, determine their unique contributions, and appreciate their successes and mistakes.
 
 A critical evaluation of this work will ensure that your project represents a genuinely-novel solution to the problem at hand, and it will prove useful when you make decisions about the project’s shape and form during the design phase. Beyond these pragmatic concerns, there is also an ethical obligation to acknowledge and celebrate the work of those who came before you.
 
@@ -122,7 +129,8 @@ Let’s first acknowledge that this is a hard problem to solve and that we might
 > **Where does this ecosystem exist?**
 >
 > Is it software or hardware? What devices are involved? How does your problem relate to problems in the offline world?
-> Remember that online life is connected to offline life. Problems native to the online world often spill over into the offline world. For example, harassment can start online but have offline ramifications like as seen with doxxing, when someone shares an address, phone number, or other personal details about someone they encourage online users to harass offline.
+> `Doxxing is the act of publicly revealing previously private personal information about an individual or organization, usually via the internet. {#doxxing}`
+> Remember that online life is connected to offline life. Problems native to the online world often spill over into the offline world. For example, harassment can start online but have offline ramifications like as seen with [doxxing](/glossary#doxxing), when someone shares an address, phone number, or other personal details about someone they encourage online users to harass offline.
 >
 > **What are the actions that happen in the ecosystem or in your problem statement?**
 >
@@ -235,3 +243,7 @@ Let’s first acknowledge that this is a hard problem to solve and that we might
 > If you answered ‘no’ to 3 or more, you may not be the right person for this job, and you will need to find someone closer to the community to fill this role. If you’ve answered at least 5 of these with “yes”, you are ready to start working with your community!
 
 [Next Chapter: Learn how to employ HRCD with a community!](/centering/2)
+
+```
+
+```

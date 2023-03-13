@@ -1,4 +1,5 @@
 {
   "window.title": "secureux",
-  "debug.javascript.unmapMissingSources": true
+  "debug.javascript.unmapMissingSources": true,
+  "svg.preview.background": "dark-transparent"
 }

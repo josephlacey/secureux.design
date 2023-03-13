@@ -1,42 +1,14 @@
-import { FC, PropsWithChildren, useState, useEffect } from "react";
-import Router from "next/router";
-import { Box, Grid } from "@mui/material";
+import { FC, PropsWithChildren } from "react";
+import dynamic from 'next/dynamic';
 
-type DefinitionProps = PropsWithChildren<{ id: string }>;
+type DefinitionProps = PropsWithChildren<{ id: string, darkColor: string }>;
 
-export const Definition: FC<DefinitionProps> = ({ id, children }) => {
-  const [visible, setVisible] = useState(false);
+const DynamicDefinition = dynamic(() => import('./InternalDefinition').then((mod) => mod.InternalDefinition), {
+  ssr: false,
+});
 
-  useEffect(() => {
-    const updateVisibility = () => {
-      setVisible(window && window?.location?.hash === `#${id}`);
-    };
-    Router.events.on("hashChangeStart", updateVisibility);
-    return () => {
-      Router.events.off("hashChangeComplete", updateVisibility);
-    };
-  }, [id, visible]);
-
-  return visible ? (
-    <Grid item xs={2} sx={{ mt: "40px", mb: "10px" }}>
-      <Box
-        id={id}
-        sx={{
-          transition: "opacity 0.5s ease-in-out",
-          fontWeight: 400,
-          color: "#0000ff",
-          fontSize: "18px",
-          width: "100%",
-          border: "1px solid #0000ff",
-          borderRadius: "50px",
-          paddingLeft: "30px",
-          paddingRight: "30px",
-          paddingTop: "20px",
-          paddingBottom: "20px",
-        }}
-      >
-        {children}
-      </Box>
-    </Grid>
-  ) : null;
-};
+export const Definition: FC<DefinitionProps> = ({ id, darkColor, children }) => (
+  <DynamicDefinition id={id} darkColor={darkColor}>
+    {children}
+  </DynamicDefinition>
+)

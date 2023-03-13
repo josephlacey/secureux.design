@@ -7,8 +7,7 @@ import {
   Twitter as TwitterIcon,
   Mail as MailIcon,
 } from "@mui/icons-material";
-import LogoWhite from "public/images/logo-white-vertical.svg";
-import LogoSmallWhite from "public/images/uxs-icon-1-white.svg";
+import LogoWhite from "public/images/uxs-icon-1-white.svg";
 import { PhaseAccordion } from "components/PhaseAccordion";
 import { useAppContext } from "components/AppProvider";
 import { breakSmall } from "styles/theme";
@@ -366,34 +365,51 @@ export const Menu: FC<MenuProps> = ({ currentPhase }) => {
               </IconButton>
             </Grid>
           </Grid>
-          <Link href="/" onClick={(e: any) => { e.preventDefault() }}>
-            {isMobile ? (
-              <Grid item onClick={() => setMenuOpen(!menuOpen)}>
-                <img
-                  src={LogoSmallWhite.src}
-                  alt=""
-                  style={{
-                    height: "32px",
-                    margin: "0 auto",
-                    marginLeft: "-4px",
-                  }}
-                />
+          {isMobile ? (
+            <Grid item onClick={() => setMenuOpen(!menuOpen)}>
+              <img
+                src={LogoWhite.src}
+                alt=""
+                style={{
+                  height: "32px",
+                  margin: "0 auto",
+                  marginLeft: "-4px",
+                }}
+              />
+            </Grid>
+          ) : (
+            <Grid item container direction="column-reverse" alignItems="center" justifyContent="center" onClick={() => setMenuOpen(!menuOpen)} flexWrap="nowrap" sx={{ maxWidth: "80px" }}>
+              <Grid item sx={{ transform: "rotate(-90deg)" }}><Box sx={{
+                fontSize: 45, color: "white", mr: 12, letterSpacing: 2,
+                textTransform: "uppercase"
+              }}>HRCD</Box></Grid>
+              <Grid item>
+                <Box sx={{
+                  width: "40px",
+                  height: "40px",
+                }}>
+                  <Link href="/" onClick={(e: any) => { e.preventDefault() }} passHref>
+                    <a href="/">
+                      <img
+                        src={LogoWhite.src}
+                        alt=""
+                        style={{
+                          width: "100%",
+                          height: "100%",
+
+                        }}
+                      />
+                    </a>
+                  </Link>
+                </Box>
               </Grid>
-            ) : (
-              <Grid item onClick={() => setMenuOpen(!menuOpen)}>
-                <img
-                  src={LogoWhite.src}
-                  alt=""
-                  style={{
-                    maxHeight: "65vh",
-                    maxWidth: "80%",
-                    marginTop: "0 auto",
-                    marginLeft: "4px",
-                  }}
-                />
-              </Grid>
-            )}
-          </Link>
+              <Grid item sx={{ transform: "rotate(-90deg)" }}><Box sx={{
+                fontSize: 45, color: "white",
+                ml: 24,
+                textTransform: "uppercase"
+              }}>Security</Box></Grid>
+            </Grid>
+          )}
           <Grid item />
         </Grid>
       </Box>
