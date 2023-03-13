@@ -1,5 +1,7 @@
 import { MDXProvider } from "@mdx-js/react";
 import { useAppContext as uac } from "components/AppProvider";
+import { ChapterInfo } from "components/ChapterInfo";
+import { ChapterFooterNav } from "components/ChapterFooterNav";
 import { colors } from "styles/theme";
 
 export default function Launching10({ children }) {
@@ -22,10 +24,16 @@ export default function Launching10({ children }) {
 
 ##### Intermediate Level | Individual quiz activity and group discussion | Pen/Paper, Post-its, Computer Text File
 
-1. Phase 4: Launching
-2. [9 ←](/prototyping/9)
-3. Chapter 10
-4. [→ 11](/launching/11)
+<ChapterInfo color={colors.lavender}>
+Phase 4: Launching
+
+[9 ←](/prototyping/9)
+
+Chapter 10
+
+[→ 11](/launching/11)
+
+</ChapterInfo>
 
 # Preparing for Beta: How to Iterate Post-Alpha Launch
 
@@ -92,3 +100,10 @@ Also, important to note are the communications channels that were set up with th
 > _Evaluation and revisions:_
 >
 > - It is particularly important to set a Code of Conduct and problem tracking mechanism for your tool / tech / platform if you aim to nurture a community through your rights-protecting product or service.
+
+<ChapterFooterNav>
+[← Previous: Building a secure, ethical prototype](/prototyping/9)
+
+[Next: Iteration →](/launching/11)
+
+</ChapterFooterNav>

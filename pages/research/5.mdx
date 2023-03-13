@@ -1,5 +1,7 @@
 import { MDXProvider } from "@mdx-js/react";
 import { useAppContext as uac } from "components/AppProvider";
+import { ChapterInfo } from "components/ChapterInfo";
+import { ChapterFooterNav } from "components/ChapterFooterNav";
 import { colors } from "styles/theme";
 
 export default function Research5({ children }) {
@@ -22,10 +24,16 @@ export default function Research5({ children }) {
 
 ##### Intermediate Level | Individual quiz activity and group discussion | Pen/Paper, Post-its, Computer Text File
 
-1. Phase 2: Conducting Research
-2. [4 ←](/research/4)
-3. Chapter 5
-4. [→ 6](/research/6)
+<ChapterInfo color={colors.mintGreen}>
+Phase 2: Conducting Research
+
+[4 ←](/research/4)
+
+Chapter 5
+
+[→ 6](/research/6)
+
+</ChapterInfo>
 
 # Designing for Everyone
 
@@ -143,4 +151,9 @@ Accessibility is an extremely important issue and domain that cannot be covered 
 - Try using your design without a mouse. It can be hard to scroll.
 - Use tools such as WAVE and Color Oracle to test your design’s accessibility.
 
-[Next Chapter: Creating Personas!!](/research/6)
+<ChapterFooterNav>
+[← Previous: Research methods](/research/4)
+
+[Next: Personas →](/research/6)
+
+</ChapterFooterNav>

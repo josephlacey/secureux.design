@@ -1,6 +1,7 @@
 import { MDXProvider } from "@mdx-js/react";
 import { useAppContext as uac } from "components/AppProvider";
 import { ChapterInfo } from "components/ChapterInfo";
+import { ChapterFooterNav } from "components/ChapterFooterNav";
 import { colors } from "styles/theme";
 
 export default function Centering1({ children }) {
@@ -26,7 +27,7 @@ export default function Centering1({ children }) {
 <ChapterInfo color={colors.red}>
 Phase 1: Centering Human Rights
 
-[0 ←](/intro)
+[0 ←](/introduction/intro)
 
 Chapter 1
 
@@ -242,8 +243,9 @@ Let’s first acknowledge that this is a hard problem to solve and that we might
 >
 > If you answered ‘no’ to 3 or more, you may not be the right person for this job, and you will need to find someone closer to the community to fill this role. If you’ve answered at least 5 of these with “yes”, you are ready to start working with your community!
 
-[Next Chapter: Learn how to employ HRCD with a community!](/centering/2)
+<ChapterFooterNav>
+[← Previous: Introduction](/introduction/intro)
 
-```
+[Next: Working with a community →](/centering/2)
 
-```
+</ChapterFooterNav>

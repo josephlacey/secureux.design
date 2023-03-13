@@ -1,5 +1,7 @@
 import { MDXProvider } from "@mdx-js/react";
 import { useAppContext as uac } from "components/AppProvider";
+import { ChapterInfo } from "components/ChapterInfo";
+import { ChapterFooterNav } from "components/ChapterFooterNav";
 import { colors } from "styles/theme";
 
 export default function Research6({ children }) {
@@ -22,10 +24,16 @@ export default function Research6({ children }) {
 
 ##### Intermediate Level | Individual quiz activity and group discussion | Text files and paper/pen, post-its
 
-1. Phase 2: Conducting Research
-2. [5 ←](/research/5)
-3. Chapter 6
-4. [→ 7](/research/7)
+<ChapterInfo color={colors.mintGreen}>
+Phase 2: Conducting Research
+
+[5 ←](/research/5)
+
+Chapter 6
+
+[→ 7](/research/7)
+
+</ChapterInfo>
 
 # Personas
 
@@ -243,4 +251,9 @@ When people are saying that something needs to change, you actually have to list
 
 [You can use this example to help with this exercise](https://www.hksinc.com/our-news/articles/evidence-empathy-how-personas-can-help-universities-design-better-student-experiences-during-covid-19/).
 
-[Next Chapter: Ideation & Validating Research Findings!](/research/7)
+<ChapterFooterNav>
+[← Previous: Designing for everyone](/research/5)
+
+[Next: Ideation & validating research findings →](/research/7)
+
+</ChapterFooterNav>

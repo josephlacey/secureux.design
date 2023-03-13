@@ -1,5 +1,7 @@
 import { MDXProvider } from "@mdx-js/react";
 import { useAppContext as uac } from "components/AppProvider";
+import { ChapterInfo } from "components/ChapterInfo";
+import { ChapterFooterNav } from "components/ChapterFooterNav";
 import { colors } from "styles/theme";
 
 export default function Research4({ children }) {
@@ -22,10 +24,16 @@ export default function Research4({ children }) {
 
 ##### Intermediate Level | Individual quiz activity and group discussion | Pen/Paper, Post-its, Computer Text File
 
-1. Phase 2: Conducting Research
-2. [3 ←](/centering/3)
-3. Chapter 4
-4. [→ 5](/research/5)
+<ChapterInfo color={colors.mintGreen}>
+Phase 2: Conducting Research
+
+[3 ←](/centering/3)
+
+Chapter 4
+
+[→ 5](/research/5)
+
+</ChapterInfo>
 
 # RESEARCH Methods
 
@@ -340,3 +348,10 @@ The main part is kind of doing iterative research to figure out whatever you bui
 **A High-Level Recap of the Research Process**
 
 # ![Research Workflow](/images/CH4_methods.png)
+
+<ChapterFooterNav>
+[← Previous: Understanding harm (threat modeling)](/centering/3)
+
+[Next: Designing for everyone →](/research/5)
+
+</ChapterFooterNav>

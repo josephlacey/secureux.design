@@ -1,5 +1,7 @@
 import { MDXProvider } from "@mdx-js/react";
 import { useAppContext as uac } from "components/AppProvider";
+import { ChapterInfo } from "components/ChapterInfo";
+import { ChapterFooterNav } from "components/ChapterFooterNav";
 import { colors } from "styles/theme";
 
 export default function Launching11({ children }) {
@@ -22,11 +24,24 @@ export default function Launching11({ children }) {
 
 ##### Intermediate Level | Individual quiz activity and group discussion | Pen/Paper, Post-its, Computer Text File
 
-1. Phase 4: Launching
-2. [10 ←](/launching/10)
-3. Chapter 11
-4. [→ 12](/future/12)
+<ChapterInfo color={colors.lavender}>
+Phase 4: Launching
+
+[10 ←](/launching/10)
+
+Chapter 11
+
+[→ 12](/future/12)
+
+</ChapterInfo>
 
 # Iteration
 
 **Coming soon!**
+
+<ChapterFooterNav>
+[← Previous: Preparing for beta](/launching/10)
+
+[Next: Sustainability →](/future/12)
+
+</ChapterFooterNav>

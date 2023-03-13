@@ -1,5 +1,7 @@
 import { MDXProvider } from "@mdx-js/react";
 import { useAppContext as uac } from "components/AppProvider";
+import { ChapterInfo } from "components/ChapterInfo";
+import { ChapterFooterNav } from "components/ChapterFooterNav";
 import { colors } from "styles/theme";
 
 export default function Centering3({ children }) {
@@ -22,10 +24,16 @@ export default function Centering3({ children }) {
 
 ##### Intermediate Level | Individual quiz activity and group discussion | Pen/paper, text pad for 5 exercises
 
-1. Phase 1: Centering Human Rights
-2. [2 ←](/centering/2)
-3. Chapter 3
-4. [→ 4](/research/4)
+<ChapterInfo color={colors.red}>
+Phase 1: Centering Human Rights
+
+[2 ←](/centering/2)
+
+Chapter 3
+
+[→ 4](/research/4)
+
+</ChapterInfo>
 
 # Understanding Harm (Threat Modeling)
 
@@ -372,4 +380,9 @@ When you and your community work together to create tools and services there wil
 
 Threat-modeling how your work can be abused in different environments is a necessary step that helps prevent you from inadvertently causing serious harm.
 
-[Next Chapter: Dive into Research!](/research/4)
+<ChapterFooterNav>
+[← Previous: Figuring Out the Problem](/centering/2)
+
+[Next: Research methods →](/research/4)
+
+</ChapterFooterNav>

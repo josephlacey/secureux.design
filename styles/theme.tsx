@@ -401,12 +401,10 @@ export const components = (
       </Box>
     </Grid>),
   code: ({ children }) => {
-    console.log({ children })
     if (!children) return null;
 
     const rawText = children;
     const items = rawText?.split("{#")
-    console.log({ items })
     const [text, id] = [items[0], items[1]?.split("}")?.[0]]
 
     return <Definition id={id} darkColor={darkColor}>{text}</Definition>;

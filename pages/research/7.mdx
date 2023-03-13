@@ -1,5 +1,7 @@
 import { MDXProvider } from "@mdx-js/react";
 import { useAppContext as uac } from "components/AppProvider";
+import { ChapterInfo } from "components/ChapterInfo";
+import { ChapterFooterNav } from "components/ChapterFooterNav";
 import { colors } from "styles/theme";
 
 export default function Research7({ children }) {
@@ -22,10 +24,16 @@ export default function Research7({ children }) {
 
 ##### Intermediate Level | Individual quiz activity and group discussion
 
-1. Phase 2: Conducting Research
-2. [6 ←](/research/6)
-3. Chapter 7
-4. [→ 8](/prototyping/8)
+<ChapterInfo color={colors.mintGreen}>
+Phase 2: Conducting Research
+
+[6 ←](/research/6)
+
+Chapter 7
+
+[→ 8](/prototyping/8)
+
+</ChapterInfo>
 
 # Ideation & Validating Research Findings
 
@@ -205,4 +213,9 @@ Additionally, we spent a lot of time talking to the sex worker community, we ske
 **_Nancy’s Advice For Building Social Good Technology for Communities_**
 Designing will definitely be in conversation. I guess really what's always helpful is your limitations like, who are you designing for? Are you part of this community or people that are part of the community on your team? Are you in dialogue? We had an advisory board and you don't want to get steered in like 1,000 directions either. Your tool can only do what it can do. You're going to get a lot of feedback, and then at some point you just have to pull back and be like, okay, really this tool can only do one thing. It can't do everything for everyone. So if you do have to eventually make decisions about what you're trying to impact and just make sure that before you begin to solve someone else's problem, really think about why you're trying to do this. And if you are not officially part of the community you're designing for, make sure you have community buy-in, make sure it's useful. Don't assume people need something unless you have proof that they do.
 
-[Next Chapter: Remote User Testing!!](/prototyping/8)
+<ChapterFooterNav>
+[← Previous: Personas](/research/6)
+
+[Next: Remote user testing →](/prototyping/8)
+
+</ChapterFooterNav>

@@ -388,18 +388,16 @@ export const Menu: FC<MenuProps> = ({ currentPhase }) => {
                   width: "40px",
                   height: "40px",
                 }}>
-                  <Link href="/" onClick={(e: any) => { e.preventDefault() }} passHref>
-                    <a href="/">
-                      <img
-                        src={LogoWhite.src}
-                        alt=""
-                        style={{
-                          width: "100%",
-                          height: "100%",
+                  <Link href="/" onClick={(e: any) => { e.preventDefault() }}>
+                    <img
+                      src={LogoWhite.src}
+                      alt=""
+                      style={{
+                        width: "100%",
+                        height: "100%",
 
-                        }}
-                      />
-                    </a>
+                      }}
+                    />
                   </Link>
                 </Box>
               </Grid>
