@@ -3,9 +3,7 @@ import { Box, Grid } from "@mui/material";
 import { breakSmall } from "styles/theme";
 
 export const Introduction: FC<PropsWithChildren> = ({ children }: any) => {
-  console.log({ children });
   const paragraphs = children.map((c: any) => c.props?.children) || [];
-  console.log({ paragraphs });
 
   return (
     <Grid item xs={7} sx={{ my: 2 }}>
