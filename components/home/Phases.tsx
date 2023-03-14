@@ -16,7 +16,7 @@ const bounce = keyframes`
 
 export const Phases: FC = () => {
   const {
-    colors: { black, white, brightBlue },
+    colors: { black, white },
   } = useAppContext();
 
   return (
