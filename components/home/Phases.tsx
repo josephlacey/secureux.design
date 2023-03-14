@@ -39,7 +39,7 @@ export const Phases: FC = () => {
           viewBox="0 0 200 200"
         >
           <style>
-            {`.phases:hover { fill: ${brightBlue} }
+            {`.phases:hover { fill: ${black} }
             .phasesTitle { font: bold 30px sans-serif; color: ${white}; }`}
           </style>
           <Link href="/#top" passHref>
@@ -72,16 +72,16 @@ export const Phases: FC = () => {
             strokeWidth="4"
             markerEnd="url(#arrowhead)"
           />
-          <Link href="/#top" passHref>
+          <Link href="/#info" passHref>
             <text
-              x="38"
+              x="65"
               y="50"
               fontFamily="Helvetica"
               fontSize="30px"
               fill={white}
               cursor="pointer"
             >
-              PHASES
+              INFO
             </text>
           </Link>
         </svg>

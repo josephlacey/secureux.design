@@ -8,6 +8,7 @@ export const Introduction: FC<PropsWithChildren> = ({ children }: any) => {
   return (
     <Grid item xs={7} sx={{ my: 2 }}>
       <Box
+        id="info"
         sx={{
           fontFamily: "Helvetica, sans-serif",
           fontSize: "24px",
