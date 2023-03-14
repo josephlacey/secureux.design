@@ -4,6 +4,7 @@ import { Box, Grid } from "@mui/material";
 import { Centering } from "components/home/Centering";
 import { ResearchPrototyping } from "components/home/ResearchPrototyping";
 import { LaunchingFuture } from "components/home/LaunchingFuture";
+import { Phases } from "components/home/Phases";
 import { breakSmall } from "styles/theme";
 import Logo from "public/images/uxs-icon-1.svg";
 import Hand from "public/images/uxs-icon-2.svg";
@@ -109,6 +110,22 @@ export const Diagram: FC = () => (
         }}
       >
         <LaunchingFuture />
+      </Box>
+
+      <Box
+        sx={{
+          width: "75%",
+          position: "absolute",
+          top: "85%",
+          left: "10%",
+          [breakSmall]: {
+            left: "2%",
+            width: "103%",
+            top: "65%",
+          },
+        }}
+      >
+        <Phases />
       </Box>
 
       <Box

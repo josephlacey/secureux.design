@@ -45,10 +45,10 @@ export const Phases: FC = () => {
           <Link href="/#top" passHref>
             <rect
               x="0"
-              y="70"
+              y="0"
               width="200"
               height="76"
-              ry="100"
+              ry="0"
               rx="38"
               className="phases"
               fill={black}
@@ -66,7 +66,7 @@ export const Phases: FC = () => {
             <polygon points="0 0, 7 3.5, 0 7" />
           </marker>
           <path
-            d="M100,70 L100,27"
+            d="M100,0 L100,100"
             fill="none"
             stroke="black"
             strokeWidth="4"
@@ -75,7 +75,7 @@ export const Phases: FC = () => {
           <Link href="/#top" passHref>
             <text
               x="38"
-              y="120"
+              y="50"
               fontFamily="Helvetica"
               fontSize="30px"
               fill={white}
