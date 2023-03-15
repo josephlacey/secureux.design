@@ -6,7 +6,7 @@ export const Introduction: FC<PropsWithChildren> = ({ children }: any) => {
   const paragraphs = children.map((c: any) => c.props?.children) || [];
 
   return (
-    <Grid item xs={7} sx={{ my: 2 }}>
+    <Grid item xs={8} sm={7} sx={{ my: 2 }}>
       <Box
         id="info"
         sx={{

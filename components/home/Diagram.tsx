@@ -45,20 +45,20 @@ export const Diagram: FC = () => (
       backgroundRepeat: "no-repeat",
       backgroundSize: "contain",
       width: "100%",
-      minWidth: "600px",
+      minWidth: "200px",
+      [breakSmall]: {
+        mt: 2,
+        mb: -12,
+      },
     }}
   >
     <Box
-      id="top"
       sx={{
         position: "relative",
         width: "100%",
         aspectRatio: "3 / 2",
         m: "0 auto",
         mb: "100px",
-        [breakSmall]: {
-          aspectRatio: "inherit",
-        },
       }}
     >
       <Box
@@ -67,10 +67,6 @@ export const Diagram: FC = () => (
           position: "absolute",
           top: 0,
           left: "36%",
-          [breakSmall]: {
-            left: "10%",
-            width: "57%",
-          },
         }}
       >
         <Centering />
@@ -82,11 +78,6 @@ export const Diagram: FC = () => (
           position: "absolute",
           top: "25.5%",
           left: "85.5%",
-          [breakSmall]: {
-            top: "20%",
-            left: "5%",
-            width: "97%",
-          },
         }}
       >
         <Research />
@@ -98,9 +89,8 @@ export const Diagram: FC = () => (
           top: "76.5%",
           left: "50.25%",
           [breakSmall]: {
-            top: "20%",
-            left: "5%",
-            width: "97%",
+            top: "81.5%",
+            left: "48%",
           },
         }}
       >
@@ -116,9 +106,8 @@ export const Diagram: FC = () => (
           animation: `${pulse} 2s infinite ease-in-out`,
           animationDirection: "alternate",
           [breakSmall]: {
-            left: "18%",
-            width: "15%",
-            top: "83%",
+            top: "70%",
+            left: "-5%",
           },
         }}
       >
@@ -132,9 +121,8 @@ export const Diagram: FC = () => (
           top: "57.5%",
           left: "19.5%",
           [breakSmall]: {
-            left: "2%",
-            width: "103%",
-            top: "65%",
+            top: "61%",
+            left: "15%",
           },
         }}
       >
@@ -148,9 +136,7 @@ export const Diagram: FC = () => (
           top: "1%",
           left: "-1.5%",
           [breakSmall]: {
-            left: "2%",
-            width: "103%",
-            top: "65%",
+            left: "-7%",
           },
         }}
       >
@@ -164,9 +150,7 @@ export const Diagram: FC = () => (
           top: "90%",
           left: "20%",
           [breakSmall]: {
-            left: "2%",
-            width: "103%",
-            top: "65%",
+            display: "none",
           },
         }}
       >
@@ -180,11 +164,6 @@ export const Diagram: FC = () => (
           position: "absolute",
           top: "32%",
           left: "54%",
-          [breakSmall]: {
-            width: "35%",
-            left: "20%",
-            top: "38%",
-          },
         }}
       >
         <Link href="/about">
@@ -201,11 +180,6 @@ export const Diagram: FC = () => (
           animationDelay: "0.5s",
           animation: `${pulse} 3s infinite ease-in-out`,
           animationDirection: "alternate",
-          [breakSmall]: {
-            top: "62%",
-            left: "74%",
-            width: "18%",
-          },
         }}
       >
         <img src={Globe.src} alt="" />
@@ -218,11 +192,6 @@ export const Diagram: FC = () => (
           left: "89%",
           animation: `${pulse} 4s infinite ease-in-out`,
           animationDirection: "alternate",
-          [breakSmall]: {
-            width: "20%",
-            top: "12%",
-            left: "77%",
-          },
         }}
       >
         <img src={Eye.src} alt="" />

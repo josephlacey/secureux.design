@@ -1,5 +1,6 @@
 {
   "window.title": "secureux",
   "debug.javascript.unmapMissingSources": true,
-  "svg.preview.background": "dark-transparent"
+  "svg.preview.background": "dark-transparent",
+  "githubPullRequests.ignoredPullRequestBranches": ["main"]
 }
