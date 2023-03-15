@@ -2,10 +2,13 @@ import { FC } from "react";
 import Link from "next/link";
 import { Box, Grid } from "@mui/material";
 import { Centering } from "components/home/Centering";
-import { ResearchPrototyping } from "components/home/ResearchPrototyping";
-import { LaunchingFuture } from "components/home/LaunchingFuture";
+import { Research } from "components/home/Research";
+import { Prototyping } from "components/home/Prototyping";
+import { Launching } from "components/home/Launching";
+import { Future } from "components/home/Future";
 import { Phases } from "components/home/Phases";
 import { breakSmall } from "styles/theme";
+import Arrows from "public/images/home-arrows.svg";
 import Logo from "public/images/uxs-icon-1.svg";
 import Hand from "public/images/uxs-icon-2.svg";
 import Globe from "public/images/uxs-icon-3.svg";
@@ -31,12 +34,24 @@ const pulse = keyframes`
 `;
 
 export const Diagram: FC = () => (
-  <Grid item xs={7} sx={{ mt: 6, mb: -6 }}>
+  <Grid
+    item
+    xs={7}
+    sx={{
+      mt: 6,
+      mb: -6,
+      backgroundImage: `url(${Arrows.src})`,
+      backgroundPosition: "top center",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "contain",
+      width: "100%",
+      minWidth: "600px",
+    }}
+  >
     <Box
       id="top"
       sx={{
         position: "relative",
-        minHeight: "700px",
         width: "100%",
         aspectRatio: "3 / 2",
         m: "0 auto",
@@ -48,10 +63,10 @@ export const Diagram: FC = () => (
     >
       <Box
         sx={{
-          width: "35%",
+          width: "47%",
           position: "absolute",
           top: 0,
-          left: 0,
+          left: "36%",
           [breakSmall]: {
             left: "10%",
             width: "57%",
@@ -63,10 +78,10 @@ export const Diagram: FC = () => (
 
       <Box
         sx={{
-          width: "60%",
+          width: "15%",
           position: "absolute",
-          top: 0,
-          left: "45%",
+          top: "25.5%",
+          left: "85.5%",
           [breakSmall]: {
             top: "20%",
             left: "5%",
@@ -74,15 +89,29 @@ export const Diagram: FC = () => (
           },
         }}
       >
-        <ResearchPrototyping />
+        <Research />
       </Box>
-
       <Box
         sx={{
-          width: "8%",
+          width: "23%",
           position: "absolute",
-          top: "85%",
-          left: "90%",
+          top: "76.5%",
+          left: "50.25%",
+          [breakSmall]: {
+            top: "20%",
+            left: "5%",
+            width: "97%",
+          },
+        }}
+      >
+        <Prototyping />
+      </Box>
+      <Box
+        sx={{
+          width: "12%",
+          position: "absolute",
+          top: "65%",
+          left: "1%",
           animationDelay: "0.25s",
           animation: `${pulse} 2s infinite ease-in-out`,
           animationDirection: "alternate",
@@ -98,10 +127,10 @@ export const Diagram: FC = () => (
 
       <Box
         sx={{
-          width: "75%",
+          width: "28%",
           position: "absolute",
-          top: "43%",
-          left: "10%",
+          top: "57.5%",
+          left: "19.5%",
           [breakSmall]: {
             left: "2%",
             width: "103%",
@@ -109,15 +138,31 @@ export const Diagram: FC = () => (
           },
         }}
       >
-        <LaunchingFuture />
+        <Launching />
       </Box>
 
       <Box
         sx={{
-          width: "75%",
+          width: "14.5%",
           position: "absolute",
-          top: "85%",
-          left: "10%",
+          top: "1%",
+          left: "-1.5%",
+          [breakSmall]: {
+            left: "2%",
+            width: "103%",
+            top: "65%",
+          },
+        }}
+      >
+        <Future />
+      </Box>
+
+      <Box
+        sx={{
+          width: "18%",
+          position: "absolute",
+          top: "90%",
+          left: "20%",
           [breakSmall]: {
             left: "2%",
             width: "103%",
@@ -130,11 +175,11 @@ export const Diagram: FC = () => (
 
       <Box
         sx={{
-          width: "20%",
+          width: "22%",
           animation: `${spin} 10s infinite linear`,
           position: "absolute",
-          top: "35%",
-          left: "58%",
+          top: "32%",
+          left: "54%",
           [breakSmall]: {
             width: "35%",
             left: "20%",
@@ -149,10 +194,10 @@ export const Diagram: FC = () => (
 
       <Box
         sx={{
-          width: "8%",
+          width: "18%",
           position: "absolute",
-          top: "54%",
-          left: 0,
+          top: "26%",
+          left: "20%",
           animationDelay: "0.5s",
           animation: `${pulse} 3s infinite ease-in-out`,
           animationDirection: "alternate",
@@ -165,13 +210,12 @@ export const Diagram: FC = () => (
       >
         <img src={Globe.src} alt="" />
       </Box>
-
       <Box
         sx={{
           width: "8%",
           position: "absolute",
-          top: "6%",
-          left: "91%",
+          top: "4%",
+          left: "89%",
           animation: `${pulse} 4s infinite ease-in-out`,
           animationDirection: "alternate",
           [breakSmall]: {
