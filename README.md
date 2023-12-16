@@ -1,4 +1,4 @@
-The Human Rights Centered Design Curriculum
+# The Human Rights Centered Design Curriculum
 
 Hello!
 
