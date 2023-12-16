@@ -2,7 +2,7 @@
 
 <br />
 
-## [Chapter 8 – Community Feedback and Testing](/prototyping/8)
+## [Chapter 8 – Community Feedback and Testing](prototyping/8.md)
 
 Chapter 8 covers the importance of user testing your work. It teaches you how to implement remote user testing with your communities.
 
@@ -13,7 +13,7 @@ Chapter 8 covers the importance of user testing your work. It teaches you how to
 * Learn about the benefits and drawbacks of user testing
 
 
-## [Chapter 9 – Building a Secure, Ethical Prototype and Preparing for Alpha Release](/prototyping/9)
+## [Chapter 9 – Building a Secure, Ethical Prototype and Preparing for Alpha Release](prototyping/9.md)
 
 Chapter 9 will teach you how to build a secure, ethical prototype based on your research, ideation, and  processes covered in prior chapters.
 

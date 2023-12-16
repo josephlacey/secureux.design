@@ -29,7 +29,7 @@ These preliminary steps include:
 Here are some specific works that we would recommend for novices:
 
 - For designing w/ at-risk groups: [Design Justice](https://design-justice.pubpub.org/)
-- For learning how to securely communicate with communities: [EFF Surveillance Self-Defense Guide](https://ssd.eff.org/en) & [The Manilal Principles](https://manilaprinciples.org/index.html)
+- For learning how to securely communicate with communities: [EFF Surveillance Self-Defense Guide](https://ssd.eff.org/en) & [The Manila Principles](https://manilaprinciples.org/index.html)
 - For how to do Activism on Social Media: [Tactical Tech Guide](https://ourdataourselves.tacticaltech.org/posts/23_guide_social_media/)
 
 Still, this guide is intended to be broadly accessible, and it should prove valuable for novices in the area of human rights activism. We avoid the use of complex language, offer definitions of key terms, and assume minimal prior knowledge. Most importantly, at the end of each chapter, we include supplementary materials intended to provide context, guidance, and paths to explore for a general readership. You can also find a broad range of works in our [resources](/resources) section that can introduce you to human rights activism.

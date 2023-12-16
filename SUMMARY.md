@@ -3,7 +3,7 @@
 * [The Human Rights Centered Design Curriculum](README.md)
 * [About](about/README.md)
 
-## Phase 0: Introduction <a href="#intro" id="intro"></a>
+## Phase 0: Introduction <a href="#introduction" id="introduction"></a>
 
 * [Intro](introduction/intro.md)
 * [How to Use the Human Rights Centered Design Curriculum](introduction/how-to-use.md)

@@ -22,9 +22,10 @@ We aim to help you learn how to center human rights throughout your entire resea
 
 Technology design has often been understood as strictly mechanical, divorced from the social and political landscape. In recent years, however, an increasing number of activists, scholars, and designers have called this belief into question, contesting the idea that design is a neutral act. Animated by these discussions, we see design as a social and political act. By informing the way technologies are utilized, design influences the actions of its users and the arena of social relations in which its users participate. The design of an internet platform, for example, may encourage interaction among strangers or incentivize widespread data collection. In the context of human rights activism, the stakes of technology design are uniquely high: activist-oriented technology can be structured to protect privacy, earn consent, and encourage civil dialogue, or it can furnish personal data to authoritarian regimes, catalyze the spread of misinformation, and incentivize interpersonal abuse.
 
-**The Call for [Human Rights Centered Design](/glossary#human-rights-centered-design)**
+**The Call for Human Rights Centered Design**
 
-`Human Rights Centered Design insists on the same sovereignty and protection for the user of a product. In essence, this means respecting a user’s privacy and data, thinking about the digital rights of people across the world (instead of just in our own backyards), and designing for all. {#human-rights-centered-design}`
+Human Rights Centered Design insists on the same sovereignty and protection for the user of a product. In essence, this means respecting a user’s privacy and data, thinking about the digital rights of people across the world (instead of just in our own backyards), and designing for all.
+
 We believe that digital rights are human rights. Human Rights Centered Design (HRCD) is a set of research, design, and product development methodologies that combine human centered design with human rights policy. It is a response to the global abuse of people’s privacy and rights online and off: internet censorship, bias in technology, online harassment, adversarial state actors engaging in cyberwarfare and many other events that degrade or challenge general human rights.
 
 As human rights centered designers, we ask how can human rights activists design their technologies in a manner that promotes ethical use, minimizes abuse potential, and aligns with community principles and practices? This is the question we strive to answer in the following chapters.
@@ -128,7 +129,7 @@ Privacy, data protection, legibility, and consent all go hand in hand to create 
 
 ### Equitable Tech Ecosystem
 
-# ![The Equitable Technology Ecosystem](/images/UXS_Diagrams-Graphics_INTRO.png)
+![The Equitable Technology Ecosystem](/images/UXS_Diagrams-Graphics_INTRO.png)
 
 _The center of this ecosystem diagram shows where privacy, data protection, legibility, and consent must converge to create ethical technologies._
 
@@ -179,14 +180,14 @@ Although we cannot speak to the particular needs of every community, we can offe
 
 In the following chapters, we progress through each stage of the research, design, and development processes.
 
-In [Phase 1, Centering Human Rights](/centering), chapters 1, 2, and 3 lay the foundations for understanding core design problems, conducting research, developing personas, and orienting your work toward inclusivity.
+In [Phase 1, Centering Human Rights](centering/README.md), chapters 1, 2, and 3 lay the foundations for understanding core design problems, conducting research, developing personas, and orienting your work toward inclusivity.
 
-In [Phase 2, Conducting Research](/research), chapters 4, 5, 6, and 7 detail how to work with community partners and activists, conduct and evaluate your co-research, ideate, and develop feedback systems.
+In [Phase 2, Conducting Research](research/README.md), chapters 4, 5, 6, and 7 detail how to work with community partners and activists, conduct and evaluate your co-research, ideate, and develop feedback systems.
 
-In [Phase 3, Prototyping](/prototyping), chapters 8 and 9 walk through the prototyping and design processes of building and receiving feedback.
+In [Phase 3, Prototyping](prototyping/README.md), chapters 8 and 9 walk through the prototyping and design processes of building and receiving feedback.
 
-In [Phase 4, Launching](/launching), chapters 10 and 11 focus on launching your product or service.
+In [Phase 4, Launching](launching/README.md), chapters 10 and 11 focus on launching your product or service.
 
-In [Phase 5, Looking to the Future](/launching), chapter 12 focuses on launching and sustainability as a practice in technology design and shares strategies to ensure the longevity and sustainability of your project and chapter 13 recaps how and where this work is most useful.
+In [Phase 5, Looking to the Future](future/README.md), chapter 12 focuses on launching and sustainability as a practice in technology design and shares strategies to ensure the longevity and sustainability of your project and chapter 13 recaps how and where this work is most useful.
 
-[Let's Begin!](/centering/1)
+[Let's Begin!](centering/README.md)
