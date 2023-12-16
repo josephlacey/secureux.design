@@ -1,39 +1,6 @@
-import { MDXProvider } from "@mdx-js/react";
-import { useAppContext as uac } from "components/AppProvider";
-import { ChapterInfo } from "components/ChapterInfo";
-import { ChapterFooterNav } from "components/ChapterFooterNav";
-import { colors } from "styles/theme";
-
-export default function Research6({ children }) {
-  return (
-    <MDXProvider
-      components={uac().components(
-        colors.mintGreen,
-        colors.darkMintGreen,
-        uac().useMobile()
-      )}
-    >
-      {children}
-    </MDXProvider>
-  );
-}
-
-[comment]: # "↓↓↓ Editable ↓↓↓"
-
 ###### 20-30min
 
 ##### Intermediate Level | Individual quiz activity and group discussion | Text files and paper/pen, post-its
-
-<ChapterInfo color={colors.mintGreen}>
-Phase 2: Conducting Research
-
-[5 ←](/research/5)
-
-Chapter 6
-
-[→ 7](/research/7)
-
-</ChapterInfo>
 
 # Personas
 
@@ -250,10 +217,3 @@ When people are saying that something needs to change, you actually have to list
 >     this as a jumping off point for ideating.
 
 [You can use this example to help with this exercise](https://www.hksinc.com/our-news/articles/evidence-empathy-how-personas-can-help-universities-design-better-student-experiences-during-covid-19/).
-
-<ChapterFooterNav>
-[← Previous: Designing for everyone](/research/5)
-
-[Next: Ideation & validating research findings →](/research/7)
-
-</ChapterFooterNav>

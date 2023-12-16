@@ -1,39 +1,6 @@
-import { MDXProvider } from "@mdx-js/react";
-import { useAppContext as uac } from "components/AppProvider";
-import { ChapterInfo } from "components/ChapterInfo";
-import { ChapterFooterNav } from "components/ChapterFooterNav";
-import { colors } from "styles/theme";
-
-export default function Centering2({ children }) {
-  return (
-    <MDXProvider
-      components={uac().components(
-        colors.red,
-        colors.darkRed,
-        uac().useMobile()
-      )}
-    >
-      {children}
-    </MDXProvider>
-  );
-}
-
-[comment]: # "↓↓↓ Editable ↓↓↓"
-
 ###### 30-60 minutes
 
 ##### Intermediate Level | Security Assessment Exercise | Pen/Paper, Post-its, Computer Text File
-
-<ChapterInfo color={colors.red}>
-Phase 1: Centering Human Rights
-
-[1 ←](/centering/1)
-
-Chapter 2
-
-[→ 3](/centering/3)
-
-</ChapterInfo>
 
 # Working with a community
 
@@ -210,10 +177,3 @@ Through his commitment to the project and our on-going discussions over the year
 Before embarking on providing solutions, it is essential to first learn as much as you can about the group you're serving, including: what their needs are, where their problems stem from, and their current capabilities, technical knowledge, and access to resources. Only by doing this, was I able to position myself to conceive of solutions that would fit well into their day-to-day processes.
 
 Through this process, I learned how they think, what works, what doesn’t, and where my and their blind spots may be (e.g. checking my assumptions that Tor would work in Iran when it is, in fact blocked, or they may think they know how to do X, but what are they actually doing in practice and is it causing an undesirable outcome?). **I learned about the whole space from multiple perspectives through observation, interviews, qualitative and minimal quantitative research which helped me to better understand what their challenges were and how I may be able to help.”**
-
-<ChapterFooterNav>
-[← Previous: Figuring out the problem](/centering/1)
-
-[Next: Understanding harm (threat modeling) →](/centering/3)
-
-</ChapterFooterNav>

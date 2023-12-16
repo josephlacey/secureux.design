@@ -1,39 +1,6 @@
-import { MDXProvider } from "@mdx-js/react";
-import { useAppContext as uac } from "components/AppProvider";
-import { ChapterInfo } from "components/ChapterInfo";
-import { ChapterFooterNav } from "components/ChapterFooterNav";
-import { colors } from "styles/theme";
-
-export default function Centering3({ children }) {
-  return (
-    <MDXProvider
-      components={uac().components(
-        colors.red,
-        colors.darkRed,
-        uac().useMobile()
-      )}
-    >
-      {children}
-    </MDXProvider>
-  );
-}
-
-[comment]: # "↓↓↓ Editable ↓↓↓"
-
 ###### 30-60 minutes
 
 ##### Intermediate Level | Individual quiz activity and group discussion | Pen/paper, text pad for 5 exercises
-
-<ChapterInfo color={colors.red}>
-Phase 1: Centering Human Rights
-
-[2 ←](/centering/2)
-
-Chapter 3
-
-[→ 4](/research/4)
-
-</ChapterInfo>
 
 # Understanding Harm (Threat Modeling)
 
@@ -379,10 +346,3 @@ Both illustrate how:
 When you and your community work together to create tools and services there will be varying downstream effects, depending on your context. These effects can ripple across many different communities that may use the same tools or resources to mitigate different problems. As builders, designers, and researchers, we can avoid these pitfalls by threat-modeling effectively.
 
 Threat-modeling how your work can be abused in different environments is a necessary step that helps prevent you from inadvertently causing serious harm.
-
-<ChapterFooterNav>
-[← Previous: Figuring Out the Problem](/centering/2)
-
-[Next: Research methods →](/research/4)
-
-</ChapterFooterNav>

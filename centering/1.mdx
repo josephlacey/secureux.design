@@ -1,39 +1,6 @@
-import { MDXProvider } from "@mdx-js/react";
-import { useAppContext as uac } from "components/AppProvider";
-import { ChapterInfo } from "components/ChapterInfo";
-import { ChapterFooterNav } from "components/ChapterFooterNav";
-import { colors } from "styles/theme";
-
-export default function Centering1({ children }) {
-  return (
-    <MDXProvider
-      components={uac().components(
-        colors.red,
-        colors.darkRed,
-        uac().useMobile()
-      )}
-    >
-      {children}
-    </MDXProvider>
-  );
-}
-
-[comment]: # "↓↓↓ Editable ↓↓↓"
-
 ###### 90 - 120 minutes
 
 ##### All Levels | 6 Exercises to aid conceptualization and determine viability: Mapping out the Ecosystem, Why & Who, Checking Assumptions, Building on Assumptions, Are We The Best to Solve this Problem? | Sticky-notes/post-its, writing tool + paper or text file
-
-<ChapterInfo color={colors.red}>
-Phase 1: Centering Human Rights
-
-[0 ←](/introduction/intro)
-
-Chapter 1
-
-[→ 2](/centering/2)
-
-</ChapterInfo>
 
 # Figuring out the Problem and Whether You Are The Person to Help Solve it
 
@@ -242,10 +209,3 @@ Let’s first acknowledge that this is a hard problem to solve and that we might
 > - I have ensured that my problem or hypothesis is not already well-documented or well-researched by communities outside of the Global North.
 >
 > If you answered ‘no’ to 3 or more, you may not be the right person for this job, and you will need to find someone closer to the community to fill this role. If you’ve answered at least 5 of these with “yes”, you are ready to start working with your community!
-
-<ChapterFooterNav>
-[← Previous: Introduction](/introduction/intro)
-
-[Next: Working with a community →](/centering/2)
-
-</ChapterFooterNav>

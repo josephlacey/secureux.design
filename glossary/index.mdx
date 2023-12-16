@@ -1,15 +1,3 @@
-import Head from "next/head";
-import { useAppContext as uac } from "components/AppProvider";
-import { MDXProvider } from "@mdx-js/react";
-import { GlossaryTable } from "components/GlossaryTable";
-import { GlossaryEntry } from "components/GlossaryEntry";
-
-export default function Glossary({ children }) {
-  return <MDXProvider components={uac().components()}>{children}</MDXProvider>;
-}
-
-[comment]: # "↓↓↓ Editable ↓↓↓"
-
 # Glossary
 
 <GlossaryTable>

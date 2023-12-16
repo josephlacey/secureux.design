@@ -1,45 +1,7 @@
-import { MDXProvider } from "@mdx-js/react";
-import { useAppContext as uac } from "components/AppProvider";
-import { ChapterInfo } from "components/ChapterInfo";
-import { ChapterFooterNav } from "components/ChapterFooterNav";
-import { colors } from "styles/theme";
-
-export default function Future13({ children }) {
-  return (
-    <MDXProvider
-      components={uac().components(
-        colors.lightBlue,
-        colors.darkLightBlue,
-        uac().useMobile()
-      )}
-    >
-      {children}
-    </MDXProvider>
-  );
-}
-
-[comment]: # "↓↓↓ Editable ↓↓↓"
-
 ###### 30-60min
 
 ##### Intermediate Level | Individual quiz activity and group discussion | Pen/Paper, Post-its, Computer Text File
 
-<ChapterInfo color={colors.lightBlue}>
-Phase: Looking to the Future
-
-[12 ←](/future/12)
-
-Chapter 13
-
-</ChapterInfo>
-
 # Importance of this Work
 
 **Coming Soon!**
-
-<ChapterFooterNav>
-  [← Previous: Sustainability](/future/12)
-
-[]()
-
-</ChapterFooterNav>

@@ -1,39 +1,6 @@
-import { MDXProvider } from "@mdx-js/react";
-import { useAppContext as uac } from "components/AppProvider";
-import { ChapterInfo } from "components/ChapterInfo";
-import { ChapterFooterNav } from "components/ChapterFooterNav";
-import { colors } from "styles/theme";
-
-export default function Prototyping9({ children }) {
-  return (
-    <MDXProvider
-      components={uac().components(
-        colors.mustardYellow,
-        colors.darkMustardYellow,
-        uac().useMobile()
-      )}
-    >
-      {children}
-    </MDXProvider>
-  );
-}
-
-[comment]: # "↓↓↓ Editable ↓↓↓"
-
 ###### 30-60min
 
 ##### Intermediate Level | Individual quiz activity and group discussion | Pen/Paper, Post-its, Computer Text File
-
-<ChapterInfo color={colors.mustardYellow}>
-Phase 3: Prototyping
-
-[8 ←](/prototyping/8)
-
-Chapter 9
-
-[→ 10](/launching/10)
-
-</ChapterInfo>
 
 # Building a Secure, Ethical Prototype and Preparing for Alpha Release
 
@@ -179,10 +146,3 @@ Based on our previous experiences, we’ve collected some additional tips to con
 - Have a kick-off call, or virtual workshop, or in-person gathering with internal stakeholders to show them how to use the product or walk through the features.
 - Make the release of the alpha special for your early users and adopters. Afterall, they are the first ones who will use your product and will continue to be stakeholders as more people adopt it.
 - Remember your alpha launch is a soft launch so you will be reviewing it with only internal stakeholders, and it will not yet be public.
-
-<ChapterFooterNav>
-[← Previous: Remote user testing](/prototyping/8)
-
-[Next: Preparing for beta →](/launching/10)
-
-</ChapterFooterNav>

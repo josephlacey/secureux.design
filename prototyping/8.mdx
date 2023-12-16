@@ -1,39 +1,6 @@
-import { MDXProvider } from "@mdx-js/react";
-import { useAppContext as uac } from "components/AppProvider";
-import { ChapterInfo } from "components/ChapterInfo";
-import { ChapterFooterNav } from "components/ChapterFooterNav";
-import { colors } from "styles/theme";
-
-export default function Prototyping8({ children }) {
-  return (
-    <MDXProvider
-      components={uac().components(
-        colors.mustardYellow,
-        colors.darkMustardYellow,
-        uac().useMobile()
-      )}
-    >
-      {children}
-    </MDXProvider>
-  );
-}
-
-[comment]: # "↓↓↓ Editable ↓↓↓"
-
 ###### 30 - 60 minutes
 
 ##### Intermediate Level | Individual quiz activity and group discussion | Pen/Paper, Post-its, Computer Text File
-
-<ChapterInfo color={colors.mustardYellow}>
-Phase 3: Prototyping
-
-[7 ←](/research/7)
-
-Chapter 8
-
-[→ 9](/prototyping/9)
-
-</ChapterInfo>
 
 # Remote User Testing for Communities
 
@@ -194,10 +161,3 @@ User testing is a core design practice and is used to uncover everything from un
 
 _Further Reading_
 [The Limits to Digital Consent](https://simplysecure.org/blog/the-limits-to-digital-consent-understanding-the-risks-of-ethical-consent-and-data-collection-for-underrepresented-communities/)
-
-<ChapterFooterNav>
-[← Previous: Ideation & validating research findings](/research/7)
-
-[Next: Building a secure, ethical prototype →](/prototyping/9)
-
-</ChapterFooterNav>

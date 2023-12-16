@@ -1,47 +1,7 @@
-import { MDXProvider } from "@mdx-js/react";
-import { useAppContext as uac } from "components/AppProvider";
-import { ChapterInfo } from "components/ChapterInfo";
-import { ChapterFooterNav } from "components/ChapterFooterNav";
-import { colors } from "styles/theme";
-
-export default function Launching11({ children }) {
-  return (
-    <MDXProvider
-      components={uac().components(
-        colors.lavender,
-        colors.darkLavender,
-        uac().useMobile()
-      )}
-    >
-      {children}
-    </MDXProvider>
-  );
-}
-
-[comment]: # "↓↓↓ Editable ↓↓↓"
-
 ###### 30-60min
 
 ##### Intermediate Level | Individual quiz activity and group discussion | Pen/Paper, Post-its, Computer Text File
 
-<ChapterInfo color={colors.lavender}>
-Phase 4: Launching
-
-[10 ←](/launching/10)
-
-Chapter 11
-
-[→ 12](/future/12)
-
-</ChapterInfo>
-
 # Iteration
 
 **Coming soon!**
-
-<ChapterFooterNav>
-[← Previous: Preparing for beta](/launching/10)
-
-[Next: Sustainability →](/future/12)
-
-</ChapterFooterNav>

@@ -1,13 +1,3 @@
-import Head from "next/head";
-import { useAppContext as uac } from "components/AppProvider";
-import { MDXProvider } from "@mdx-js/react";
-
-export default function Resources({ children }) {
-  return <MDXProvider components={uac().components}>{children}</MDXProvider>;
-}
-
-[comment]: # "↓↓↓ Editable ↓↓↓"
-
 # Resources
 
 ### HOW TO USE

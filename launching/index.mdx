@@ -1,23 +1,3 @@
-import { MDXProvider } from "@mdx-js/react";
-import { useAppContext as uac } from "components/AppProvider";
-import { colors } from "styles/theme";
-
-export default function Centering1({ children }) {
-  return (
-    <MDXProvider
-      components={uac().components(
-        colors.lavender,
-        colors.darkLavender,
-        uac().useMobile()
-      )}
-    >
-      {children}
-    </MDXProvider>
-  );
-}
-
-[comment]: # "↓↓↓ Editable ↓↓↓"
-
 # Phase 4: Launching
 
 <br />
