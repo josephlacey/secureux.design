@@ -180,14 +180,14 @@ Although we cannot speak to the particular needs of every community, we can offe
 
 In the following chapters, we progress through each stage of the research, design, and development processes.
 
-In [Phase 1, Centering Human Rights](centering/README.md), chapters 1, 2, and 3 lay the foundations for understanding core design problems, conducting research, developing personas, and orienting your work toward inclusivity.
+In [Phase 1, Centering Human Rights](../centering/README.md), chapters 1, 2, and 3 lay the foundations for understanding core design problems, conducting research, developing personas, and orienting your work toward inclusivity.
 
-In [Phase 2, Conducting Research](research/README.md), chapters 4, 5, 6, and 7 detail how to work with community partners and activists, conduct and evaluate your co-research, ideate, and develop feedback systems.
+In [Phase 2, Conducting Research](../research/README.md), chapters 4, 5, 6, and 7 detail how to work with community partners and activists, conduct and evaluate your co-research, ideate, and develop feedback systems.
 
-In [Phase 3, Prototyping](prototyping/README.md), chapters 8 and 9 walk through the prototyping and design processes of building and receiving feedback.
+In [Phase 3, Prototyping](../prototyping/README.md), chapters 8 and 9 walk through the prototyping and design processes of building and receiving feedback.
 
-In [Phase 4, Launching](launching/README.md), chapters 10 and 11 focus on launching your product or service.
+In [Phase 4, Launching](../launching/README.md), chapters 10 and 11 focus on launching your product or service.
 
-In [Phase 5, Looking to the Future](future/README.md), chapter 12 focuses on launching and sustainability as a practice in technology design and shares strategies to ensure the longevity and sustainability of your project and chapter 13 recaps how and where this work is most useful.
+In [Phase 5, Looking to the Future](../future/README.md), chapter 12 focuses on launching and sustainability as a practice in technology design and shares strategies to ensure the longevity and sustainability of your project and chapter 13 recaps how and where this work is most useful.
 
-[Let's Begin!](centering/README.md)
+[Let's Begin!](../centering/README.md)
