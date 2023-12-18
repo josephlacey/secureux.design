@@ -11,7 +11,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="#Actor-Map">Actor Map</a></td>
+      <td>Actor Map</td>
       <td>Chapter 2</td>
       <td>
         An actor map is a visual depiction of the key organizations and
@@ -213,7 +213,7 @@
       </td>
     </tr>
     <tr>
-      <td>Human Rights Centered Design<a href="#human-rights-centered-design"></a></td>
+      <td>Human Rights Centered Design</td>
       <td>Introduction</td>
       <td>
         Human Rights Centered Design insists on the same sovereignty and
