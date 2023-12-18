@@ -22,7 +22,7 @@ We aim to help you learn how to center human rights throughout your entire resea
 
 Technology design has often been understood as strictly mechanical, divorced from the social and political landscape. In recent years, however, an increasing number of activists, scholars, and designers have called this belief into question, contesting the idea that design is a neutral act. Animated by these discussions, we see design as a social and political act. By informing the way technologies are utilized, design influences the actions of its users and the arena of social relations in which its users participate. The design of an internet platform, for example, may encourage interaction among strangers or incentivize widespread data collection. In the context of human rights activism, the stakes of technology design are uniquely high: activist-oriented technology can be structured to protect privacy, earn consent, and encourage civil dialogue, or it can furnish personal data to authoritarian regimes, catalyze the spread of misinformation, and incentivize interpersonal abuse.
 
-**The Call for Human Rights Centered Design**
+**The [Call for Human Rights Centered Design](/glossary#Human-Rights-Centered-Design)**
 
 Human Rights Centered Design insists on the same sovereignty and protection for the user of a product. In essence, this means respecting a user’s privacy and data, thinking about the digital rights of people across the world (instead of just in our own backyards), and designing for all.
 

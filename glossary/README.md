@@ -213,7 +213,7 @@
       </td>
     </tr>
     <tr>
-      <td>Human Rights Centered Design</td>
+      <td><a href="#Human-Rights-Centered-Design">Human Rights Centered Design</a></td>
       <td>Introduction</td>
       <td>
         Human Rights Centered Design insists on the same sovereignty and
