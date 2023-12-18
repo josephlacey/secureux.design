@@ -41,6 +41,10 @@
 * [Sustainability](future/12.md)
 * [Importance of this Work](future/13.md)
 
+## Resources
+
 * [Resources](resources/README.md)
+
+## Glossary
 
 * [Glossary](glossary/README.md)
