@@ -11,7 +11,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="Actor-Map">Actor Map</a></td>
+      <td><a href="#Actor-Map">Actor Map</a></td>
       <td>Chapter 2</td>
       <td>
         An actor map is a visual depiction of the key organizations and
