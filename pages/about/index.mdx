@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useAppContext as uac } from "components/AppProvider";
 import { MDXProvider } from "@mdx-js/react";
-import AboutReadme from "docs/about/README.md";
+import AboutReadme from "about/README.md";
 
 export default function About({ children }) {
   return <MDXProvider components={uac().components()}>{children}</MDXProvider>;

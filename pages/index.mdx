@@ -3,7 +3,7 @@ import { useAppContext as uac } from "components/AppProvider";
 import { Header } from "components/home/Header";
 import { Diagram } from "components/home/Diagram";
 import { Introduction } from "components/home/Introduction";
-import HRCDHello from "docs/README.md";
+import HRCDHello from "README.md";
 
 export default function Home({ children }) {
   return <MDXProvider components={uac().components}>{children}</MDXProvider>;
@@ -16,7 +16,5 @@ export default function Home({ children }) {
 <Diagram />
 
 # Introduction surrounding component was deprecated in the Gitbook migration.
-
-# TODO Need to clean up remaining code.
 
 <HRCDHello />
