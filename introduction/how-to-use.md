@@ -37,5 +37,3 @@ Still, this guide is intended to be broadly accessible, and it should prove valu
 Whether you come to this material as an expert or as a novice, remember to ask yourself in the course of conducting your research: "How do I know this?" and "Did someone ask for this?". The former encourages us to question our assumptions and sources of knowledge, and the latter reminds us to ground our tools in the communities that need them – to build with those communities and not merely for them.
 
 We hope our guide will help you better center human rights in your work and we’d love any feedback!
-
-[Next: The Introduction!](/introduction/intro)

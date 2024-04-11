@@ -186,5 +186,3 @@ In [Phase 3, Prototyping](/prototyping), chapters 8 and 9 walk through the proto
 In [Phase 4, Launching](/launching), chapters 10 and 11 focus on launching your product or service.
 
 In [Phase 5, Looking to the Future](/launching), chapter 12 focuses on launching and sustainability as a practice in technology design and shares strategies to ensure the longevity and sustainability of your project and chapter 13 recaps how and where this work is most useful.
-
-[Let's Begin!](/centering/1)
