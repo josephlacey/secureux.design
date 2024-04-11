@@ -63,7 +63,7 @@ Turning to McKercher’s [Beyond Sticky Notes](https://www.beyondstickynotes.com
 - Use participatory means – Move communities from participants to partners by providing many way for people to partake in design e.g. visual, oral, kinesthetic approaches
 - Build capacity – Play the role of coach rather than expert and be open to both teaching and learning
 
-We dive deeper into co-design in Phase 2, [Chapter 5](/research/5).
+We dive deeper into co-design in Phase 2, [Chapter 5](/research/5/).
 
 ### Harm Reduction
 
@@ -136,7 +136,7 @@ Let’s first acknowledge that this is a hard problem to solve and that we might
 
 #### Exercise 3: Checking Your Assumptions with Different Users
 
-> Your product will have many users! If you have an idea of your ideal user’s identity, this is the time to start considering how the project will change when users have different experiences or backgrounds. You should do this again in the Personas chapter (Phase 2, [Chapter 6](/research/6)), but it can be valuable to check your own assumptions and biases before you start a project.
+> Your product will have many users! If you have an idea of your ideal user’s identity, this is the time to start considering how the project will change when users have different experiences or backgrounds. You should do this again in the Personas chapter (Phase 2, [Chapter 6](/research/6/)), but it can be valuable to check your own assumptions and biases before you start a project.
 >
 > Start by thinking about one of your users. Change at least one part of their identity – their gender, sexuality, race, class, age, location, etc. Consider how their needs change when you transform the user. Think of their reasons for using this software from their different perspectives.
 >

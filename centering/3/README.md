@@ -13,7 +13,7 @@ Threat modeling is important because every person, no matter their background, c
 
 Every time you start a new project you will need to create a new threat model, even if you’re working with a community or problem you’ve engaged with before. This is because new threats arise as technology evolves.
 
-This chapter covers how to create threat models to discover the harms your community will, or might, face. [Tactical Tech’s Holistic Security Guide: A Strategy Manual for Human Rights Defenders](https://holistic-security.tacticaltech.org/chapters/explore.html) is a fantastic threat modeling resource and starting point for you to review. We will also expand upon our discussion to include how to secure communications with your community from [Chapter 2](/centering/2), and create a communications response to the threat model you’ve made for them.
+This chapter covers how to create threat models to discover the harms your community will, or might, face. [Tactical Tech’s Holistic Security Guide: A Strategy Manual for Human Rights Defenders](https://holistic-security.tacticaltech.org/chapters/explore.html) is a fantastic threat modeling resource and starting point for you to review. We will also expand upon our discussion to include how to secure communications with your community from [Chapter 2](/centering/2/), and create a communications response to the threat model you’ve made for them.
 
 To exemplify threat modeling best practices, we will share real-world use cases and include guest experts’ on-the-ground experiences. In these, we will review the processes that ensure the efficacy and safety of our communities, their data, and those they work with during our research processes.
 
