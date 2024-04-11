@@ -11,9 +11,9 @@
 ## Phase 1: Centering Human Rights <a href="#centering" id="centering"></a>
 
 - [Overview](/centering/README.md)
-- [CH1 - Figuring out the Problem](/centering/1.md)
-- [CH2 - Working with a community](/centering/2.md)
-- [CH3 - Understanding Harm (Threat Modeling)](/centering/3.md)
+- [CH1 - Figuring out the Problem](/centering/1/README.md)
+- [CH2 - Working with a community](/centering/2/README.md)
+- [CH3 - Understanding Harm (Threat Modeling)](/centering/3/README.md)
 
 ## Phase 2: Conducting Research <a href="#research" id="research"></a>
 
