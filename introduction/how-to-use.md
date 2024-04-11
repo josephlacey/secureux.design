@@ -10,11 +10,11 @@ This guide consists of five phases. Each covers a different segment of the Human
 
 These phases include:
 
-- [Centering Human Rights](/centering)
-- [Conducting Research](/research)
-- [Prototyping and Building](/prototyping)
-- [Release / Launch / Iteration](/launching)
-- [Looking to the Future / Sustainability](/future)
+- [Centering Human Rights](/centering/)
+- [Conducting Research](/research/)
+- [Prototyping and Building](/prototyping/)
+- [Release / Launch / Iteration](/launching/)
+- [Looking to the Future / Sustainability](/future/)
 
 We recommend following the chapters sequentially as they build on each other, however, chapters can be read out of order if specific topics are more relevant to your needs.
 

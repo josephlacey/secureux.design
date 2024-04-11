@@ -6,7 +6,7 @@
 
 This work came about as a natural extension of our own experiences being part of and working with highly at-risk groups. Natalie Cadranel is an archivist and ethnographer working at the nexus of human rights, technology, and design. She is the Founder and Executive Director of [OpenArchive](https://open-archive.org/), a nonprofit that collaborates with human rights defenders and at-risk communities to create responsive, secure, and ethical archiving technologies to advance justice and accountability. Caroline Sinders is a technologist and artist who examines the impact of technology on society, focusing specifically on interface design, artificial intelligence, abuse, and politics in digital conversational spaces.
 
-At RightsCon 2018, Natalie and a number of [human rights defenders](/about) working at every stage of the research → development process came together to create the [Secure UX Checklist](/s/Secure-UX-Checklist.pdf) because there was no roadmap that addressed the challenges we faced in our digital freedom work. We created this for ourselves and others working with at-risk communities, including: designers, human rights activists, public interest technologists, hackers, localizers, researchers, and tool-builders. Inspired by this work and others in our community who appreciated the checklist and needed a roadmap to implement it, we designed this methodology. Our curriculum acknowledges and builds on the work of other experts who aim to create a safer, more inclusive, human rights-focused digital world.
+At RightsCon 2018, Natalie and a number of [human rights defenders](/about/) working at every stage of the research → development process came together to create the [Secure UX Checklist](/s/Secure-UX-Checklist.pdf) because there was no roadmap that addressed the challenges we faced in our digital freedom work. We created this for ourselves and others working with at-risk communities, including: designers, human rights activists, public interest technologists, hackers, localizers, researchers, and tool-builders. Inspired by this work and others in our community who appreciated the checklist and needed a roadmap to implement it, we designed this methodology. Our curriculum acknowledges and builds on the work of other experts who aim to create a safer, more inclusive, human rights-focused digital world.
 
 **The Importance of This Work**
 
@@ -177,12 +177,12 @@ Although we cannot speak to the particular needs of every community, we can offe
 
 In the following chapters, we progress through each stage of the research, design, and development processes.
 
-In [Phase 1, Centering Human Rights](/centering), chapters 1, 2, and 3 lay the foundations for understanding core design problems, conducting research, developing personas, and orienting your work toward inclusivity.
+In [Phase 1, Centering Human Rights](/centering/), chapters 1, 2, and 3 lay the foundations for understanding core design problems, conducting research, developing personas, and orienting your work toward inclusivity.
 
-In [Phase 2, Conducting Research](/research), chapters 4, 5, 6, and 7 detail how to work with community partners and activists, conduct and evaluate your co-research, ideate, and develop feedback systems.
+In [Phase 2, Conducting Research](/research/), chapters 4, 5, 6, and 7 detail how to work with community partners and activists, conduct and evaluate your co-research, ideate, and develop feedback systems.
 
-In [Phase 3, Prototyping](/prototyping), chapters 8 and 9 walk through the prototyping and design processes of building and receiving feedback.
+In [Phase 3, Prototyping](/prototyping/), chapters 8 and 9 walk through the prototyping and design processes of building and receiving feedback.
 
-In [Phase 4, Launching](/launching), chapters 10 and 11 focus on launching your product or service.
+In [Phase 4, Launching](/launching/), chapters 10 and 11 focus on launching your product or service.
 
-In [Phase 5, Looking to the Future](/launching), chapter 12 focuses on launching and sustainability as a practice in technology design and shares strategies to ensure the longevity and sustainability of your project and chapter 13 recaps how and where this work is most useful.
+In [Phase 5, Looking to the Future](/future/), chapter 12 focuses on launching and sustainability as a practice in technology design and shares strategies to ensure the longevity and sustainability of your project and chapter 13 recaps how and where this work is most useful.

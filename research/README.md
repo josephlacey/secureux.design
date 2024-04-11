@@ -4,7 +4,7 @@ Phase 2 will help you understand various research methods and guide you through 
 
 <br />
 
-## [Chapter 4 – Research Methods](/research/4)
+## [Chapter 4 – Research Methods](/research/4/)
 
 In chapter 4, you will learn about various research methods to help you decide which works best for you during your research process.
 
@@ -14,7 +14,7 @@ In chapter 4, you will learn about various research methods to help you decide w
 - Learn how to respond to the community’s threat model
 - Learn how to conduct iterative research to better understand their needs
 
-## [Chapter 5 – Designing for Everyone](/research/5)
+## [Chapter 5 – Designing for Everyone](/research/5/)
 
 Chapter 5 will cover design principles that center at-risk use cases in order to build safer, more accessible products for all.
 
@@ -25,7 +25,7 @@ Chapter 5 will cover design principles that center at-risk use cases in order to
 - Understand the difference between accessibility and usability
 - Better-understand co-design
 
-## [Chapter 6 – Centering Human Rights When Creating Personas & Journey Maps](/research/6)
+## [Chapter 6 – Centering Human Rights When Creating Personas & Journey Maps](/research/6/)
 
 In chapter 6, you will learn how to infuse HRCD into the persona-building processes.
 
@@ -35,7 +35,7 @@ In chapter 6, you will learn how to infuse HRCD into the persona-building proces
 - Journey mapping 101
 - Centering human rights throughout these processes
 
-## [Chapter 7 – Ideation / Validating Research Findings](/research/7)
+## [Chapter 7 – Ideation / Validating Research Findings](/research/7/)
 
 Learn how to use your research and iterate on it to ideate for your proposed design solutions.
 
